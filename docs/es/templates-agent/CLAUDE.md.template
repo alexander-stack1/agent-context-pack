@@ -1,0 +1,81 @@
+# CLAUDE.md / AGENTS.md — template por repositório
+
+> **Public template.** Personal identifiers, firm, products, emails and paths were replaced with placeholders. See `PLACEHOLDERS.md`. Do not reintroduce real data.
+
+
+> Copiar para a **raiz do clone** (fora do iCloud, ex. `~/dev/<projeto>/CLAUDE.md`).
+> Pode espelhar como `AGENTS.md` se a ferramenta preferir esse nome.
+> Rellenar os placeholders. Manter ≤ ~2 pantallas.
+
+---
+
+# CLAUDE.md — {{NOME_DO_PROJETO}}
+
+## Entrada
+
+1. Reglas globais de [YOUR_NAME]: `~/Desktop/[CONTEXT_DIR]/agent_rules.md` (e working-style cuando C).
+2. Este archivo = contrato **deste** repo.
+3. Mapa operacional: `docs/agent/REPO_MAP.md` (checar SHA no cabeçalho).
+4. Decisões estáveis: `docs/agent/DECISIONS.md`.
+
+Memória de chat / `.auto-memory` **não** autoriza path. Cite archivo.
+
+## Stack real (preencher)
+
+- Linguagem / framework: {{ex. Django 4.2 + DRF}}
+- Node/Python versão: {{ }}
+- Banco: {{Postgres / SQLite ramos}}
+- Testes: {{pytest / …}} — comando: `{{cmd}}`
+- Lint/typecheck: `{{cmd}}`
+- Run local: `{{cmd}}`
+
+## Esforço S / M / C (resumo)
+
+Seguir `[CONTEXT_DIR]` (Clasificación de esfuerzo). Neste repo, **força C** se tocar:
+
+{{listar paths locais, ex.}}
+- `**/migrations/**`
+- `**/settings/**` con secrets / DATABASES
+- `**/auth/**`, permissões, RLS
+- deploy / Docker prod / CI de release
+
+Primeira línea de toda resposta de implementação:
+`Esfuerzo: S|M|C — motivo: … — Repo: {{nome}} @ {{git rev-parse --short HEAD}}`
+
+## Onde mexer (atalhos)
+
+| Quero… | Começar em |
+|--------|------------|
+| {{ex. API de processo}} | {{path}} |
+| {{ex. serialização}} | {{path}} |
+| {{ex. permissões}} | {{path}} |
+| Testes do módulo X | {{path}} |
+
+Detalhe: `docs/agent/REPO_MAP.md`.
+
+## No fazer neste repo
+
+- {{ex. Editar cópia em iCloud Desktop; usar clone em ~/dev}}
+- {{ex. Inventar DATABASE_URL; respeitar ramos vazio / "1" / postgres://}}
+- {{ex. Commitar .env real}}
+- Afirmar “pronto” sin comando de verificación do nível S/M/C
+- Usar Codebase Memory / RAG como fato sin abrir o archivo
+
+## Retrieval
+
+- Codebase Memory / busca: só para **hipótese de path**.
+- Antes de editar: `Read` / `rg` no archivo real.
+- Se o mapa estiver *stale* (SHA ≠ HEAD): reconfirmar no código o regenerar mapa.
+
+## Verificação mínima
+
+| Classe | Comando mínimo neste repo |
+|--------|---------------------------|
+| S | `{{lint path}}` |
+| M | `{{pytest path}}` + lint |
+| C | `{{pytest integral}}` + `{{lint/typecheck}}` |
+
+## Contatos de contexto
+
+- Produto / prioridade: `_PROJETOS-ATIVOS.md` em [CONTEXT_DIR]
+- Appsec global: working-style (fail-closed)

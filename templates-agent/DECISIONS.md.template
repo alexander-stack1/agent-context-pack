@@ -1,0 +1,30 @@
+# DECISIONS — {{NOME_DO_PROJETO}}
+
+> **Public template.** Personal identifiers, firm, products, emails and paths were replaced with placeholders. See `PLACEHOLDERS.md`. Do not reintroduce real data.
+
+
+> ADRs curtos. Só o que muda o próximo diff. Um bloco por decisão.
+> Não narrar histórico de chat.
+
+## Template de entrada
+
+### ADR-{{NNN}}: {{título}}
+
+- **Data:** YYYY-MM-DD
+- **Status:** accepted | superseded | NÃO VERIFICADO
+- **Contexto:** {{1–3 linhas}}
+- **Decisão:** {{o que vale agora}}
+- **Consequência:** {{o que o agente deve fazer/evitar}}
+- **Paths:** `{{…}}`
+- **SHA:** {{opcional}}
+
+---
+
+### ADR-001: {{exemplo — Autorização só no servidor}}
+
+- **Data:** YYYY-MM-DD
+- **Status:** accepted
+- **Contexto:** UI e flags de cliente não autorizam.
+- **Decisão:** toda operação protegida valida papel/tenant/owner no servidor.
+- **Consequência:** mudança só de front nunca conta como authz.
+- **Paths:** `{{…}}`

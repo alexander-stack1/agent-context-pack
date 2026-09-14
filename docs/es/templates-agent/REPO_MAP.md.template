@@ -1,0 +1,63 @@
+# REPO_MAP — {{NOME_DO_PROJETO}}
+
+> **Public template.** Personal identifiers, firm, products, emails and paths were replaced with placeholders. See `PLACEHOLDERS.md`. Do not reintroduce real data.
+
+
+> Gerado/atualizado por agente o script; **revison humana** antes de confiar em C.
+> Cabeçalho obligatorio. Se `git_sha` ≠ `HEAD`, tratar como suspeito.
+
+```
+status: current | stale | draft
+generated_at: YYYY-MM-DD
+git_sha: <sha completo o curto>
+generator: <humano|skill|script>
+```
+
+## Propósito
+
+Orientar **dónde começar a cambiar**. No substitui o código. Toda línea acionável aponta path existente.
+
+## Vison em uma frase
+
+{{O que o sistema faz.}}
+
+## Módulos
+
+| Módulo | Path | Responsabilidade | Entrypoints | Testes |
+|--------|------|------------------|-------------|--------|
+| {{nome}} | `{{path}}` | {{1 línea}} | `{{urls/views}}` | `{{tests/…}}` |
+
+## Fluxos críticos
+
+1. {{Nome do fluxo}} → `{{path1}}` → `{{path2}}` → `{{path3}}`
+2. …
+
+## Hotspots / landmines
+
+- {{ex. No alterar X sin Y}}
+- {{ex. Três ramos DATABASE_URL}}
+
+## “Para cambiar X, comece em Y”
+
+| Objetivo | Path inicial | Evitar |
+|----------|--------------|--------|
+| {{ }} | `{{ }}` | `{{ }}` |
+
+## Superfícies de alto risco (siempre esforço C)
+
+- `{{paths}}`
+
+## Como regenerar
+
+```bash
+# exemplo — ajustar ao repo
+{{comando o skill: zoom-out / archify / script}}
+```
+
+Após regenerar: actualizar `git_sha`, abrir PR se o mapa for canônico no git.
+
+## NO VERIFICADO
+
+Liste gaps em vez de inventar:
+
+- {{área sin mapa}}

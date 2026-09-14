@@ -1,0 +1,81 @@
+# CLAUDE.md / AGENTS.md — 每仓库模板
+
+> **公开模板。** 个人标识、律所、产品、邮箱与路径已替换为占位符。见 `PLACEHOLDERS.md`。请勿重新引入真实数据。
+
+
+> 复制到**克隆根目录**（iCloud 外，例如 `~/dev/<project>/CLAUDE.md`）。
+> 若工具偏好该名，可镜像为 `AGENTS.md`。
+> 填写占位符。保持 ≤ 约 2 屏。
+
+---
+
+# CLAUDE.md — {{PROJECT_NAME}}
+
+## 入口
+
+1. [YOUR_NAME] 全局规则：`~/Desktop/[CONTEXT_DIR]/agent_rules.md`（C 时还有 working-style）。
+2. 本文件 = **本**仓库的契约。
+3. 操作地图：`docs/agent/REPO_MAP.md`（检查页眉中的 SHA）。
+4. 稳定决策：`docs/agent/DECISIONS.md`。
+
+聊天记忆 / `.auto-memory` **不**授权路径。引用文件。
+
+## 真实技术栈（填写）
+
+- 语言 / 框架：{{e.g. Django 4.2 + DRF}}
+- Node/Python 版本：{{ }}
+- 数据库：{{Postgres / SQLite branches}}
+- 测试：{{pytest / …}} — 命令：`{{cmd}}`
+- Lint/typecheck：`{{cmd}}`
+- 本地运行：`{{cmd}}`
+
+## 工作量 S / M / C（摘要）
+
+遵循 `[CONTEXT_DIR]`（Effort classification）。在本仓库中，若触碰以下内容则**强制 C**：
+
+{{list local paths, e.g.}}
+- `**/migrations/**`
+- `**/settings/**` 含密钥 / DATABASES
+- `**/auth/**`、权限、RLS
+- deploy / Docker 生产 / 发布 CI
+
+每次实现响应的第一行：
+`Effort: S|M|C — reason: … — Repo: {{name}} @ {{git rev-parse --short HEAD}}`
+
+## 改哪里（捷径）
+
+| 我想… | 从这里开始 |
+|--------|------------|
+| {{e.g. case API}} | {{path}} |
+| {{e.g. serialization}} | {{path}} |
+| {{e.g. permissions}} | {{path}} |
+| 模块 X 的测试 | {{path}} |
+
+细节：`docs/agent/REPO_MAP.md`。
+
+## 本仓库不要做
+
+- {{e.g. Edit the copy on iCloud Desktop; use the clone in ~/dev}}
+- {{e.g. Invent DATABASE_URL; respect empty / "1" / postgres:// branches}}
+- {{e.g. Commit a real .env}}
+- 未按 S/M/C 级别的核验命令却声称「完成」
+- 未打开文件就把 Codebase Memory / RAG 当事实
+
+## 检索
+
+- Codebase Memory / 搜索：仅用于**路径假说**。
+- 编辑前：对真实文件 `Read` / `rg`。
+- 若地图 *stale*（SHA ≠ HEAD）：在代码中再确认或重新生成地图。
+
+## 最低核验
+
+| 级别 | 本仓库最低命令 |
+|--------|---------------------------|
+| S | `{{lint path}}` |
+| M | `{{pytest path}}` + lint |
+| C | `{{full pytest}}` + `{{lint/typecheck}}` |
+
+## 上下文联系点
+
+- 产品 / 优先级：[CONTEXT_DIR] 中的 `_PROJETOS-ATIVOS.md`
+- 全局 appsec：working-style（失败关闭）

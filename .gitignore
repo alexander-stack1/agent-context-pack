@@ -1,0 +1,11 @@
+.DS_Store
+._*
+.venv*/
+scripts/
+__pycache__/
+_preview-github.html
+github-preview.html
+*.tgz
+.env
+.env.*
+credentials/

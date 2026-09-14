@@ -1,0 +1,30 @@
+# DECISIONS — {{PROJECT_NAME}}
+
+> **公开模板。** 个人标识、律所、产品、邮箱与路径已替换为占位符。见 `PLACEHOLDERS.md`。请勿重新引入真实数据。
+
+
+> 短 ADR。仅记录会改变下一次 diff 的内容。每个决策一块。
+> 不叙述聊天历史。
+
+## 条目模板
+
+### ADR-{{NNN}}: {{title}}
+
+- **日期：** YYYY-MM-DD
+- **状态：** accepted | superseded | UNVERIFIED
+- **上下文：** {{1–3 lines}}
+- **决策：** {{what holds now}}
+- **后果：** {{what the agent must do/avoid}}
+- **路径：** `{{…}}`
+- **SHA：** {{optional}}
+
+---
+
+### ADR-001: {{example — Authorization only on the server}}
+
+- **日期：** YYYY-MM-DD
+- **状态：** accepted
+- **上下文：** UI 与客户端标志不授权。
+- **决策：** 每个受保护操作在服务器上校验角色/租户/所有者。
+- **后果：** 仅前端的变更永不算作 authz。
+- **路径：** `{{…}}`

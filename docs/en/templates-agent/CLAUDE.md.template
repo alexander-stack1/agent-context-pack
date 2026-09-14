@@ -1,0 +1,81 @@
+# CLAUDE.md / AGENTS.md — per-repository template
+
+> **Public template.** Personal identifiers, firm, products, emails and paths were replaced with placeholders. See `PLACEHOLDERS.md`. Do not reintroduce real data.
+
+
+> Copy to the **clone root** (outside iCloud, e.g. `~/dev/<project>/CLAUDE.md`).
+> May mirror as `AGENTS.md` if the tool prefers that name.
+> Fill the placeholders. Keep ≤ ~2 screens.
+
+---
+
+# CLAUDE.md — {{PROJECT_NAME}}
+
+## Entry
+
+1. [YOUR_NAME] global rules: `~/Desktop/[CONTEXT_DIR]/agent_rules.md` (and working-style when C).
+2. This file = contract for **this** repo.
+3. Operational map: `docs/agent/REPO_MAP.md` (check SHA in the header).
+4. Stable decisions: `docs/agent/DECISIONS.md`.
+
+Chat memory / `.auto-memory` does **not** authorize a path. Cite the file.
+
+## Real stack (fill in)
+
+- Language / framework: {{e.g. Django 4.2 + DRF}}
+- Node/Python version: {{ }}
+- Database: {{Postgres / SQLite branches}}
+- Tests: {{pytest / …}} — command: `{{cmd}}`
+- Lint/typecheck: `{{cmd}}`
+- Run local: `{{cmd}}`
+
+## Effort S / M / C (summary)
+
+Follow `[CONTEXT_DIR]` (Effort classification). In this repo, **force C** if touching:
+
+{{list local paths, e.g.}}
+- `**/migrations/**`
+- `**/settings/**` with secrets / DATABASES
+- `**/auth/**`, permissions, RLS
+- deploy / Docker prod / release CI
+
+First line of every implementation response:
+`Effort: S|M|C — reason: … — Repo: {{name}} @ {{git rev-parse --short HEAD}}`
+
+## Where to change (shortcuts)
+
+| I want… | Start at |
+|--------|------------|
+| {{e.g. case API}} | {{path}} |
+| {{e.g. serialization}} | {{path}} |
+| {{e.g. permissions}} | {{path}} |
+| Tests for module X | {{path}} |
+
+Detail: `docs/agent/REPO_MAP.md`.
+
+## Do not do in this repo
+
+- {{e.g. Edit the copy on iCloud Desktop; use the clone in ~/dev}}
+- {{e.g. Invent DATABASE_URL; respect empty / "1" / postgres:// branches}}
+- {{e.g. Commit a real .env}}
+- Claim “done” without the verification command for the S/M/C level
+- Use Codebase Memory / RAG as fact without opening the file
+
+## Retrieval
+
+- Codebase Memory / search: only for **path hypothesis**.
+- Before editing: `Read` / `rg` on the real file.
+- If the map is *stale* (SHA ≠ HEAD): reconfirm in code or regenerate the map.
+
+## Minimum verification
+
+| Class | Minimum command in this repo |
+|--------|---------------------------|
+| S | `{{lint path}}` |
+| M | `{{pytest path}}` + lint |
+| C | `{{full pytest}}` + `{{lint/typecheck}}` |
+
+## Context contacts
+
+- Product / priority: `_PROJETOS-ATIVOS.md` in [CONTEXT_DIR]
+- Global appsec: working-style (fail-closed)

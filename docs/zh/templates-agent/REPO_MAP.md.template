@@ -1,0 +1,63 @@
+# REPO_MAP — {{PROJECT_NAME}}
+
+> **公开模板。** 个人标识、律所、产品、邮箱与路径已替换为占位符。见 `PLACEHOLDERS.md`。请勿重新引入真实数据。
+
+
+> 由智能体或脚本生成/更新；在 C 上信任前需**人类审阅**。
+> 强制页眉。若 `git_sha` ≠ `HEAD`，视为可疑。
+
+```
+status: current | stale | draft
+generated_at: YYYY-MM-DD
+git_sha: <full or short sha>
+generator: <human|skill|script>
+```
+
+## 目的
+
+指引**从哪里开始改**。不替代代码。每条可操作行指向已存在路径。
+
+## 一句话愿景
+
+{{What the system does.}}
+
+## 模块
+
+| 模块 | 路径 | 职责 | 入口 | 测试 |
+|--------|------|------------------|-------------|--------|
+| {{name}} | `{{path}}` | {{1 line}} | `{{urls/views}}` | `{{tests/…}}` |
+
+## 关键流程
+
+1. {{Flow name}} → `{{path1}}` → `{{path2}}` → `{{path3}}`
+2. …
+
+## 热点 / 地雷
+
+- {{e.g. Do not change X without Y}}
+- {{e.g. Three DATABASE_URL branches}}
+
+## 「要改 X，从 Y 开始」
+
+| 目标 | 起始路径 | 避免 |
+|----------|--------------|--------|
+| {{ }} | `{{ }}` | `{{ }}` |
+
+## 高风险表面（一律工作量 C）
+
+- `{{paths}}`
+
+## 如何重新生成
+
+```bash
+# example — adjust to the repo
+{{command or skill: zoom-out / archify / script}}
+```
+
+重新生成后：更新 `git_sha`；若地图在 git 中为正典则开 PR。
+
+## UNVERIFIED
+
+列出缺口而非编造：
+
+- {{unmapped area}}
