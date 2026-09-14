@@ -32,7 +32,11 @@
   <img src="https://img.shields.io/badge/made%20with-Markdown-1f2937?style=flat-square&logo=markdown&logoColor=white" alt="Markdown"/>
 </p>
 
-> Live repo badges (add after first push if desired): stars / last-commit / repo-size for `[YOUR_GITHUB]/agent-context-pack`.
+<p align="center">
+  <a href="https://github.com/alexander-stack1/agent-context-pack/stargazers"><img src="https://img.shields.io/github/stars/alexander-stack1/agent-context-pack?style=flat-square" alt="Stars"/></a>
+  <a href="https://github.com/alexander-stack1/agent-context-pack/commits/main"><img src="https://img.shields.io/github/last-commit/alexander-stack1/agent-context-pack?style=flat-square" alt="Last commit"/></a>
+  <img src="https://img.shields.io/github/repo-size/alexander-stack1/agent-context-pack?style=flat-square" alt="Repo size"/>
+</p>
 
 ---
 
