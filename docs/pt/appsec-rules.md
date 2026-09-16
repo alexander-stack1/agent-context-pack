@@ -204,4 +204,4 @@ Se qualquer item não puder ser comprovado, escreva “NÃO VERIFICADO” e info
 
 ## Skills de referência
 
-`cybersecurity-squad`, `appsec-specialist` (Nexo), `especialista-revisao-codigo` (categoria segurança).
+`[SKILL_SECURITY_SQUAD]`, `[AGENT_TEAM]:appsec`, `[SKILL_CODE_REVIEW]` (categoria segurança).

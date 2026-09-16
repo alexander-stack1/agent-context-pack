@@ -167,4 +167,4 @@
 
 ## 参考 skills
 
-`cybersecurity-squad`、`appsec-specialist`（Nexo）、`especialista-revisao-codigo`（安全类别）。
+`[SKILL_SECURITY_SQUAD]`、`[AGENT_TEAM]:appsec`（[AGENT_TEAM]）、`[SKILL_CODE_REVIEW]`（安全类别）。

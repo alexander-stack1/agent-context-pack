@@ -7,59 +7,58 @@
 
 ## Quem sou
 
-Me chamo [YOUR_NAME] ([YOUR_NAME]). Atuo em três frentes simultâneas: advocacia trabalhista bancária, academia e construção de produtos legaltech.
+Me chamo [YOUR_NAME] ([YOUR_HANDLE]). Atuo em três frentes simultâneas: [FRONT_A], [FRONT_B] e [FRONT_C].
 
-Na advocacia, atendo trabalhadores e ex-funcionários de bancos e instituições financeiras (bancários e financiários) em reclamações trabalhistas, sempre pelo lado do reclamante. Tenho escritório, a [YOUR_FIRM], com sedes no Rio de Janeiro e em Minas Gerais e atuação nacional.
+Na frente principal ([FRONT_A]), atendo [YOUR_AUDIENCE] em [PRACTICE_AREA]. Tenho uma organização própria, a [YOUR_FIRM], com sedes em [CITY_A] e [CITY_B] e atuação nacional.
 
-Como acadêmico, sou Mestre em Direito do Trabalho e Previdenciário pela [YOUR_UNIVERSITY], doutorando, autor de artigos e livros jurídicos e professor de pós-graduação em Direito Constitucional do Trabalho.
+Como acadêmico ([FRONT_B]), sou [ACADEMIC_TITLE] pela [YOUR_UNIVERSITY], [ACADEMIC_STATUS], autor de artigos e livros e professor de pós-graduação em [ACADEMIC_FIELD].
 
-Como fundador e desenvolvedor, construo software para o mercado jurídico e ferramentas internas de automação. Programo e orquestro times de agentes de IA para isso. Já não sou só quem especifica o produto, sou quem implementa.
+Como fundador e desenvolvedor ([FRONT_C]), construo software para [YOUR_INDUSTRY] e ferramentas internas de automação. Programo e orquestro times de agentes de IA para isso. Já não sou só quem especifica o produto, sou quem implementa.
 
 ## O que faço no dia a dia
 
-- Elaborar petições, contestações, recursos e pareceres na área trabalhista bancária
-- Acompanhar clientes em todas as fases processuais, do conhecimento à execução
-- Analisar laudos periciais e cálculos trabalhistas (divisor, reflexos, índices de correção)
+- [DAILY_TASK_A] (entregas típicas da frente principal)
+- [DAILY_TASK_B] (acompanhamento de clientes em todas as fases)
+- [DAILY_TASK_C] (análises técnicas típicas da frente principal)
 - Conduzir a produção acadêmica (artigos, capítulos e o doutorado)
-- Gerir a equipe e os processos internos da banca
+- Gerir a equipe e os processos internos da [YOUR_FIRM]
 - Desenvolver, testar e publicar produtos e automações (código, CI, pipelines de dados)
 
 ## A quem atendo
 
-Meu público principal são trabalhadores e ex-funcionários de bancos e instituições financeiras com direitos trabalhistas violados, pessoas físicas. Também atendo advogados que querem atuar com mais confiança e eficiência, público dos meus produtos e do meu conteúdo.
+Meu público principal é [YOUR_AUDIENCE]. Também atendo [SECONDARY_AUDIENCE], público dos meus produtos e do meu conteúdo.
 
 ## Frentes profissionais
 
-### Advocacia, [YOUR_FIRM]
-Núcleo trabalhista bancário pró-reclamante. Conhecimento, recursos e execução. Equipe de cerca de 10 pessoas.
+### [FRONT_A], [YOUR_FIRM]
+[PRACTICE_AREA]. Equipe de cerca de [TEAM_SIZE] pessoas.
 
-### Academia, [YOUR_UNIVERSITY]
-Doutorado em andamento, com pesquisa de fundamentação e definição de tema inédito. Linha de Direito Constitucional do Trabalho e Seguridade Social. Artigos e docência de pós-graduação.
+### [FRONT_B], [YOUR_UNIVERSITY]
+[ACADEMIC_STATUS], com pesquisa de fundamentação e definição de tema inédito. Linha de [ACADEMIC_FIELD]. Artigos e docência de pós-graduação.
 
 ### [PRODUCT_A] e [PRODUCT_B]
-Plataforma de pesquisa e análise de jurisprudência trabalhista. Stack React, TypeScript, tRPC, Drizzle e MySQL, com mais de 190 testes automatizados. Design system próprio (Swiss Legal Design). Funcionalidades de dossiês analíticos de magistrados, juiz simulado e comparação de magistrados, além de um agente de publicações com backend duplo (API e Ollama local). [PRODUCT_G] é um segundo produto, em discovery.
+[PRODUCT_A_DESCRIPTION]. Stack [APP_FRAMEWORK] + [DATA_STORE], com mais de [N] testes automatizados. Design system próprio ([PRODUCT_DESIGN_SYSTEM]). [PRODUCT_G] é um segundo produto, em discovery.
 
 ### [PRODUCT_C]
-Ferramenta interna de inteligência competitiva SaaS. Classifica produtos em 3 tiers de MRR (Micro até R$ 25k, Tração R$ 25k-100k, Escala acima de R$ 100k), avalia escalabilidade com dados reais e gera recomendações de Spec Driven Development ajustadas ao tier. Usada para avaliar oportunidades de produto e comparar com concorrentes.
+Ferramenta interna de inteligência competitiva SaaS. Classifica produtos em 3 tiers de MRR (Micro até [TIER_1], Tração [TIER_1]–[TIER_2], Escala acima de [TIER_2]), avalia escalabilidade com dados reais e gera recomendações de Spec Driven Development ajustadas ao tier. Usada para avaliar oportunidades de produto e comparar com concorrentes.
 
 ### [PRODUCT_F]
-Framework próprio de automação que roda na minha máquina. CLI, agendamento por cron, gateway de LLM com adaptadores (Gemini, OpenRouter) e coletores de dados. É a espinha dorsal operacional dos outros projetos.
+Framework próprio de automação que roda na minha máquina. CLI, agendamento por cron, gateway de LLM com adaptadores e coletores de dados. É a espinha dorsal operacional dos outros projetos.
 
-### Medicina ([RAG_STACK])
-Assistente de pesquisa de literatura médica baseado em RAG. Coletores automatizados (BVS, SciELO, EuropePMC) alimentam um vault Obsidian, indexado em Postgres com embeddings e enriquecimento semântico, orquestrado pelo [PRODUCT_F] e por GitHub Actions.
+### [RAG_STACK]
+Assistente de pesquisa baseado em RAG. Coletores automatizados alimentam um vault Obsidian, indexado em Postgres com embeddings e enriquecimento semântico, orquestrado pelo [PRODUCT_F] e por GitHub Actions.
 
 ## Referência de qualidade do meu trabalho
 
-- Análise estratégica de melhores práticas para o mercado jurídico, com foco em advogados em início de carreira
-- Proposta comercial que fechou contrato de R$ 60.000,00
-- Negociação de acordo trabalhista superior a R$ 20.000,00 líquidos para o cliente
+- [QUALITY_REF_A] (análise estratégica de referência no seu mercado)
+- [QUALITY_REF_B] (proposta comercial ou negociação relevante, valor [AMOUNT_A])
 - Pipelines de RAG em produção, com indexação incremental, poda de órfãos e testes de regressão
 
 ## Contexto importante
 
-- Trabalho com uma equipe de cerca de 10 pessoas
+- Trabalho com uma equipe de cerca de [TEAM_SIZE] pessoas
 - Meu maior gargalo é tempo. Preciso de entregas prontas para uso imediato, sem retrabalho
-- Atuo em três frentes ao mesmo tempo: advocacia, academia e produto
+- Atuo em três frentes ao mesmo tempo: [FRONT_A], [FRONT_B] e [FRONT_C]
 - Sou cuidadoso com credenciais: tokens efêmeros, nada de segredo em repositório, revisão do que fica em pasta sincronizada
 
 ## Estilo acadêmico preferido

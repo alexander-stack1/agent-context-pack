@@ -9,7 +9,7 @@
 
 - Obsidian (main vault, synced via iCloud, at `[CONTEXT_DIR]/[YOUR_NAME]/`)
 - Claude and Cowork (production assistant), with 70+ local skills and 20+ plugins
-- Nexo agent team (18 specialized agents in CTO → managers → operational hierarchy)
+- [AGENT_TEAM] (18 specialized agents in CTO → managers → operational hierarchy)
 - [PRODUCT_F] (own automation: cron, LLM gateway, collectors)
 - Ollama (local models on Apple Silicon: qwen2.5:7b, nomic-embed-text) and OpenRouter (API models)
 - Python and Node for automation, Postgres and embeddings for RAG
@@ -17,13 +17,13 @@
 - Tailscale for remote access to machines
 - PJe, email, and WhatsApp in firm operations
 - [PRODUCT_A]/[PRODUCT_B] (own software under development)
-- OmniGet (download and organization of courses, videos, and media)
+- [TOOL_MEDIA] (download and organization of courses, videos, and media)
 
 ## Connected MCPs
 
 | MCP | Purpose |
 |-----|-----------|
-| LightRAG | Local knowledge graph (109 PDFs, localhost:9621) |
+| LightRAG | Local knowledge graph ([N] PDFs, localhost:9621) |
 | Context7 | Up-to-date library documentation directly in context |
 | Codebase Memory | Codebase knowledge graph (persists across sessions) |
 | Perplexity | Web research with AI |
@@ -57,20 +57,20 @@ Organized by domain. See full routing in `_MANIFEST.md`.
 
 | Domain | Qty | Main examples |
 |---------|:---:|---------------------|
-| Labor law | 13 | advogado-trabalhista-bancario, especialista-recurso-revista, pesquisa-jurisprudencia |
-| Development | 17 | tdd, diagnose, review, zoom-out, improve-codebase-architecture, commit-push-pr, archify |
+| Labor law | 13 | [SKILL_DOMAIN_DRAFTING], [SKILL_APPEALS], [SKILL_CASELAW_SEARCH] |
+| Development | 17 | tdd, diagnose, review, zoom-out, improve-codebase-architecture, [SKILL_COMMIT_PR], archify |
 | Google Cloud | 10 | cloud-run-basics, cloud-sql-basics, gcloud, gemini-agents-api, rag-engine-management, monitoring, logging, iam, waf-reliability, solution-architecture |
 | Documents | 9 | docx, pdf, pptx, xlsx, video-editing |
-| Design | 7+ | Menu `ux-ui-REQUESTS.md`: planejar-interface, desenhar-landing, revisar-experiencia, refatorar-interface, polir-para-ship, provar-com-screenshot, redesenhar-[PRODUCT_A] (motors: gates + impeccable/frontend-design) |
+| Design | 7+ | Menu `ux-ui-REQUESTS.md`: [SKILL_UI_PLAN], [SKILL_UI_LANDING], [SKILL_UI_REVIEW], [SKILL_UI_REFACTOR], [SKILL_UI_POLISH], [SKILL_UI_PROVE], [SKILL_UI_REDESIGN] (motors: gates + impeccable/frontend-design) |
 | Obsidian | 4 | obsidian-cli, obsidian-markdown, obsidian-bases |
 | Workflow | 10 | grill-with-docs, to-prd, to-issues, triage, handoff |
-| Writing | 6 | copy-marca-pessoal, edit-article, writing-beats, writing-shape |
-| Utilities | 9+ | [PRODUCT_C], product-partner, modo-conciso, defuddle |
-| Study | 3+ | especialista-concursos, documento-estudo-abnt, revisor-academico |
+| Writing | 6 | [SKILL_BRAND_COPY], edit-article, writing-beats, writing-shape |
+| Utilities | 9+ | [PRODUCT_C], product-partner, [SKILL_CONCISE_MODE], defuddle |
+| Study | 3+ | [SKILL_EXAM_STUDY], [SKILL_STUDY_DOC], [SKILL_ACADEMIC_REVIEW] |
 
 ## Plugins (20+)
 
-Auto-discovered by the system. Main ones: Nexo Agents Team (18 agents), Adobe for Creativity, Adspirer Ads, Brazilian Legislation, Marketing, Sales, Bright Data, Brand Voice, Engineering, Product Management, Operations, Finance, Searchfit SEO, Box, Wix, Figma, Desktop Commander, PDF Viewer.
+Auto-discovered by the system. Main ones: [AGENT_TEAM] ([N] agents), Adobe for Creativity, Adspirer Ads, Brazilian Legislation, Marketing, Sales, Bright Data, Brand Voice, Engineering, Product Management, Operations, Finance, Searchfit SEO, Box, Wix, Figma, Desktop Commander, PDF Viewer.
 
 ## LightRAG (Local Knowledge Graph)
 
@@ -79,7 +79,7 @@ Auto-discovered by the system. Main ones: Nexo Agents Team (18 agents), Adobe fo
 | Version | 1.4.16 |
 | LLM | Ollama qwen2.5:7b (local) |
 | Embeddings | nomic-embed-text (local) |
-| Indexed documents | 109 PDFs (Dev Library) |
+| Indexed documents | [N] PDFs (Dev Library) |
 | MCP | lightrag_query, lightrag_insert, lightrag_health |
 | URL | http://localhost:9621 |
 | Privacy | 100% local |
@@ -99,7 +99,7 @@ Reference architecture for any AI feature that answers from documents:
 9. Caching + memory layer (Redis, TTL, invalidation)
 10. Observability (trace IDs, token attribution, alerts)
 
-Documented in the CTO and Solution Architect skills of Nexo.
+Documented in the CTO and Solution Architect skills of [AGENT_TEAM].
 
 ## Agent governance
 
@@ -109,12 +109,12 @@ Documented in the CTO and Solution Architect skills of Nexo.
 
 | Skill | Frequency |
 |-------|-----------|
-| briefing-matinal | Every day 7h |
-| code-review-continuo | Every day 20h |
-| monitor-legislativo | Every Monday 8h |
-| monitor-concursos | Every Wednesday 8h |
-| monitor-concorrentes | Day 1 of each month |
-| estudo-adaptativo, revisao-espacada, deploy-guardian, refatoracao-sugerida, jurisprudencia-automatica, pesquisa-academica, coleta-decisoes | On demand |
+| [TASK_MORNING_BRIEF] | Every day 7h |
+| [TASK_NIGHTLY_REVIEW] | Every day 20h |
+| [TASK_LAW_MONITOR] | Every Monday 8h |
+| [TASK_EXAM_MONITOR] | Every Wednesday 8h |
+| [TASK_COMPETITOR_MONITOR] | Day 1 of each month |
+| [TASK_ON_DEMAND_A] … [TASK_ON_DEMAND_G] | On demand |
 
 ---
 *Update whenever you install/remove MCPs, skills, or plugins, or change infra. Record in `_CHANGELOG.md`.*

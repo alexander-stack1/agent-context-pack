@@ -53,11 +53,11 @@
 
 ## 判例相关性评估（检索判断）
 
-在评判检索或法律 RAG 质量、给查询–判决对打分或构建 golden set 时适用。参考 skill：`avaliar-relevancia-jurisprudencia`。与 Nexo 团队 Data & AI Tech Lead 一起做指标与监控。
+在评判检索或法律 RAG 质量、给查询–判决对打分或构建 golden set 时适用。参考 skill：`[SKILL_RETRIEVAL_EVAL]`。与 [AGENT_TEAM] Data & AI Tech Lead 一起做指标与监控。
 
 - **0–3 量表：** 0 与查询及其过滤无关；1 上下文或旁切；2 相关且有用，以论题为根据；3 直接回应且强力根据，论题在判词中被面对并解决。分数衡量回应性，不是胜诉。面对论题的不利先例仍是高分，在备注中标出。
 - **硬规则：** 违反法院或日期过滤则分数上限为 1，在判决正文而非仅元数据中核验。区分判决事实与战术用法，区分 mere mention、根据与判词。绝不按关键词匹配打分。缺正文则 PENDING 并用全文重处理。不编造缺失数据。
-- **基础与训练：** 在全文上评估，不是短摘。大批量时每查询一个并行子智能体。劳动法训练来自 Obsidian 大脑，由激活 MOC `_moc-direito-trabalho.md` 加载，不要读整个 vault，也不要从索引编造 OJ 或 Súmula 表述。
+- **基础与训练：** 在全文上评估，不是短摘。大批量时每查询一个并行子智能体。劳动法训练来自 Obsidian 大脑，由激活 MOC `[DOMAIN_MOC].md` 加载，不要读整个 vault，也不要从索引编造 OJ 或 Súmula 表述。
 - **指标：** 分数分布、有用精确率（分数 ≥ 2）、每查询召回、零召回查询与过滤符合度。将评估批次固定为回归 golden set，并在每次提示、索引或模型变更后重做核验。
 - **输出：** 每行填好分数与备注的 CSV，以及含方法、指标、检索诊断与配对附录的 `.docx` 报告。
 
@@ -67,11 +67,11 @@
 
 **首先：** 分级工作量 S/M/C（见下节）。仪式（计划、TDD、套件）按等级表。Fail-closed 不放松。
 
-- **编排：** 跨方向需求使用 Nexo 智能体团队。CTO 分级并委派给经理与专家。单方向则直达专家（backend、frontend、devops、dba、qa）。
+- **编排：** 跨方向需求使用 [AGENT_TEAM]。CTO 分级并委派给经理与专家。单方向则直达专家（backend、frontend、devops、dba、qa）。
 - **先计划再编码：** 按 S/M/C。提出修复前先复现 bug（M/C）。在 C 上完整计划与明确批准。
 - **先证明再断言：** 无证据不要说“已就绪”。S：路径核验。M：包/模块。C：完整套件。声称成功前要有新证据。
 - **对限度诚实：** 声明修复解决了什么、未解决什么。指出未触碰什么及原因。
-- **提交：** Conventional Commits。用 `commit-push-pr` skill 做 commit、push 与 draft PR。
+- **提交：** Conventional Commits。用 `[SKILL_COMMIT_PR]` skill 做 commit、push 与 draft PR。
 - **PR：** 描述以问题开头，再写解决方案。注明哪个模型/harness 做了变更。引用 issue/PR 用超链接。监控 PR：轮询最近检查，对照源码核验机器人发现，修真问题，书面驳回误报。无新内容则保持安静。仅按给定处置合并。
 - **不自行做破坏性操作：** 未经我批准不要重启服务、杀进程、在生产跑迁移或删数据。把命令准备好让我执行并解释效果。
 - **爆炸半径：** 未经明确指示绝不触碰生产应用、线上服务器或日常数据。触碰前先点名将触碰什么。
@@ -79,7 +79,7 @@
 - **绝不在 iCloud 内编辑仓库：** Desktop 与 Documents 会同步，iCloud 用重复文件解决冲突。更糟的是，未物化文件在读取时返回 `Resource deadlock avoided`，在 git 中返回 `Bus error`，副本可能以零字节看起来完整。触碰位于同步文件夹的代码前，克隆到外部（如 `~/dev`）并在克隆上工作。生产快照同理：`~/[PRODUCT_A]-prod` 是只读记录；在那里编辑不会改变任何东西。
 - **证明测试会咬人：** 有新测试时在 M/C 强制（GREEN 后故意变异）。S 上不需要。在提交中记录尝试了哪些变异、抓住了哪些。
 - **费用：** 使用付费 API（模型、embeddings、服务）前告知估计费用。
-- **PostgreSQL、Docker 与 Kubernetes：** 完整规则在 `agent_rules.md`。摘要：强制 RLS、参数化 SQL、可逆迁移、多阶段构建、每容器一进程、绝不 root、分离探针、最少副本、GitOps。参考 skills：`dba-data-engineer` 与 `devops-sre`（Nexo Agents Team）。
+- **PostgreSQL、Docker 与 Kubernetes：** 完整规则在 `agent_rules.md`。摘要：强制 RLS、参数化 SQL、可逆迁移、多阶段构建、每容器一进程、绝不 root、分离探针、最少副本、GitOps。参考 skills：`[AGENT_TEAM]:dba` 与 `[AGENT_TEAM]:devops`（[AGENT_TEAM]）。
 - **书转 skill：** 用 `book-to-skill`（命令 `/book-to-skill ~/path/to-book.pdf`，安装于 `~/.claude/skills/book-to-skill`）把 PDF/EPUB/DOCX 等长文档变成智能体 skill。由书生成的 skills 进入对应主题类别，不是通用文件夹。
 
 ## 工作量分级（S / M / C）
@@ -198,7 +198,7 @@ Repo: name @ short-sha — map: docs/agent/REPO_MAP.md (date)
 
 在我的产品上安装 pixel、tag、分析 SDK 或任何第三方脚本前适用。
 
-- **先读政策再写代码：** 打开产品现行 Cookie 政策与隐私政策，核对其主张。2026 年 9 月 [PRODUCT_A] 的政策明文写不使用广告 cookie。不改文本就装 pixel 会造成公司签署文件与网站真实行为矛盾，而其中具名的数据保护官是我。
+- **先读政策再写代码：** 打开产品现行 Cookie 政策与隐私政策，核对其主张。2026 年 9 月 [PRODUCT_A] 的政策明文写不使用广告 cookie。不改文本就装 pixel 会造成公司签署文件与网站真实行为矛盾，而其中具名的数据保护官是 [YOUR_NAME]。
 - **文本与行为同窗上线：** 政策变更与追踪器安装进入同一部署窗口。哪怕一天也不得分叉。
 - **首次请求前征得同意：** 仅在接受后才拉取第三方脚本。禁止先加载再“尊重”选择。保证须是结构性的：加载器在页面之外，并用测试禁止任何页面引用第三方主机。
 - **同意 fail-closed：** 缺失、畸形、篡改或旧政策版本的 cookie 表示无同意，通知再次出现。
@@ -212,7 +212,7 @@ Repo: name @ short-sha — map: docs/agent/REPO_MAP.md (date)
 - **来源：** 改编自 `anthropics/commerce-agents` 参考架构（shopping agent 与 merchant agent），特别是 `commerce-common` 核心（fencing、provenance gates）以及真实写入前需人工批准的 staged changes 模式。
 - **中心规则：** 任何智能体都不直接写入真实系统。流程始终是：草稿 → 带 fencing 与 provenance 的 staged change → 人工批准 → 交接给执行系统 → 若涉及真实花费或财务承诺，激活前再做**第二次单独确认**。
 - **两次批准，不是一次：** 第一次批准想法（内容、受众、结构）。第二次批准真钱（预算、激活）。彼此不可替代。
-- **已映射应用：** [PRODUCT_A] 遵循 merchant-agent 模式，应用前需合伙人批准的 staged changes。[PRODUCT_G] 遵循 shopping-agent 模式，构建模拟且结账只渲染，从不独自收费。JusGraphé 在任何文书出去前获得人工批准门。`[YOUR_FIRM]` 的 WhatsApp 自动化把决定与执行分开。对活动与广告，内部智能体起草，交接给 Adspirer 创建暂停活动，只有第二次预算批准才真正激活。
+- **已映射应用：** [PRODUCT_A] 遵循 merchant-agent 模式，应用前需合伙人批准的 staged changes。[PRODUCT_G] 遵循 shopping-agent 模式，构建模拟且结账只渲染，从不独自收费。[PRODUCT_I] 在任何文书出去前获得人工批准门。`[YOUR_FIRM]` 的 WhatsApp 自动化把决定与执行分开。对活动与广告，内部智能体起草，交接给 Adspirer 创建暂停活动，只有第二次预算批准才真正激活。
 
 ## 执行规则
 
@@ -220,7 +220,7 @@ Repo: name @ short-sha — map: docs/agent/REPO_MAP.md (date)
 - **对分级或决定不确定时：** 记入 `_PARA-REVISAR.md`，不要猜。
 - **处理多项时：** 若信心低于 80%，标为 `VERIFY`。
 - **有独立部分的任务：** 建议或使用并行子智能体以提速。
-- **每当我使用 `/papel-timbrado` 命令：** 使用 `[CONTEXT_DIR]/ativos-[YOUR_FIRM]/` 子文件夹中的 `PAPEL TIMBRADO.docx` 与 `logo-cabecalho.png`。
+- **每当我使用 `/[LETTERHEAD_CMD]` 命令：** 使用 `[CONTEXT_DIR]/ativos-[YOUR_FIRM]/` 子文件夹中的 `[LETTERHEAD_FILE]` 与 `[LOGO_FILE]`。
 - **本文件夹的每次结构变更**进入 `_CHANGELOG.md`。
 
 ## 如何在执行前展示计划
@@ -272,7 +272,7 @@ Repo: name @ short-sha — map: docs/agent/REPO_MAP.md (date)
 - **持久线程**：协调者可发 follow-up；智能体保留先前轮次上下文
 - **MCP 路由**：servers 按智能体作用域；vault 凭证按会话作用域
 - **限制**：名册最多 20 个智能体、25 个并发线程、1 层深度（无子委派）
-- **Nexo 映射**：CTO → coordinator，Eng/Product/Infra Managers → 第二层，Frontend/Backend/QA/DBA/DevOps → 运营，Solution Architect 与 Data/AI Lead → 按需顾问
+- **[AGENT_TEAM] 映射**：CTO → coordinator，Eng/Product/Infra Managers → 第二层，Frontend/Backend/QA/DBA/DevOps → 运营，Solution Architect 与 Data/AI Lead → 按需顾问
 
 ## 隐私排除
 
@@ -315,7 +315,7 @@ Repo: name @ short-sha — map: docs/agent/REPO_MAP.md (date)
 
 可粘贴到 Claude Project / 审计聊天的副本：`appsec-rules.md`（同一手册，单文件）。
 
-适用于每次审计、安全代码审查与部署。参考 skills：`cybersecurity-squad`、`appsec-specialist`（Nexo）、`especialista-revisao-codigo`（安全类别）。
+适用于每次审计、安全代码审查与部署。参考 skills：`[SKILL_SECURITY_SQUAD]`、`[AGENT_TEAM]:appsec`（[AGENT_TEAM]）、`[SKILL_CODE_REVIEW]`（安全类别）。
 
 ### 仓库与 CI/CD
 

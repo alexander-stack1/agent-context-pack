@@ -8,7 +8,7 @@
 
 ## Fuente de verdad
 
-Los archivos en `[CONTEXT_DIR]/` (en el Mini: `[CONTEXT_DIR]`) son la fuente canónica operacional. La memoria del modelo sirve para enrutar, las preferencias estables viven en `.auto-memory/`, el conocimiento operacional/Karpathy vive en el vault `[YOUR_NAME]/`, y el segundo cerebro jurídico de dominio vive en `[DOMAIN_VAULT]` (atajo `[DOMAIN_VAULT]`). El historial del chat es contexto secundario.
+Los archivos en `[CONTEXT_DIR]/` (en el [SECONDARY_MACHINE]: `[CONTEXT_DIR]`) son la fuente canónica operacional. La memoria del modelo sirve para enrutar, las preferencias estables viven en `.auto-memory/`, el conocimiento operacional/Karpathy vive en el vault `[YOUR_NAME]/`, y el segundo cerebro jurídico de dominio vive en `[DOMAIN_VAULT]` (atajo `[DOMAIN_VAULT]`). El historial del chat es contexto secundario.
 
 Enrutamiento de dominio: si el pedido es jurídico (derecho, jurisprudencia, legislación, precedentes, doctrina, noticias jurídicas, RAG jurídico), **todas las IAs** deben apuntar y consultar el vault Jurídico (`[DOMAIN_VAULT]`). No uses solo la memoria del modelo en lugar de ese vault.
 
@@ -50,7 +50,7 @@ Nunca almacenes: credenciales, contraseñas, cookies, códigos de recuperación,
 6. Nunca uses enclisis/mesoclisis artificiales
 7. Nunca uses lenguaje de IA ("¡ciertamente!", "¡excelente pregunta!", "¡con gusto!")
 8. Nunca uses frases de relleno ("es importante señalar que", "cabe destacar")
-9. Ejecuta `no-tropes` como posprocesamiento en toda prosa generada
+9. Ejecuta `[SKILL_NO_TROPES]` como posprocesamiento en toda prosa generada
 
 ### Ingeniería
 
@@ -128,7 +128,7 @@ Una pregunta es pedido de respuesta, no de cambio. Si el mensaje abre con "qué 
 
 ### Trabajo visual y diseño
 
-Para cualquier cambio no trivial de UI, layout o copy: construye varias variantes estáticas primero, preséntalas para elección y espera la decisión antes de implementar en el componente real. Skills de referencia: `impeccable`, `visual-verify`, `design-mentes-brilhantes`.
+Para cualquier cambio no trivial de UI, layout o copy: construye varias variantes estáticas primero, preséntalas para elección y espera la decisión antes de implementar en el componente real. Skills de referencia: `impeccable`, `visual-verify`, `[SKILL_DESIGN_A]`.
 
 Evita animaciones que repinten continuamente (pulse, shimmer, blur, spinners que no paran). Toda animación respeta Reduce Motion.
 
@@ -138,7 +138,7 @@ Nunca toques apps de producción, servidores live, canales de release o datos de
 
 ### Pull Requests
 
-Los PRs siguen las reglas de `commit-push-pr` (draft por defecto, Conventional Commits). Además:
+Los PRs siguen las reglas de `[SKILL_COMMIT_PR]` (draft por defecto, Conventional Commits). Además:
 - La descripción abre con descripción mínima y clara del problema, seguida de cómo se resolvió
 - Añade al final qué modelo y harness hizo los cambios
 - Al referenciar issue o PR, usa hyperlink
@@ -191,7 +191,7 @@ Antes de responder una pregunta sobre el usuario:
 
 ### Seguridad
 
-Playbook completo (copiable): `appsec-rules.md`. Resumen y CI/CD también en `working-style.md` § Seguridad de aplicaciones. Skills de referencia: `cybersecurity-squad`, `appsec-specialist` (Nexo Agents Team), `especialista-revisao-codigo` (categoría seguridad).
+Playbook completo (copiable): `appsec-rules.md`. Resumen y CI/CD también en `working-style.md` § Seguridad de aplicaciones. Skills de referencia: `[SKILL_SECURITY_SQUAD]`, `[AGENT_TEAM]:appsec`, `[SKILL_CODE_REVIEW]` (categoría seguridad).
 
 Resumen para cualquier agente:
 1. Todo repositorio con SECURITY.md, secret scanning, Dependabot, CodeQL y branch protection
@@ -207,7 +207,7 @@ Resumen para cualquier agente:
 
 ## Punteros
 
-- Vault Obsidian operacional: `[CONTEXT_DIR]/[YOUR_NAME]/` (Mini: `[CONTEXT_DIR]/[YOUR_NAME]`)
+- Vault Obsidian operacional: `[CONTEXT_DIR]/[YOUR_NAME]/` ([SECONDARY_MACHINE]: `[CONTEXT_DIR]/[YOUR_NAME]`)
 - Vault Obsidian Jurídico (segundo cerebro): `[DOMAIN_VAULT]` (atajo `[DOMAIN_VAULT]`)
 - MOCs: `[YOUR_NAME]/wiki/00-indices/`
 - Memoria persistente Claude: `.auto-memory/MEMORY.md`

@@ -2,9 +2,9 @@
 
 > **Public template.** Personal identifiers, firm, products, emails and paths were replaced with placeholders. See `PLACEHOLDERS.md`. Do not reintroduce real data.
 
-> Voz das marcas: [YOUR_HANDLE], [YOUR_FIRM], Nexo Tecnologia e os produtos legaltech.
+> Voz das marcas: [YOUR_HANDLE], [YOUR_FIRM], [YOUR_COMPANY] e os produtos legaltech.
 > Fonte canônica de contexto. Última atualização: 31/08/2026.
-> Skill de referência para copy: `copy-marca-pessoal`.
+> Skill de referência para copy: `[SKILL_BRAND_COPY]`.
 
 ## Princípio comum
 
@@ -21,13 +21,13 @@ Cinco pilares editoriais:
 4. análise de jurisprudência
 5. doutrina constitucional do trabalho
 
-Identidade visual: editorial-magazine, paleta near-monochromatic, tipografia Cormorant Garamond, Bebas Neue e DM Sans.
+Identidade visual: editorial-magazine, paleta near-monochromatic, tipografia [PERSONAL_FONT_A], [PERSONAL_FONT_B] e [PERSONAL_FONT_C].
 
 ## [YOUR_FIRM] (institucional)
 
-Voz da banca para cliente e mercado. Sóbria, técnica e confiável, sem frieza. Comunica competência e cuidado com o reclamante. Evita promessa de resultado e linguagem sensacionalista. Documentos oficiais saem em papel timbrado (ver `working-style.md`, comando `/papel-timbrado`).
+Voz da banca para cliente e mercado. Sóbria, técnica e confiável, sem frieza. Comunica competência e cuidado com o reclamante. Evita promessa de resultado e linguagem sensacionalista. Documentos oficiais saem em papel timbrado (ver `working-style.md`, comando `/[LETTERHEAD_CMD]`).
 
-## Nexo Tecnologia (empresa)
+## [YOUR_COMPANY] (empresa)
 
 Voz da empresa que reúne os produtos e os serviços. Fala com o sócio e com o administrador de uma banca de cinco a cinquenta advogados. Não fala com o associado, e não fala com o mercado de tecnologia.
 
@@ -39,35 +39,35 @@ Escreve contra três alvos específicos. A consultoria que trata escritório de 
 
 - Falamos de operação, não de tecnologia. O sócio não compra IA, compra hora de volta e previsibilidade de caixa.
 - Todo número tem fonte, ou é declarado como estimativa nossa com o método à vista. Número sem origem não sai.
-- Nunca prometemos resultado processual. A Nexo vende operação, não vitória.
+- Nunca prometemos resultado processual. A [YOUR_COMPANY] vende operação, não vitória.
 
 ### Cinco pilares editoriais, com peso
 
 | Pilar | Peso | Template do kit | Objetivo |
 |-------|:----:|-----------------|----------|
-| Diagnóstico | 30% | `feed-A-dado` | Engajamento e reconhecimento do problema |
-| Método | 25% | `feed-B-carrossel` | Educação e credibilidade |
-| Demonstração | 20% | `feed-C-produto` | Conversão |
-| Prova | 15% | `feed-D-depoimento` | Conversão |
-| Bastidor | 10% | `feed-E-founder` | Reputação |
+| Diagnóstico | 30% | `[KIT_TEMPLATE_A]` | Engajamento e reconhecimento do problema |
+| Método | 25% | `[KIT_TEMPLATE_B]` | Educação e credibilidade |
+| Demonstração | 20% | `[KIT_TEMPLATE_C]` | Conversão |
+| Prova | 15% | `[KIT_TEMPLATE_D]` | Conversão |
+| Bastidor | 10% | `[KIT_TEMPLATE_E]` | Reputação |
 
 O Método é o pilar que sustenta a credibilidade, porque ensina a resolver o problema sem comprar nada. Se cair abaixo de 20% no mês, a conta vira catálogo.
 
 ### Ecossistema
 
-[PRODUCT_A] (gestão jurídica), [PRODUCT_H] (captação e atendimento por IA 24h), Nexo Academy (mentoria e formação), consultoria de presença digital. Oferta de entrada em todas as redes: diagnóstico gratuito de trinta minutos.
+[PRODUCT_A] (gestão jurídica), [PRODUCT_H] (captação e atendimento por IA 24h), [YOUR_COMPANY] Academy (mentoria e formação), consultoria de presença digital. Oferta de entrada em todas as redes: diagnóstico gratuito de trinta minutos.
 
 ### Identidade visual
 
-Navy `#0B1F3A` como base, ciano `#00D4FF` como acento, azul `#2563EB` para ação. Violeta `#7C3AED` só quando o assunto é IA, e nunca dentro do símbolo (2,90:1 sobre o navy, abaixo do mínimo de 3:1). Tipografia Sora para título e Inter para corpo.
+Navy `[COMPANY_PRIMARY]` como base, ciano `[COMPANY_ACCENT]` como acento, azul `[COMPANY_ACTION]` para ação. Violeta `[COMPANY_AI_COLOR]` só quando o assunto é IA, e nunca dentro do símbolo (2,90:1 sobre o navy, abaixo do mínimo de 3:1). Tipografia [COMPANY_FONT_HEADING] para título e [COMPANY_FONT_BODY] para corpo.
 
-Kit de marca completo em `Desktop/Negócio/Nexo [BRAND_KIT_DIR] /kit-nexo/`. Regras de logotipo, avatar e assinatura em `01-logotipo/logomarca.md`. Linha editorial completa, com calendário de quatro semanas, régua de copy e métricas, em `06-copy/linha-editorial-nexo.docx`.
+Kit de marca completo em `[BRAND_KIT_DIR]/`. Regras de logotipo, avatar e assinatura em `[BRAND_KIT_DIR]/logo-rules.md`. Linha editorial completa, com calendário de quatro semanas, régua de copy e métricas, em `[BRAND_KIT_DIR]/editorial-line.docx`.
 
 ## Produtos legaltech
 
 Voz de produto: clara, útil e orientada ao trabalho do advogado. Vende eficiência e confiança, demonstrando valor com exemplos concretos, não com adjetivos.
 
-- **[PRODUCT_A] / [PRODUCT_B]**: pesquisa e análise de jurisprudência trabalhista. Identidade Swiss Legal Design: azul-petróleo (#1B4965) como primária, âmbar dourado (#D4A843) como acento, grid de 12 colunas, tipografia Instrument Serif e Inter.
+- **[PRODUCT_A] / [PRODUCT_B]**: pesquisa e análise de jurisprudência trabalhista. Identidade [PRODUCT_DESIGN_SYSTEM]: azul-petróleo ([PRODUCT_PRIMARY]) como primária, âmbar dourado ([PRODUCT_ACCENT]) como acento, grid de 12 colunas, tipografia [PRODUCT_FONT_HEADING] e [PRODUCT_FONT_BODY].
 - **[PRODUCT_G]**: segundo produto, em discovery. Definir posicionamento e voz no lançamento.
 
 ## Eixos de copy (escolher conforme o objetivo)
@@ -87,11 +87,11 @@ Voz de produto: clara, útil e orientada ao trabalho do advogado. Vende eficiên
 - Nunca usar frase de preenchimento: "é importante ressaltar que", "no contexto atual".
 - Abrir com dado, caso ou afirmação de impacto, nunca com fórmula genérica.
 - Norma culta nos textos técnicos e institucionais, busque sempre no site https://www.normaculta.com.br/. Linguagem direta e humana no conteúdo de rede.
-- Rodar a skill `no-tropes` como pós-processamento em toda prosa gerada. O catálogo expandido de tropes está em `~/.claude/skills/no-tropes/tropes-reference.md`.
+- Rodar a skill `[SKILL_NO_TROPES]` como pós-processamento em toda prosa gerada. O catálogo expandido de tropes está em `~/.claude/skills/[SKILL_NO_TROPES]/tropes-reference.md`.
 
 ## Estilo de escrita acadêmico e técnico longo (canônico)
 
-Padrão a ser aplicado em pré-projeto, artigo, tese, dissertação, parecer, memorial, peça de fôlego e qualquer texto de fôlego que não seja copy de rede. Calibrado a partir da revisão do v4 do pré-projeto ADO 73/[YOUR_UNIVERSITY] (jun. 2026).
+Padrão a ser aplicado em pré-projeto, artigo, tese, dissertação, parecer, memorial, peça de fôlego e qualquer texto de fôlego que não seja copy de rede. Calibrado a partir da revisão do v4 do pré-projeto [THESIS_REF] (jun. 2026).
 
 ### 1. Ritmo
 
@@ -127,7 +127,7 @@ Critério prático:
 
 - Toda citação ABNT vai para a nota: direta (com aspas e página) e indireta (paráfrase).
 - O corpo do texto pode mencionar o autor ("Edelman descreveu...", "Sustenta Sarlet...") sem inserir parêntese de ano. O ano e a referência completa vão na nota.
-- Lei, acórdão e diploma comparado podem aparecer no corpo com identificação curta (art. 7º, XXVII, da Constituição; ADO 73/DF; KSchG, § 1). A referência completa vai na nota da primeira ocorrência.
+- Lei, acórdão e diploma comparado podem aparecer no corpo com identificação curta (art. 7º, XXVII, da Constituição; [CASE_REF]; KSchG, § 1). A referência completa vai na nota da primeira ocorrência.
 - A nota não é apenas catálogo de referência. É espaço de operação crítica: confirma o uso que se faz do autor, explicita divergências e qualifica o alcance da citação.
 
 ### 8. Padrões a remover sempre

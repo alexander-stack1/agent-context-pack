@@ -9,14 +9,14 @@
 
 ## Sobre esta pasta
 
-Esta é a pasta de contexto canônico de [YOUR_NAME] ([YOUR_NAME]): advogado trabalhista bancário, acadêmico (Mestre [YOUR_UNIVERSITY], doutorando) e fundador de produtos legaltech. A pasta reúne a identidade de trabalho, a voz das marcas, as regras de colaboração, o estado dos projetos e o vault de conhecimento.
+Esta é a pasta de contexto canônico de [YOUR_NAME] ([YOUR_HANDLE]): [YOUR_ROLE], acadêmico ([YOUR_UNIVERSITY]) e fundador de produtos em [YOUR_INDUSTRY]. A pasta reúne a identidade de trabalho, a voz das marcas, as regras de colaboração, o estado dos projetos e o vault de conhecimento.
 
-A pasta `[CONTEXT_DIR]/` (no Mini: `[CONTEXT_DIR]`) é a **única** fonte de contexto operacional canônico. Qualquer assistente, em qualquer máquina, deve ler exclusivamente os arquivos desta pasta antes de iniciar tarefas.
+A pasta `[CONTEXT_DIR]/` (no [SECONDARY_MACHINE]: `[CONTEXT_DIR]`) é a **única** fonte de contexto operacional canônico. Qualquer assistente, em qualquer máquina, deve ler exclusivamente os arquivos desta pasta antes de iniciar tarefas.
 
 Há dois vaults Obsidian, com papéis distintos:
 
 - **Contexto / `[YOUR_NAME]/`**: vault operacional (método Karpathy: o humano lê, o LLM escreve).
-- **Jurídico**: segundo cérebro de domínio para todos os agentes: `[DOMAIN_VAULT]` (atalho `[DOMAIN_VAULT]` no Mini; ~4,5k notas: jurisprudência, legislação, notícias, RAG, precedentes). Não substitui a Camada 1 desta pasta.
+- **Jurídico**: segundo cérebro de domínio para todos os agentes: `[DOMAIN_VAULT]` (atalho `[DOMAIN_VAULT]` no [SECONDARY_MACHINE]; ~4,5k notas: jurisprudência, legislação, notícias, RAG, precedentes). Não substitui a Camada 1 desta pasta.
 
 **Roteamento obrigatório:** em qualquer pedido relacionado a direito, jurisprudência, legislação, precedentes, doutrina, notícias jurídicas, RAG jurídico ou pesquisa de domínio legal, **todas as IAs e agentes** devem consultar e apontar para o vault Jurídico (`[DOMAIN_VAULT]`) antes de inventar ou improvisar. O vault `[YOUR_NAME]/` continua só para contexto operacional e método Karpathy.
 
@@ -77,7 +77,7 @@ Fluxo Karpathy em `[YOUR_NAME]/`:
 | `credenciais/` | Credenciais de integração | Apenas em tarefas de automação que exijam acesso (ver `_PARA-REVISAR.md`) |
 | `appsec-rules.md` | Playbook fail-closed completo (10 regras + matriz + APROVADO); colar em Project Claude AppSec | Auditoria, review de segurança, correção auth/secrets/deploy |
 | `documentos/` | Documentos avulsos e status de projetos | Consulta pontual |
-| `Desktop/Negócio/Nexo [BRAND_KIT_DIR] /kit-nexo/` | Kit de marca da Nexo Tecnologia: logotipo, paleta, tipografia, avatares, assinaturas e peças por rede. Regras em `01-logotipo/logomarca.md` | Qualquer peça visual da Nexo |
+| `[BRAND_KIT_DIR]/` | Kit de marca da [YOUR_COMPANY]: logotipo, paleta, tipografia, avatares, assinaturas e peças por rede. Regras em `[BRAND_KIT_DIR]/logo-rules.md` | Qualquer peça visual da [YOUR_COMPANY] |
 
 ---
 
@@ -96,50 +96,50 @@ Fluxo Karpathy em `[YOUR_NAME]/`:
 ## Skills por frente
 > Mapa de roteamento. Ao identificar a frente da tarefa, prefira estas skills.
 
-### Trabalhista bancário (pró-reclamante)
+### [PRACTICE_AREA]
 
 | Tarefa | Skill |
 |--------|-------|
-| Ler processo novo, síntese de peça | `resumo-processo` |
-| Petição, réplica, memoriais (1º grau) | `advogado-trabalhista-bancario` |
-| Cálculo e proposta de acordo | `calculo-acordo-trabalhista` |
-| Laudo e cálculo pericial | `perito-trabalhista-bancario` |
-| Impugnar cálculo ou laudo | `contador-trabalhista-impugnacao` |
-| Recurso de revista, embargos, agravo | `especialista-recurso-revista` |
-| Contrarrazões a recurso patronal | `contrarrazoes-trabalhistas` |
-| Execução e liquidação | `execucao-trabalhista` |
-| Pesquisa de jurisprudência | `pesquisa-jurisprudencia`, `jurisprudencia-stf-direitos-sociais` |
-| Doutrina de processo do trabalho (competência, prazos, nulidades, recursos, execução) | `martins-processo-trabalho` (livro do Sergio Pinto Martins convertido; repo privado `[YOUR_GITHUB]/martins-processo-trabalho`) |
-| Verificar lei ou tramitação | `legislacao-brasileira:verificar-legislacao` |
+| Ler processo novo, síntese de peça | `[SKILL_CASE_SUMMARY]` |
+| Petição, réplica, memoriais (1º grau) | `[SKILL_DOMAIN_DRAFTING]` |
+| Cálculo e proposta de acordo | `[SKILL_SETTLEMENT_CALC]` |
+| Laudo e cálculo pericial | `[SKILL_EXPERT_REPORT]` |
+| Impugnar cálculo ou laudo | `[SKILL_CALC_CHALLENGE]` |
+| Recurso de revista, embargos, agravo | `[SKILL_APPEALS]` |
+| Contrarrazões a recurso patronal | `[SKILL_COUNTER_APPEAL]` |
+| Execução e liquidação | `[SKILL_ENFORCEMENT]` |
+| Pesquisa de jurisprudência | `[SKILL_CASELAW_SEARCH]`, `[SKILL_CASELAW_SEARCH_B]` |
+| Doutrina de processo do trabalho (competência, prazos, nulidades, recursos, execução) | `[SKILL_DOMAIN_BOOK]` (livro do [BOOK_AUTHOR] convertido; repo privado `[YOUR_GITHUB]/[SKILL_DOMAIN_BOOK]`) |
+| Verificar lei ou tramitação | `[SKILL_LAW_CHECK]` |
 
 ### Acadêmico ([YOUR_UNIVERSITY], doutorado)
 
 | Tarefa | Skill |
 |--------|-------|
-| Escrever ou revisar artigo, tese, capítulo | `revisor-academico-juridico` |
-| Análise doutrinária e pré-projeto | `professor-trabalho-previdenciario-[YOUR_UNIVERSITY]` |
-| Documento de estudo em ABNT | `documento-estudo-abnt` |
-| Análise de julgado do STF | `analise-jurisprudencia-stf` |
+| Escrever ou revisar artigo, tese, capítulo | `[SKILL_ACADEMIC_REVIEW]` |
+| Análise doutrinária e pré-projeto | `[SKILL_ACADEMIC_ADVISOR]` |
+| Documento de estudo em ABNT | `[SKILL_STUDY_DOC]` |
+| Análise de julgado do STF | `[SKILL_COURT_ANALYSIS]` |
 
 ### Legaltech e produto
 
 | Tarefa | Skill |
 |--------|-------|
-| Inteligência de mercado legaltech | `analise-mercado-juridico` |
-| PRD a partir da conversa | `gerar-prd` |
-| Quebrar plano em issues | `quebrar-em-issues` |
-| Triagem de issues | `triagem` |
-| Avaliar relevância de busca ou RAG jurídico (nota 0 a 3, precisão, recall, golden set) | `avaliar-relevancia-jurisprudencia` |
+| Inteligência de mercado legaltech | `[SKILL_MARKET_INTEL]` |
+| PRD a partir da conversa | `[SKILL_PRD]` |
+| Quebrar plano em issues | `[SKILL_ISSUES]` |
+| Triagem de issues | `[SKILL_TRIAGE]` |
+| Avaliar relevância de busca ou RAG jurídico (nota 0 a 3, precisão, recall, golden set) | `[SKILL_RETRIEVAL_EVAL]` |
 
 ### Desenvolvimento e automação
 
 | Tarefa | Skill |
 |--------|-------|
-| Orquestração e arquitetura por time | `nexo-agents-team` (cto, backend, frontend, devops, dba, qa) |
+| Orquestração e arquitetura por time | `[AGENT_TEAM]` (cto, backend, frontend, devops, dba, qa) |
 | Contrato operacional do implementador sênior (DoD, TDD, infra, segurança) | `instrucoes-implementador-senior.md` (Camada 1) |
-| Revisão de código completa | `especialista-revisao-codigo` |
-| Análise de sistema ponta a ponta | `analisador-sistema-ponta-a-ponta` |
-| Commit, push e PR | `commit-push-pr` |
+| Revisão de código completa | `[SKILL_CODE_REVIEW]` |
+| Análise de sistema ponta a ponta | `[SKILL_E2E_ANALYSIS]` |
+| Commit, push e PR | `[SKILL_COMMIT_PR]` |
 | Diagramas de arquitetura interativos | `archify` (architecture, workflow, sequence, data-flow, lifecycle) |
 | TDD red-green-refactor | `tdd` |
 | Debugging disciplinado | `diagnose` |
@@ -185,20 +185,20 @@ Fluxo Karpathy em `[YOUR_NAME]/`:
 
 | Tarefa | Skill |
 |--------|-------|
-| Copy de [YOUR_HANDLE], [YOUR_FIRM] e produtos | `copy-marca-pessoal` |
+| Copy de [YOUR_HANDLE], [YOUR_FIRM] e produtos | `[SKILL_BRAND_COPY]` |
 | Logotipo, identidade visual e peças gráficas | Seção "Fluxo de design e identidade visual" em `working-style.md` |
-| UI / landing / app / chat | `ux-ui-PEDIDOS.md` → skills PT (`planejar-interface`, `desenhar-landing`, `revisar-experiencia`, `refatorar-interface`, `polir-para-ship`, `provar-com-screenshot`, `redesenhar-[PRODUCT_A]`); motors: gates + impeccable |
+| UI / landing / app / chat | `ux-ui-PEDIDOS.md` → skills PT (`[SKILL_UI_PLAN]`, `[SKILL_UI_LANDING]`, `[SKILL_UI_REVIEW]`, `[SKILL_UI_REFACTOR]`, `[SKILL_UI_POLISH]`, `[SKILL_UI_PROVE]`, `[SKILL_UI_REDESIGN]`); motors: gates + impeccable |
 
 ### Conhecimento e produtividade
 
 | Tarefa | Skill |
 |--------|-------|
-| Sintetizar tema ou texto longo | `sintetizador` |
-| Modo de resposta comprimido | `modo-conciso` |
-| Estressar plano com entrevista | `entrevistar`, `entrevistar-com-contexto` |
+| Sintetizar tema ou texto longo | `[SKILL_SYNTHESIZE]` |
+| Modo de resposta comprimido | `[SKILL_CONCISE_MODE]` |
+| Estressar plano com entrevista | `[SKILL_INTERVIEW]`, `[SKILL_INTERVIEW_CTX]` |
 | Operar o vault Obsidian | `obsidian-cli`, `obsidian-markdown`, `obsidian-bases` |
-| Traduzir documento para PT-BR | `tradutor-documentos` |
-| Criar ou ajustar skill | `criar-skill`, `skill-creator` |
+| Traduzir documento para PT-BR | `[SKILL_TRANSLATE]` |
+| Criar ou ajustar skill | `[SKILL_CREATE_SKILL]`, `skill-creator` |
 | Converter livro (PDF, EPUB, DOCX etc.) em skill de agente | `book-to-skill` (instalada em `~/.claude/skills/book-to-skill`, comando `/book-to-skill`) |
 
 ### Saída de documentos

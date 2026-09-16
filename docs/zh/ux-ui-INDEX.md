@@ -18,7 +18,7 @@
 
 ## 精简请求菜单
 
-阅读 **`ux-ui-REQUESTS.md`** 以了解该要求什么。PT 技能：`planejar-interface`、`desenhar-landing`、`revisar-experiencia`、`refatorar-interface`、`polir-para-ship`、`provar-com-screenshot`、`redesenhar-[PRODUCT_A]`。它们封装这些文件 + impeccable。
+阅读 **`ux-ui-REQUESTS.md`** 以了解该要求什么。PT 技能：`[SKILL_UI_PLAN]`、`[SKILL_UI_LANDING]`、`[SKILL_UI_REVIEW]`、`[SKILL_UI_REFACTOR]`、`[SKILL_UI_POLISH]`、`[SKILL_UI_PROVE]`、`[SKILL_UI_REDESIGN]`。它们封装这些文件 + impeccable。
 
 Grok Bot 技能：[ux-ui-criteria](sand-workflow:ux-ui-criteria)（当已安装在机队中时）。
 互补插件（工艺/抛光）：**impeccable** — 仅在上述失败关闭标准**之后**。

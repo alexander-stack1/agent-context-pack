@@ -204,4 +204,4 @@ If any item cannot be proven, write “UNVERIFIED” and state exactly which fil
 
 ## Reference skills
 
-`cybersecurity-squad`, `appsec-specialist` (Nexo), `especialista-revisao-codigo` (security category).
+`[SKILL_SECURITY_SQUAD]`, `[AGENT_TEAM]:appsec`, `[SKILL_CODE_REVIEW]` (security category).

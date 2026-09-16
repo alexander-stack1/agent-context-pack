@@ -12,13 +12,13 @@
 
 | Tú quer… | Peça / skill | Encapsula |
 |------------|--------------|-----------|
-| Planejar pantalla **antes** de codar | **`planejar-interface`** | R0 + gates + impeccable `shape` (+ variantes se pedido) |
-| Landing / marketing web+mobile | **`desenhar-landing`** | gates web-landing + mobile + modo Persuade |
-| Revisar UX, a11y, responsivo | **`revisar-experiencia`** | gates checklist + impeccable `critique` + `audit` |
-| Refatorar visual (hierarquia, tipo, cor, mobile↔web) | **`refatorar-interface`** | gates + `distill` / `layout` / `typeset` / `adapt` / `colorize` / `clarify` según o caso |
-| Polir e endurecer pra ship | **`polir-para-ship`** | `polish` + `harden` + `provar-com-screenshot` |
-| Provar que a pantalla fico certa | **`provar-com-screenshot`** | `visual-verify` (screenshot vs referência) |
-| Redesign incremental do [PRODUCT_A] | **`redesenhar-[PRODUCT_A]`** | briefing [PRODUCT_A] + gates (no troca marca) |
+| Planejar pantalla **antes** de codar | **`[SKILL_UI_PLAN]`** | R0 + gates + impeccable `shape` (+ variantes se pedido) |
+| Landing / marketing web+mobile | **`[SKILL_UI_LANDING]`** | gates web-landing + mobile + modo Persuade |
+| Revisar UX, a11y, responsivo | **`[SKILL_UI_REVIEW]`** | gates checklist + impeccable `critique` + `audit` |
+| Refatorar visual (hierarquia, tipo, cor, mobile↔web) | **`[SKILL_UI_REFACTOR]`** | gates + `distill` / `layout` / `typeset` / `adapt` / `colorize` / `clarify` según o caso |
+| Polir e endurecer pra ship | **`[SKILL_UI_POLISH]`** | `polish` + `harden` + `[SKILL_UI_PROVE]` |
+| Provar que a pantalla fico certa | **`[SKILL_UI_PROVE]`** | `visual-verify` (screenshot vs referência) |
+| Redesign incremental do [PRODUCT_A] | **`[SKILL_UI_REDESIGN]`** | briefing [PRODUCT_A] + gates (no troca marca) |
 
 Skill de base (raramente pedir sozinha): `ux-ui-criteria` — só os gates fail-closed.
 
@@ -26,13 +26,13 @@ Skill de base (raramente pedir sozinha): `ux-ui-criteria` — só os gates fail-
 
 ## Frases listas
 
-- «Roda **planejar-interface** pra [pantalla/fluxo].»
-- «**desenhar-landing** do [produto], web e mobile.»
-- «**revisar-experiencia** nesta página / neste PR.»
-- «**refatorar-interface**: está poluído / ilegível / quebra no mobile.»
-- «**polir-para-ship** antes do merge.»
-- «**provar-com-screenshot** contra o mock / sibling.»
-- «**redesenhar-[PRODUCT_A]** camada [Chrome|Painel|Listagens|Forms].»
+- «Roda **[SKILL_UI_PLAN]** pra [pantalla/fluxo].»
+- «**[SKILL_UI_LANDING]** do [produto], web e mobile.»
+- «**[SKILL_UI_REVIEW]** nesta página / neste PR.»
+- «**[SKILL_UI_REFACTOR]**: está poluído / ilegível / quebra no mobile.»
+- «**[SKILL_UI_POLISH]** antes do merge.»
+- «**[SKILL_UI_PROVE]** contra o mock / sibling.»
+- «**[SKILL_UI_REDESIGN]** camada [Chrome|Painel|Listagens|Forms].»
 
 ---
 
@@ -41,10 +41,10 @@ Skill de base (raramente pedir sozinha): `ux-ui-criteria` — só os gates fail-
 | Antigo | Por quê | Use em vez |
 |--------|---------|------------|
 | Comandos ingleses soltos do impeccable (`polish`, `bolder`…) | Menú PT ya escolhe o motor | skills da tabla |
-| `frontend-design` plugin direto | Sobreposto ao impeccable no craft | `planejar-interface` / `desenhar-landing` / `refatorar-interface` |
+| `frontend-design` plugin direto | Sobreposto ao impeccable no craft | `[SKILL_UI_PLAN]` / `[SKILL_UI_LANDING]` / `[SKILL_UI_REFACTOR]` |
 | `ui-design` marketplace (dezenas de skills) | Ruído; gates+impeccable cobrem o fluxo | menú acima |
 | `design-an-interface` | É API/módulo, **não** UI | (fora deste menú) |
-| `design-mentes-brilhantes`, `apple-design-master` | Citados no stack, **sin carpeta** no Claude | remover do stack |
+| `[SKILL_DESIGN_A]`, `[SKILL_DESIGN_B]` | Citados no stack, **sin carpeta** no Claude | remover do stack |
 | `asc-app-create-ui` | Automação App Store Connect, no design | (fora) |
 | `product-partner` | Ciclo de produto inteiro | só se for lançar produto, no UI pontual |
 | `meigen-ai-design` | Geração de imagem | só se precisar de asset ilustrado |

@@ -9,7 +9,7 @@
 
 - Obsidian（主库，经 iCloud 同步，位于 `[CONTEXT_DIR]/[YOUR_NAME]/`）
 - Claude 与 Cowork（生产助手），含 70+ 本地技能与 20+ 插件
-- Nexo 智能体团队（18 名专业智能体，CTO → 经理 → 运营层级）
+- [AGENT_TEAM]（[N] 名专业智能体，CTO → 经理 → 运营层级）
 - [PRODUCT_F]（自有自动化：cron、LLM 网关、采集器）
 - Ollama（Apple Silicon 本地模型：qwen2.5:7b、nomic-embed-text）与 OpenRouter（API 模型）
 - Python 与 Node 做自动化，Postgres 与嵌入做 RAG
@@ -17,13 +17,13 @@
 - Tailscale 远程访问机器
 - PJe、邮箱与 WhatsApp 用于律所运营
 - [PRODUCT_A]/[PRODUCT_B]（开发中的自有软件）
-- OmniGet（课程、视频与媒体的下载与整理）
+- [TOOL_MEDIA]（课程、视频与媒体的下载与整理）
 
 ## 已连接 MCP
 
 | MCP | 用途 |
 |-----|-----------|
-| LightRAG | 本地知识图谱（109 PDF，localhost:9621） |
+| LightRAG | 本地知识图谱（[N] PDF，localhost:9621） |
 | Context7 | 直接在上下文中获取最新库文档 |
 | Codebase Memory | 代码库知识图谱（跨会话持久） |
 | Perplexity | 带 AI 的网络调研 |
@@ -57,20 +57,20 @@
 
 | 领域 | 数量 | 主要示例 |
 |---------|:---:|---------------------|
-| 劳动法 | 13 | advogado-trabalhista-bancario、especialista-recurso-revista、pesquisa-jurisprudencia |
-| 开发 | 17 | tdd、diagnose、review、zoom-out、improve-codebase-architecture、commit-push-pr、archify |
+| 劳动法 | 13 | [SKILL_DOMAIN_DRAFTING]、[SKILL_APPEALS]、[SKILL_CASELAW_SEARCH] |
+| 开发 | 17 | tdd、diagnose、review、zoom-out、improve-codebase-architecture、[SKILL_COMMIT_PR]、archify |
 | Google Cloud | 10 | cloud-run-basics、cloud-sql-basics、gcloud、gemini-agents-api、rag-engine-management、monitoring、logging、iam、waf-reliability、solution-architecture |
 | 文档 | 9 | docx、pdf、pptx、xlsx、video-editing |
-| 设计 | 7+ | 菜单 `ux-ui-REQUESTS.md`：planejar-interface、desenhar-landing、revisar-experiencia、refatorar-interface、polir-para-ship、provar-com-screenshot、redesenhar-[PRODUCT_A]（引擎：gates + impeccable/frontend-design） |
+| 设计 | 7+ | 菜单 `ux-ui-REQUESTS.md`：[SKILL_UI_PLAN]、[SKILL_UI_LANDING]、[SKILL_UI_REVIEW]、[SKILL_UI_REFACTOR]、[SKILL_UI_POLISH]、[SKILL_UI_PROVE]、[SKILL_UI_REDESIGN]（引擎：gates + impeccable/frontend-design） |
 | Obsidian | 4 | obsidian-cli、obsidian-markdown、obsidian-bases |
 | 工作流 | 10 | grill-with-docs、to-prd、to-issues、triage、handoff |
-| 写作 | 6 | copy-marca-pessoal、edit-article、writing-beats、writing-shape |
-| 工具 | 9+ | [PRODUCT_C]、product-partner、modo-conciso、defuddle |
-| 学习 | 3+ | especialista-concursos、documento-estudo-abnt、revisor-academico |
+| 写作 | 6 | [SKILL_BRAND_COPY]、edit-article、writing-beats、writing-shape |
+| 工具 | 9+ | [PRODUCT_C]、product-partner、[SKILL_CONCISE_MODE]、defuddle |
+| 学习 | 3+ | [SKILL_EXAM_STUDY]、[SKILL_STUDY_DOC]、[SKILL_ACADEMIC_REVIEW] |
 
 ## 插件（20+）
 
-由系统自动发现。主要有：Nexo Agents Team（18 智能体）、Adobe for Creativity、Adspirer Ads、Brazilian Legislation、Marketing、Sales、Bright Data、Brand Voice、Engineering、Product Management、Operations、Finance、Searchfit SEO、Box、Wix、Figma、Desktop Commander、PDF Viewer。
+由系统自动发现。主要有：[AGENT_TEAM]（[N] 智能体）、Adobe for Creativity、Adspirer Ads、Brazilian Legislation、Marketing、Sales、Bright Data、Brand Voice、Engineering、Product Management、Operations、Finance、Searchfit SEO、Box、Wix、Figma、Desktop Commander、PDF Viewer。
 
 ## LightRAG（本地知识图谱）
 
@@ -79,7 +79,7 @@
 | 版本 | 1.4.16 |
 | LLM | Ollama qwen2.5:7b（本地） |
 | 嵌入 | nomic-embed-text（本地） |
-| 已索引文档 | 109 PDF（Dev Library） |
+| 已索引文档 | [N] PDF（Dev Library） |
 | MCP | lightrag_query、lightrag_insert、lightrag_health |
 | URL | http://localhost:9621 |
 | 隐私 | 100% 本地 |
@@ -99,7 +99,7 @@
 9. 缓存 + 记忆层（Redis、TTL、失效）
 10. 可观测性（追踪 ID、token 归因、告警）
 
-记录于 Nexo 的 CTO 与 Solution Architect 技能中。
+记录于 [AGENT_TEAM] 的 CTO 与 Solution Architect 技能中。
 
 ## 智能体治理
 
@@ -109,12 +109,12 @@
 
 | 技能 | 频率 |
 |-------|-----------|
-| briefing-matinal | 每天 7 时 |
-| code-review-continuo | 每天 20 时 |
-| monitor-legislativo | 每周一 8 时 |
-| monitor-concursos | 每周三 8 时 |
-| monitor-concorrentes | 每月 1 日 |
-| estudo-adaptativo、revisao-espacada、deploy-guardian、refatoracao-sugerida、jurisprudencia-automatica、pesquisa-academica、coleta-decisoes | 按需 |
+| [TASK_MORNING_BRIEF] | 每天 7 时 |
+| [TASK_NIGHTLY_REVIEW] | 每天 20 时 |
+| [TASK_LAW_MONITOR] | 每周一 8 时 |
+| [TASK_EXAM_MONITOR] | 每周三 8 时 |
+| [TASK_COMPETITOR_MONITOR] | 每月 1 日 |
+| [TASK_ON_DEMAND_A] … [TASK_ON_DEMAND_G] | 按需 |
 
 ---
 *每当安装/移除 MCP、技能或插件，或变更基础设施时更新。记入 `_CHANGELOG.md`。*

@@ -2,9 +2,9 @@
 
 > **公开模板。** 个人标识、律所、产品、邮箱与路径已替换为占位符。见 `PLACEHOLDERS.md`。请勿重新引入真实数据。
 
-> 品牌声音：[YOUR_HANDLE]、[YOUR_FIRM]、Nexo Tecnologia 以及法律科技产品。
+> 品牌声音：[YOUR_HANDLE]、[YOUR_FIRM]、[YOUR_COMPANY] 以及法律科技产品。
 > 正典上下文来源。最近更新：31/08/2026。
-> 文案参考技能：`copy-marca-pessoal`。
+> 文案参考技能：`[SKILL_BRAND_COPY]`。
 
 ## 共同原则
 
@@ -21,13 +21,13 @@
 4. 判例分析
 5. 宪法劳动法教义
 
-视觉识别：编辑杂志风、近乎单色色板、字体 Cormorant Garamond、Bebas Neue 与 DM Sans。
+视觉识别：编辑杂志风、近乎单色色板、字体 [PERSONAL_FONT_A]、[PERSONAL_FONT_B] 与 [PERSONAL_FONT_C]。
 
 ## [YOUR_FIRM]（机构）
 
-面向客户与市场的律所声音。沉稳、专业、可信，但不冷漠。传达能力与对请求人的关照。避免结果承诺与煽情语言。正式文件用抬头信纸（见 `working-style.md`，`/papel-timbrado` 命令）。
+面向客户与市场的律所声音。沉稳、专业、可信，但不冷漠。传达能力与对请求人的关照。避免结果承诺与煽情语言。正式文件用抬头信纸（见 `working-style.md`，`/[LETTERHEAD_CMD]` 命令）。
 
-## Nexo Tecnologia（公司）
+## [YOUR_COMPANY]（公司）
 
 汇集产品与服务的公司声音。对五到五十名律师规模律所的合伙人和管理者说话。不对助理律师说话，也不对技术市场说话。
 
@@ -39,35 +39,35 @@
 
 - 我们谈运营，不谈技术。合伙人不买 AI；他们买回时间与现金流可预期性。
 - 每个数字都有来源，或声明为我们的估计并公开方法。无出处的数字不发布。
-- 我们永不承诺诉讼结果。Nexo 卖运营，不卖胜诉。
+- 我们永不承诺诉讼结果。[YOUR_COMPANY] 卖运营，不卖胜诉。
 
 ### 五大编辑支柱（带权重）
 
 | 支柱 | 权重 | Kit 模板 | 目标 |
 |-------|:----:|-----------------|----------|
-| 诊断 | 30% | `feed-A-dado` | 互动与问题认同 |
-| 方法 | 25% | `feed-B-carrossel` | 教育与可信度 |
-| 演示 | 20% | `feed-C-produto` | 转化 |
-| 证明 | 15% | `feed-D-depoimento` | 转化 |
-| 幕后 | 10% | `feed-E-founder` | 声誉 |
+| 诊断 | 30% | `[KIT_TEMPLATE_A]` | 互动与问题认同 |
+| 方法 | 25% | `[KIT_TEMPLATE_B]` | 教育与可信度 |
+| 演示 | 20% | `[KIT_TEMPLATE_C]` | 转化 |
+| 证明 | 15% | `[KIT_TEMPLATE_D]` | 转化 |
+| 幕后 | 10% | `[KIT_TEMPLATE_E]` | 声誉 |
 
 方法支柱支撑可信度，因为它在不卖任何东西的情况下教如何解决问题。若当月低于 20%，账号会变成目录。
 
 ### 生态
 
-[PRODUCT_A]（法律管理）、[PRODUCT_H]（24 小时 AI 获客与接案）、Nexo Academy（辅导与培训）、数字存在咨询。全网入口优惠：免费三十分钟诊断。
+[PRODUCT_A]（法律管理）、[PRODUCT_H]（24 小时 AI 获客与接案）、[YOUR_COMPANY] Academy（辅导与培训）、数字存在咨询。全网入口优惠：免费三十分钟诊断。
 
 ### 视觉识别
 
-海军蓝 `#0B1F3A` 为底，青绿 `#00D4FF` 为强调，蓝 `#2563EB` 用于操作。紫罗兰 `#7C3AED` 仅当主题是 AI，且永不进入符号（在海军蓝上对比 2.90:1，低于 3:1 最低标准）。标题用 Sora，正文用 Inter。
+海军蓝 `[COMPANY_PRIMARY]` 为底，青绿 `[COMPANY_ACCENT]` 为强调，蓝 `[COMPANY_ACTION]` 用于操作。紫罗兰 `[COMPANY_AI_COLOR]` 仅当主题是 AI，且永不进入符号（在海军蓝上对比 2.90:1，低于 3:1 最低标准）。标题用 [COMPANY_FONT_HEADING]，正文用 [COMPANY_FONT_BODY]。
 
-完整品牌 kit 位于 `Desktop/Negócio/Nexo [BRAND_KIT_DIR] /kit-nexo/`。标志、头像与签名规则见 `01-logotipo/logomarca.md`。完整编辑线（含四周日历、文案标尺与指标）见 `06-copy/linha-editorial-nexo.docx`。
+完整品牌 kit 位于 `[BRAND_KIT_DIR]/`。标志、头像与签名规则见 `[BRAND_KIT_DIR]/logo-rules.md`。完整编辑线（含四周日历、文案标尺与指标）见 `[BRAND_KIT_DIR]/editorial-line.docx`。
 
 ## 法律科技产品
 
 产品声音：清晰、有用、面向律师工作。用具体例子证明价值来卖效率与信任，而非形容词。
 
-- **[PRODUCT_A] / [PRODUCT_B]**：劳动法判例研究与分析。Swiss Legal Design 识别：石油蓝（#1B4965）为主色，金琥珀（#D4A843）为强调，12 栏网格，Instrument Serif 与 Inter 字体。
+- **[PRODUCT_A] / [PRODUCT_B]**：劳动法判例研究与分析。[PRODUCT_DESIGN_SYSTEM] 识别：石油蓝（[PRODUCT_PRIMARY]）为主色，金琥珀（[PRODUCT_ACCENT]）为强调，12 栏网格，[PRODUCT_FONT_HEADING] 与 [PRODUCT_FONT_BODY] 字体。
 - **[PRODUCT_G]**：第二产品，处于发现阶段。上线时定义定位与声音。
 
 ## 文案轴（按目标选择）
@@ -87,11 +87,11 @@
 - 永不使用填充套话：「值得注意的是」「在当前语境下」。
 - 以数据、案例或冲击性主张开篇，永不套用通用公式。
 - 技术与机构文本用规范书面语；务必核对 https://www.normaculta.com.br/。网络内容用直接、人性化语言。
-- 对所有生成散文用 `no-tropes` 技能做后处理。扩展套话目录在 `~/.claude/skills/no-tropes/tropes-reference.md`。
+- 对所有生成散文用 `[SKILL_NO_TROPES]` 技能做后处理。扩展套话目录在 `~/.claude/skills/[SKILL_NO_TROPES]/tropes-reference.md`。
 
 ## 长篇学术与技术写作风格（正典）
 
-适用于预项目、文章、论文、学位论文、意见书、诉状、实质提交，以及任何非网络文案的长文。校准自 ADO 73/[YOUR_UNIVERSITY] 预项目的 v4 审阅（2026 年 6 月）。
+适用于预项目、文章、论文、学位论文、意见书、诉状、实质提交，以及任何非网络文案的长文。校准自 [THESIS_REF] 预项目的 v4 审阅（2026 年 6 月）。
 
 ### 1. 节奏
 
@@ -127,7 +127,7 @@
 
 - 每条 ABNT 引用进脚注：直接引用（带引号与页码）与间接引用（转述）。
 - 正文可提及作者（「Edelman 描述了……」「Sarlet 主张……」）而不插入年份括号。年份与完整出处进脚注。
-- 法律、判决与比较法条文可在正文以短标识出现（宪法第 7 条 XXVII；ADO 73/DF；KSchG § 1）。首次出现时完整出处进脚注。
+- 法律、判决与比较法条文可在正文以短标识出现（宪法第 7 条 XXVII；[CASE_REF]；KSchG § 1）。首次出现时完整出处进脚注。
 - 脚注不只是出处目录。它是批判操作空间：确认对作者的用法、明示分歧、限定引用的射程。
 
 ### 8. 一律删除的模式

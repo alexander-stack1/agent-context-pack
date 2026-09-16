@@ -7,59 +7,58 @@
 
 ## Who I am
 
-My name is [YOUR_NAME] ([YOUR_NAME]). I work on three fronts at once: banking labor law practice, academia, and building legaltech products.
+My name is [YOUR_NAME] ([YOUR_HANDLE]). I work on three fronts at once: [FRONT_A], [FRONT_B], and [FRONT_C].
 
-In practice, I represent workers and former employees of banks and financial institutions (bank workers and financing-sector workers) in labor claims, always on the claimant side. I run a firm, [YOUR_FIRM], with offices in Rio de Janeiro and Minas Gerais and nationwide practice.
+On the main front ([FRONT_A]), I serve [YOUR_AUDIENCE] in [PRACTICE_AREA]. I run my own organization, [YOUR_FIRM], with offices in [CITY_A] and [CITY_B] and nationwide practice.
 
-As an academic, I hold a Master's in Labor and Social Security Law from [YOUR_UNIVERSITY], I am a doctoral candidate, author of legal articles and books, and a postgraduate lecturer in Constitutional Labor Law.
+As an academic ([FRONT_B]), I hold [ACADEMIC_TITLE] from [YOUR_UNIVERSITY], I am [ACADEMIC_STATUS], author of articles and books, and a postgraduate lecturer in [ACADEMIC_FIELD].
 
-As a founder and developer, I build software for the legal market and internal automation tools. I program and orchestrate teams of AI agents for that. I am no longer only the person who specifies the product; I am the one who implements it.
+As a founder and developer ([FRONT_C]), I build software for [YOUR_INDUSTRY] and internal automation tools. I program and orchestrate teams of AI agents for that. I am no longer only the person who specifies the product; I am the one who implements it.
 
 ## What I do day to day
 
-- Draft petitions, answers, appeals, and opinions in banking labor law
-- Follow clients through all procedural stages, from knowledge through enforcement
-- Analyze expert reports and labor calculations (divisor, reflexes, correction indexes)
+- [DAILY_TASK_A] (typical deliverables of the main front)
+- [DAILY_TASK_B] (following clients through every stage)
+- [DAILY_TASK_C] (typical technical analyses of the main front)
 - Drive academic production (articles, chapters, and the doctorate)
-- Manage the firm's team and internal processes
+- Manage the [YOUR_FIRM] team and internal processes
 - Develop, test, and ship products and automations (code, CI, data pipelines)
 
 ## Whom I serve
 
-My primary audience is workers and former employees of banks and financial institutions with violated labor rights, natural persons. I also serve lawyers who want to practice with more confidence and efficiency, the audience for my products and content.
+My primary audience is [YOUR_AUDIENCE]. I also serve [SECONDARY_AUDIENCE], the audience for my products and content.
 
 ## Professional fronts
 
-### Law practice, [YOUR_FIRM]
-Pro-claimant banking labor core. Knowledge, appeals, and enforcement. Team of about 10 people.
+### [FRONT_A], [YOUR_FIRM]
+[PRACTICE_AREA]. Team of about [TEAM_SIZE] people.
 
-### Academia, [YOUR_UNIVERSITY]
-Doctorate in progress, with foundational research and definition of an original topic. Line of Constitutional Labor Law and Social Security. Articles and postgraduate teaching.
+### [FRONT_B], [YOUR_UNIVERSITY]
+[ACADEMIC_STATUS], with foundational research and definition of an original topic. Line of [ACADEMIC_FIELD]. Articles and postgraduate teaching.
 
 ### [PRODUCT_A] and [PRODUCT_B]
-Platform for research and analysis of labor case law. Stack React, TypeScript, tRPC, Drizzle, and MySQL, with more than 190 automated tests. Own design system (Swiss Legal Design). Features for analytical magistrate dossiers, simulated judge, and magistrate comparison, plus a publications agent with dual backend (API and local Ollama). [PRODUCT_G] is a second product, in discovery.
+[PRODUCT_A_DESCRIPTION]. Stack [APP_FRAMEWORK] + [DATA_STORE], with more than [N] automated tests. Own design system ([PRODUCT_DESIGN_SYSTEM]). [PRODUCT_G] is a second product, in discovery.
 
 ### [PRODUCT_C]
-Internal SaaS competitive-intelligence tool. Classifies products into 3 MRR tiers (Micro up to R$ 25k, Traction R$ 25k–100k, Scale above R$ 100k), assesses scalability with real data, and generates Spec Driven Development recommendations tuned to the tier. Used to evaluate product opportunities and compare with competitors.
+Internal SaaS competitive-intelligence tool. Classifies products into 3 MRR tiers (Micro up to [TIER_1], Traction [TIER_1]–[TIER_2], Scale above [TIER_2]), assesses scalability with real data, and generates Spec Driven Development recommendations tuned to the tier. Used to evaluate product opportunities and compare with competitors.
 
 ### [PRODUCT_F]
-Own automation framework that runs on my machine. CLI, cron scheduling, LLM gateway with adapters (Gemini, OpenRouter), and data collectors. It is the operational backbone of the other projects.
+Own automation framework that runs on my machine. CLI, cron scheduling, LLM gateway with adapters, and data collectors. It is the operational backbone of the other projects.
 
-### Medicine ([RAG_STACK])
-Medical literature research assistant based on RAG. Automated collectors (BVS, SciELO, EuropePMC) feed an Obsidian vault, indexed in Postgres with embeddings and semantic enrichment, orchestrated by [PRODUCT_F] and GitHub Actions.
+### [RAG_STACK]
+Research assistant based on RAG. Automated collectors feed an Obsidian vault, indexed in Postgres with embeddings and semantic enrichment, orchestrated by [PRODUCT_F] and GitHub Actions.
 
 ## Quality reference for my work
 
-- Strategic analysis of best practices for the legal market, focused on early-career lawyers
-- Commercial proposal that closed a R$ 60,000.00 contract
-- Labor settlement negotiation above R$ 20,000.00 net for the client
+- [QUALITY_REF_A] (reference strategic analysis in your market)
+- [QUALITY_REF_B] (relevant commercial proposal or negotiation, value [AMOUNT_A])
 - Production RAG pipelines, with incremental indexing, orphan pruning, and regression tests
 
 ## Important context
 
-- I work with a team of about 10 people
+- I work with a team of about [TEAM_SIZE] people
 - My biggest bottleneck is time. I need deliverables ready for immediate use, without rework
-- I operate on three fronts at once: law practice, academia, and product
+- I operate on three fronts at once: [FRONT_A], [FRONT_B], and [FRONT_C]
 - I am careful with credentials: ephemeral tokens, no secrets in the repository, review of what sits in a synced folder
 
 ## Preferred academic style

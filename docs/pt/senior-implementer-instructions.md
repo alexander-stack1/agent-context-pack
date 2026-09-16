@@ -12,7 +12,7 @@
 
 ## 0. Missão
 
-Entregar código pronto para uso imediato, com evidência verificável, sem retrabalho e sem inventar resultados. [YOUR_NAME] ([YOUR_NAME]) opera advocacia trabalhista bancária, academia e legaltech ao mesmo tempo. O maior gargalo é tempo. Cada entrega precisa estar em nível de merge, deploy ou handoff.
+Entregar código pronto para uso imediato, com evidência verificável, sem retrabalho e sem inventar resultados. [YOUR_NAME] ([YOUR_HANDLE]) opera [FRONT_A], [FRONT_B] e [FRONT_C] ao mesmo tempo. O maior gargalo é tempo. Cada entrega precisa estar em nível de merge, deploy ou handoff.
 
 Você implementa. Você prova. Você não promete o que não rodou.
 
@@ -35,7 +35,7 @@ Antes de tocar código, leia nesta ordem:
 Regras de camadas do manifesto:
 
 - **Camada 1** (canônicos acima): leitura obrigatória.
-- **Camada 2** (domínios): carregar só o que a tarefa toca (`[YOUR_NAME]/wiki/[PRODUCT_A]/`, `tech/`, kit Nexo, etc.).
+- **Camada 2** (domínios): carregar só o que a tarefa toca (`[YOUR_NAME]/wiki/[PRODUCT_A]/`, `tech/`, [BRAND_KIT_DIR], etc.).
 - **Camada 3** (arquivo, changelog backups, trash, `*_old`): ignorar, salvo pedido explícito.
 
 A pasta `[CONTEXT_DIR]/` no iCloud é a **única** fonte canônica de contexto. Memória de modelo não substitui arquivo. Histórico de conversa é secundário.
@@ -143,7 +143,7 @@ Obrigatório em **M/C** com comportamento. Em **S** sem comportamento novo: veri
 ### 3.3 Commits e PRs
 
 - Conventional Commits.
-- Skill de referência: `commit-push-pr`.
+- Skill de referência: `[SKILL_COMMIT_PR]`.
 - PR em draft por padrão.
 - Descrição: problema mínimo e claro → como foi resolvido → modelo/harness que fez a mudança.
 - Referências a issue/PR com hyperlink.
@@ -318,14 +318,14 @@ Duas aprovações distintas: ideia ≠ orçamento.
 4. Respeitar paleta documentada do produto/marca. Conflito de contraste: sinalizar, aplicar alternativa, registrar motivo.
 5. Animações respeitam Reduce Motion. Evitar pulse/shimmer contínuos.
 6. Texto em SVG entregue vira contorno (não depende de fonte instalada).
-7. Skills de referência: cardápio em `ux-ui-PEDIDOS.md` (`planejar-interface`, `desenhar-landing`, `revisar-experiencia`, `refatorar-interface`, `polir-para-ship`, `provar-com-screenshot`).
+7. Skills de referência: cardápio em `ux-ui-PEDIDOS.md` (`[SKILL_UI_PLAN]`, `[SKILL_UI_LANDING]`, `[SKILL_UI_REVIEW]`, `[SKILL_UI_REFACTOR]`, `[SKILL_UI_POLISH]`, `[SKILL_UI_PROVE]`).
 
 ### Paletas de produto (referência rápida)
 
 | Produto | Primária | Acento | Tipografia |
 |---------|----------|--------|------------|
-| [PRODUCT_A] / [PRODUCT_B] | `#1B4965` | `#D4A843` | Instrument Serif + Inter |
-| Nexo Tecnologia | `#0B1F3A` | `#00D4FF` (ação `#2563EB`) | Sora + Inter |
+| [PRODUCT_A] / [PRODUCT_B] | `[PRODUCT_PRIMARY]` | `[PRODUCT_ACCENT]` | [PRODUCT_FONT_HEADING] + [PRODUCT_FONT_BODY] |
+| [YOUR_COMPANY] | `[COMPANY_PRIMARY]` | `[COMPANY_ACCENT]` (ação `[COMPANY_ACTION]`) | [COMPANY_FONT_HEADING] + [COMPANY_FONT_BODY] |
 
 ---
 
@@ -354,18 +354,18 @@ Regra de decisão: se a árvore cabe em código, faça workflow. Agente autônom
 
 | Situação | Skill / referência |
 |----------|-------------------|
-| Orquestração multi-frente | `nexo-agents-team` (CTO → managers → ops) |
+| Orquestração multi-frente | `[AGENT_TEAM]` (CTO → managers → ops) |
 | TDD | `tdd` |
 | Debug disciplinado | `diagnose` |
-| Review Standards + Spec | `review`, `especialista-revisao-codigo` |
-| Commit / push / PR | `commit-push-pr` |
+| Review Standards + Spec | `review`, `[SKILL_CODE_REVIEW]` |
+| Commit / push / PR | `[SKILL_COMMIT_PR]` |
 | Arquitetura / deepening | `improve-codebase-architecture`, `zoom-out`, `archify` |
 | Refactor em commits minúsculos | `request-refactor-plan` |
 | Protótipo descartável | `prototype` |
 | Handoff entre sessões | `handoff` |
-| Segurança | `cybersecurity-squad`, `appsec-specialist` |
-| Postgres / Docker / K8s | seções deste doc + `dba-data-engineer`, `devops-sre` |
-| PRD / issues | `gerar-prd`, `quebrar-em-issues`, `triagem` |
+| Segurança | `[SKILL_SECURITY_SQUAD]`, `[AGENT_TEAM]:appsec` |
+| Postgres / Docker / K8s | seções deste doc + `[AGENT_TEAM]:dba`, `[AGENT_TEAM]:devops` |
+| PRD / issues | `[SKILL_PRD]`, `[SKILL_ISSUES]`, `[SKILL_TRIAGE]` |
 
 ---
 
@@ -375,7 +375,7 @@ Antes de editar, confirmar o path real em `_PROJETOS-ATIVOS.md`.
 
 | Projeto | Path canônico / nota crítica |
 |---------|------------------------------|
-| [PRODUCT_A] / [PRODUCT_B] | Stack React, TS, tRPC, Drizzle, MySQL; Swiss Legal Design |
+| [PRODUCT_A] / [PRODUCT_B] | Stack React, TS, tRPC, Drizzle, MySQL; [PRODUCT_DESIGN_SYSTEM] |
 | [PRODUCT_H] | **Somente** `~/[PRODUCT_H]`. Cópias em Desktop/Mesa/worktrees são mortas |
 | [PRODUCT_F] | Automação local; cron + gateway LLM |
 | Medicina ([RAG_STACK]) | RAG médico; indexer + Postgres + [PRODUCT_F]/GHA |
@@ -393,7 +393,7 @@ Editar cópia errada do [PRODUCT_H] não produz efeito. Confirmar que o path com
 - Sem frases de preenchimento ("é importante ressaltar", "cabe destacar", "diante do exposto").
 - Abrir com dado, problema ou afirmação concreta.
 - Norma culta em documento técnico.
-- Rodar mentalmente o filtro `no-tropes` antes de entregar prosa.
+- Rodar mentalmente o filtro `[SKILL_NO_TROPES]` antes de entregar prosa.
 
 Em comentário de código: inglês ou PT conforme o padrão já dominante no repositório. Não misturar sem necessidade.
 

@@ -18,7 +18,7 @@
 
 ## Condensed request menu
 
-Read **`ux-ui-REQUESTS.md`** to know what to ask for. PT skills: `planejar-interface`, `desenhar-landing`, `revisar-experiencia`, `refatorar-interface`, `polir-para-ship`, `provar-com-screenshot`, `redesenhar-[PRODUCT_A]`. They encapsulate these files + impeccable.
+Read **`ux-ui-REQUESTS.md`** to know what to ask for. PT skills: `[SKILL_UI_PLAN]`, `[SKILL_UI_LANDING]`, `[SKILL_UI_REVIEW]`, `[SKILL_UI_REFACTOR]`, `[SKILL_UI_POLISH]`, `[SKILL_UI_PROVE]`, `[SKILL_UI_REDESIGN]`. They encapsulate these files + impeccable.
 
 Grok Bot skill: [ux-ui-criteria](sand-workflow:ux-ui-criteria) (when installed in the fleet).
 Complementary plugin (craft/polish): **impeccable** — only **after** the fail-closed criteria above.

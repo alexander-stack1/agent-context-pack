@@ -12,7 +12,7 @@
 
 ## 0. 使命
 
-交付可立即使用的代码，并附可核查证据，不做返工，不编造结果。[YOUR_NAME]（[YOUR_NAME]）同时运营银行劳动法实务、学术与法律科技。最大瓶颈是时间。每一次交付都必须达到可合并、可部署或可交接的水准。
+交付可立即使用的代码，并附可核查证据，不做返工，不编造结果。[YOUR_NAME]（[YOUR_HANDLE]）同时运营 [FRONT_A]、[FRONT_B] 与 [FRONT_C]。最大瓶颈是时间。每一次交付都必须达到可合并、可部署或可交接的水准。
 
 你实现。你证明。你不承诺未运行过的结果。
 
@@ -35,7 +35,7 @@
 宣言层规则：
 
 - **Camada 1**（上述正典）：必读。
-- **Camada 2**（领域）：仅加载任务触及的部分（`[YOUR_NAME]/wiki/[PRODUCT_A]/`、`tech/`、Nexo kit 等）。
+- **Camada 2**（领域）：仅加载任务触及的部分（`[YOUR_NAME]/wiki/[PRODUCT_A]/`、`tech/`、[BRAND_KIT_DIR] 等）。
 - **Camada 3**（归档、changelog 备份、垃圾、`*_old`）：除非明确要求，否则忽略。
 
 iCloud 上的 `[CONTEXT_DIR]/` 文件夹是**唯一**正典上下文来源。模型记忆不能替代文件。聊天历史是次要的。
@@ -142,7 +142,7 @@ Proceed?
 ### 3.3 提交与 PR
 
 - Conventional Commits。
-- 参考技能：`commit-push-pr`。
+- 参考技能：`[SKILL_COMMIT_PR]`。
 - PR 默认草稿。
 - 描述：最小清晰问题 → 如何解决 → 做出改动的模型/工具链。
 - Issue/PR 引用带超链接。
@@ -317,14 +317,14 @@ Regression test: case that fails before and passes after
 4. 尊重已文档化的产品/品牌色板。对比冲突：示警、应用备选、记录理由。
 5. 动画尊重 Reduce Motion。避免持续脉冲/闪烁。
 6. 交付的 SVG 文字转轮廓（不依赖已安装字体）。
-7. 参考技能：`ux-ui-REQUESTS.md` 菜单（`planejar-interface`、`desenhar-landing`、`revisar-experiencia`、`refatorar-interface`、`polir-para-ship`、`provar-com-screenshot`）。
+7. 参考技能：`ux-ui-REQUESTS.md` 菜单（`[SKILL_UI_PLAN]`、`[SKILL_UI_LANDING]`、`[SKILL_UI_REVIEW]`、`[SKILL_UI_REFACTOR]`、`[SKILL_UI_POLISH]`、`[SKILL_UI_PROVE]`）。
 
 ### 产品色板（速查）
 
 | 产品 | 主色 | 强调色 | 字体 |
 |---------|----------|--------|------------|
-| [PRODUCT_A] / [PRODUCT_B] | `#1B4965` | `#D4A843` | Instrument Serif + Inter |
-| Nexo Tecnologia | `#0B1F3A` | `#00D4FF`（操作 `#2563EB`） | Sora + Inter |
+| [PRODUCT_A] / [PRODUCT_B] | `[PRODUCT_PRIMARY]` | `[PRODUCT_ACCENT]` | [PRODUCT_FONT_HEADING] + [PRODUCT_FONT_BODY] |
+| [YOUR_COMPANY] | `[COMPANY_PRIMARY]` | `[COMPANY_ACCENT]`（操作 `[COMPANY_ACTION]`） | [COMPANY_FONT_HEADING] + [COMPANY_FONT_BODY] |
 
 ---
 
@@ -353,18 +353,18 @@ Regression test: case that fails before and passes after
 
 | 情境 | 技能 / 参考 |
 |----------|-------------------|
-| 多前线编排 | `nexo-agents-team`（CTO → 经理 → 运营） |
+| 多前线编排 | `[AGENT_TEAM]`（CTO → 经理 → 运营） |
 | TDD | `tdd` |
 | 纪律化调试 | `diagnose` |
-| Review Standards + Spec | `review`、`especialista-revisao-codigo` |
-| Commit / push / PR | `commit-push-pr` |
+| Review Standards + Spec | `review`、`[SKILL_CODE_REVIEW]` |
+| Commit / push / PR | `[SKILL_COMMIT_PR]` |
 | 架构 / 深化 | `improve-codebase-architecture`、`zoom-out`、`archify` |
 | 微小提交式重构 | `request-refactor-plan` |
 | 一次性原型 | `prototype` |
 | 跨会话交接 | `handoff` |
-| 安全 | `cybersecurity-squad`、`appsec-specialist` |
-| Postgres / Docker / K8s | 本文各节 + `dba-data-engineer`、`devops-sre` |
-| PRD / issues | `gerar-prd`、`quebrar-em-issues`、`triagem` |
+| 安全 | `[SKILL_SECURITY_SQUAD]`、`[AGENT_TEAM]:appsec` |
+| Postgres / Docker / K8s | 本文各节 + `[AGENT_TEAM]:dba`、`[AGENT_TEAM]:devops` |
+| PRD / issues | `[SKILL_PRD]`、`[SKILL_ISSUES]`、`[SKILL_TRIAGE]` |
 
 ---
 
@@ -374,7 +374,7 @@ Regression test: case that fails before and passes after
 
 | 项目 | 正典路径 / 关键说明 |
 |---------|------------------------------|
-| [PRODUCT_A] / [PRODUCT_B] | 栈：React、TS、tRPC、Drizzle、MySQL；Swiss Legal Design |
+| [PRODUCT_A] / [PRODUCT_B] | 栈：React、TS、tRPC、Drizzle、MySQL；[PRODUCT_DESIGN_SYSTEM] |
 | [PRODUCT_H] | **仅** `~/[PRODUCT_H]`。Desktop/Mesa/worktrees 上的副本是死的 |
 | [PRODUCT_F] | 本地自动化；cron + LLM 网关 |
 | 医学（[RAG_STACK]） | 医学 RAG；索引器 + Postgres + [PRODUCT_F]/GHA |
@@ -392,7 +392,7 @@ Regression test: case that fails before and passes after
 - 不用填充套话（「值得注意的是」「有必要强调」「鉴于上述」）。
 - 以数据、问题或具体主张开篇。
 - 技术文档用规范书面语。
-- 交付散文前在心里跑一遍 `no-tropes` 过滤。
+- 交付散文前在心里跑一遍 `[SKILL_NO_TROPES]` 过滤。
 
 代码注释：按仓库已主导的模式用英语或葡萄牙语。无必要不混用。
 

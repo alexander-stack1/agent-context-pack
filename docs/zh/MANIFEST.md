@@ -9,14 +9,14 @@
 
 ## 关于本文件夹
 
-这是 [YOUR_NAME]（[YOUR_NAME]）的正典上下文文件夹：银行劳动法律师、学者（[YOUR_UNIVERSITY] 硕士、博士候选人）与 legaltech 产品创始人。文件夹汇集工作身份、品牌声音、协作规则、项目状态与知识 vault。
+这是 [YOUR_NAME]（[YOUR_HANDLE]）的正典上下文文件夹：[YOUR_ROLE]、学者（[YOUR_UNIVERSITY]）与 [YOUR_INDUSTRY] 产品创始人。文件夹汇集工作身份、品牌声音、协作规则、项目状态与知识 vault。
 
-`[CONTEXT_DIR]/` 文件夹（在 Mini 上：`[CONTEXT_DIR]`）是正典运营上下文的**唯一**来源。任何助手、在任何机器上，开始任务前必须只阅读本文件夹中的文件。
+`[CONTEXT_DIR]/` 文件夹（在 [SECONDARY_MACHINE] 上：`[CONTEXT_DIR]`）是正典运营上下文的**唯一**来源。任何助手、在任何机器上，开始任务前必须只阅读本文件夹中的文件。
 
 有两个 Obsidian vault，角色不同：
 
 - **上下文 / `[YOUR_NAME]/`**：运营 vault（Karpathy 方法：人读，LLM 写）。
-- **法律**：所有智能体的领域第二大脑：`[DOMAIN_VAULT]`（Mini 上快捷方式 `[DOMAIN_VAULT]`；约 4.5k 笔记：判例、立法、新闻、RAG、先例）。它不替代本文件夹的 Camada 1。
+- **法律**：所有智能体的领域第二大脑：`[DOMAIN_VAULT]`（[SECONDARY_MACHINE] 上快捷方式 `[DOMAIN_VAULT]`；约 4.5k 笔记：判例、立法、新闻、RAG、先例）。它不替代本文件夹的 Camada 1。
 
 **强制路由：** 任何与法、判例、立法、先例、学说、法律新闻、法律 RAG 或法律领域研究相关的请求，**所有 AI 与智能体**必须在编造或即兴之前查阅并指向法律 vault（`[DOMAIN_VAULT]`）。`[YOUR_NAME]/` vault 仍仅用于运营上下文与 Karpathy 方法。
 
@@ -77,7 +77,7 @@ Karpathy 流程在 `[YOUR_NAME]/`：
 | `credenciais/` | 集成凭证 | 仅在需要访问的自动化任务（见 `_PARA-REVISAR.md`） |
 | `appsec-rules.md` | 完整 fail-closed 手册（10 条规则 + 矩阵 + 已批准）；粘贴到 Claude AppSec Project | 审计、安全审查、auth/密钥/部署修复 |
 | `documentos/` | 零散文档与项目状态 | 点查 |
-| `Desktop/Negócio/Nexo [BRAND_KIT_DIR] /kit-nexo/` | Nexo Tecnologia 品牌包：标志、调色板、字体、头像、签名与各网络物料。规则见 `01-logotipo/logomarca.md` | 任何 Nexo 视觉物料 |
+| `[BRAND_KIT_DIR]/` | [YOUR_COMPANY] 品牌包：标志、调色板、字体、头像、签名与各网络物料。规则见 `[BRAND_KIT_DIR]/logo-rules.md` | 任何 [YOUR_COMPANY] 视觉物料 |
 
 ---
 
@@ -96,50 +96,50 @@ Karpathy 流程在 `[YOUR_NAME]/`：
 ## 按方向的 Skills
 > 路由图。识别任务方向后，优先这些 skills。
 
-### 银行劳动法（亲请求人）
+### [PRACTICE_AREA]
 
 | 任务 | Skill |
 |--------|-------|
-| 阅读新案件、文书摘要 | `resumo-processo` |
-| 诉状、答辩、备忘录（一审） | `advogado-trabalhista-bancario` |
-| 和解计算与提案 | `calculo-acordo-trabalhista` |
-| 鉴定报告与计算 | `perito-trabalhista-bancario` |
-| 质疑计算或报告 | `contador-trabalhista-impugnacao` |
-| 再审上诉、embargos、agravo | `especialista-recurso-revista` |
-| 对雇主上诉的反驳 | `contrarrazoes-trabalhistas` |
-| 执行与清算 | `execucao-trabalhista` |
-| 判例研究 | `pesquisa-jurisprudencia`, `jurisprudencia-stf-direitos-sociais` |
-| 劳动程序学说（管辖、期限、无效、上诉、执行） | `martins-processo-trabalho` （Sergio Pinto Martins 书转换；私有仓库 `[YOUR_GITHUB]/martins-processo-trabalho`） |
-| 核验法律或程序 | `legislacao-brasileira:verificar-legislacao` |
+| 阅读新案件、文书摘要 | `[SKILL_CASE_SUMMARY]` |
+| 诉状、答辩、备忘录（一审） | `[SKILL_DOMAIN_DRAFTING]` |
+| 和解计算与提案 | `[SKILL_SETTLEMENT_CALC]` |
+| 鉴定报告与计算 | `[SKILL_EXPERT_REPORT]` |
+| 质疑计算或报告 | `[SKILL_CALC_CHALLENGE]` |
+| 再审上诉、embargos、agravo | `[SKILL_APPEALS]` |
+| 对雇主上诉的反驳 | `[SKILL_COUNTER_APPEAL]` |
+| 执行与清算 | `[SKILL_ENFORCEMENT]` |
+| 判例研究 | `[SKILL_CASELAW_SEARCH]`, `[SKILL_CASELAW_SEARCH_B]` |
+| 劳动程序学说（管辖、期限、无效、上诉、执行） | `[SKILL_DOMAIN_BOOK]` （[BOOK_AUTHOR] 书转换；私有仓库 `[YOUR_GITHUB]/[SKILL_DOMAIN_BOOK]`） |
+| 核验法律或程序 | `[SKILL_LAW_CHECK]` |
 
 ### 学术（[YOUR_UNIVERSITY]，博士）
 
 | 任务 | Skill |
 |--------|-------|
-| 撰写或审阅文章、论文、章节 | `revisor-academico-juridico` |
-| 学说分析与预立项 | `professor-trabalho-previdenciario-[YOUR_UNIVERSITY]` |
-| ABNT 学习文档 | `documento-estudo-abnt` |
-| STF 判决分析 | `analise-jurisprudencia-stf` |
+| 撰写或审阅文章、论文、章节 | `[SKILL_ACADEMIC_REVIEW]` |
+| 学说分析与预立项 | `[SKILL_ACADEMIC_ADVISOR]` |
+| ABNT 学习文档 | `[SKILL_STUDY_DOC]` |
+| STF 判决分析 | `[SKILL_COURT_ANALYSIS]` |
 
 ### Legaltech 与产品
 
 | 任务 | Skill |
 |--------|-------|
-| Legaltech 市场情报 | `analise-mercado-juridico` |
-| 从对话生成 PRD | `gerar-prd` |
-| 将计划拆成 issues | `quebrar-em-issues` |
-| Issue 分诊 | `triagem` |
-| 评估法律检索或 RAG 相关性（0–3 分、精确率、召回、golden set） | `avaliar-relevancia-jurisprudencia` |
+| Legaltech 市场情报 | `[SKILL_MARKET_INTEL]` |
+| 从对话生成 PRD | `[SKILL_PRD]` |
+| 将计划拆成 issues | `[SKILL_ISSUES]` |
+| Issue 分诊 | `[SKILL_TRIAGE]` |
+| 评估法律检索或 RAG 相关性（0–3 分、精确率、召回、golden set） | `[SKILL_RETRIEVAL_EVAL]` |
 
 ### 开发与自动化
 
 | 任务 | Skill |
 |--------|-------|
-| 团队编排与架构 | `nexo-agents-team` (cto, backend, frontend, devops, dba, qa) |
+| 团队编排与架构 | `[AGENT_TEAM]` (cto, backend, frontend, devops, dba, qa) |
 | 高级实现者运营合同（DoD、TDD、基础设施、安全） | `senior-implementer-instructions.md` (Camada 1) |
-| 完整代码审查 | `especialista-revisao-codigo` |
-| 端到端系统分析 | `analisador-sistema-ponta-a-ponta` |
-| Commit、push 与 PR | `commit-push-pr` |
+| 完整代码审查 | `[SKILL_CODE_REVIEW]` |
+| 端到端系统分析 | `[SKILL_E2E_ANALYSIS]` |
+| Commit、push 与 PR | `[SKILL_COMMIT_PR]` |
 | 交互式架构图 | `archify` (architecture, workflow, sequence, data-flow, lifecycle) |
 | TDD red-green-refactor | `tdd` |
 | 纪律化调试 | `diagnose` |
@@ -185,20 +185,20 @@ Karpathy 流程在 `[YOUR_NAME]/`：
 
 | 任务 | Skill |
 |--------|-------|
-| [YOUR_HANDLE]、[YOUR_FIRM] 与产品的文案 | `copy-marca-pessoal` |
+| [YOUR_HANDLE]、[YOUR_FIRM] 与产品的文案 | `[SKILL_BRAND_COPY]` |
 | 标志、视觉识别与平面物料 | `working-style.md` 中的“设计与视觉识别流程”一节 |
-| UI / landing / app / chat | `ux-ui-REQUESTS.md` → PT skills (`planejar-interface`, `desenhar-landing`, `revisar-experiencia`, `refatorar-interface`, `polir-para-ship`, `provar-com-screenshot`, `redesenhar-[PRODUCT_A]`); motors: gates + impeccable |
+| UI / landing / app / chat | `ux-ui-REQUESTS.md` → PT skills (`[SKILL_UI_PLAN]`, `[SKILL_UI_LANDING]`, `[SKILL_UI_REVIEW]`, `[SKILL_UI_REFACTOR]`, `[SKILL_UI_POLISH]`, `[SKILL_UI_PROVE]`, `[SKILL_UI_REDESIGN]`); motors: gates + impeccable |
 
 ### 知识与生产力
 
 | 任务 | Skill |
 |--------|-------|
-| 综合主题或长文 | `sintetizador` |
-| 压缩应答模式 | `modo-conciso` |
-| 用访谈压测计划 | `entrevistar`, `entrevistar-com-contexto` |
+| 综合主题或长文 | `[SKILL_SYNTHESIZE]` |
+| 压缩应答模式 | `[SKILL_CONCISE_MODE]` |
+| 用访谈压测计划 | `[SKILL_INTERVIEW]`, `[SKILL_INTERVIEW_CTX]` |
 | 操作 Obsidian vault | `obsidian-cli`, `obsidian-markdown`, `obsidian-bases` |
-| 将文档译为 PT-BR | `tradutor-documentos` |
-| 创建或调整 skill | `criar-skill`, `skill-creator` |
+| 将文档译为 PT-BR | `[SKILL_TRANSLATE]` |
+| 创建或调整 skill | `[SKILL_CREATE_SKILL]`, `skill-creator` |
 | 将书（PDF、EPUB、DOCX 等）转为智能体 skill | `book-to-skill` （安装于 `~/.claude/skills/book-to-skill`，命令 `/book-to-skill`） |
 
 ### 文档输出

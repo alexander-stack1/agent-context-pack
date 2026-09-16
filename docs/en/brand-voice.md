@@ -2,9 +2,9 @@
 
 > **Public template.** Personal identifiers, firm, products, emails and paths were replaced with placeholders. See `PLACEHOLDERS.md`. Do not reintroduce real data.
 
-> Brand voice: [YOUR_HANDLE], [YOUR_FIRM], Nexo Tecnologia, and the legaltech products.
+> Brand voice: [YOUR_HANDLE], [YOUR_FIRM], [YOUR_COMPANY], and the legaltech products.
 > Canonical context source. Last updated: 31/08/2026.
-> Reference skill for copy: `copy-marca-pessoal`.
+> Reference skill for copy: `[SKILL_BRAND_COPY]`.
 
 ## Shared principle
 
@@ -21,13 +21,13 @@ Five editorial pillars:
 4. case-law analysis
 5. constitutional labor doctrine
 
-Visual identity: editorial-magazine, near-monochromatic palette, typography Cormorant Garamond, Bebas Neue, and DM Sans.
+Visual identity: editorial-magazine, near-monochromatic palette, typography [PERSONAL_FONT_A], [PERSONAL_FONT_B], and [PERSONAL_FONT_C].
 
 ## [YOUR_FIRM] (institutional)
 
-Firm voice for client and market. Sober, technical, and trustworthy, without coldness. Communicates competence and care for the claimant. Avoids outcome promises and sensational language. Official documents go on letterhead (see `working-style.md`, `/papel-timbrado` command).
+Firm voice for client and market. Sober, technical, and trustworthy, without coldness. Communicates competence and care for the claimant. Avoids outcome promises and sensational language. Official documents go on letterhead (see `working-style.md`, `/[LETTERHEAD_CMD]` command).
 
-## Nexo Tecnologia (company)
+## [YOUR_COMPANY] (company)
 
 Voice of the company that gathers the products and services. Speaks to the partner and the administrator of a firm of five to fifty lawyers. Does not speak to the associate, and does not speak to the technology market.
 
@@ -39,35 +39,35 @@ Writes against three specific targets. The consultancy that treats a law firm li
 
 - We speak of operations, not technology. The partner does not buy AI; they buy hours back and cash predictability.
 - Every number has a source, or is declared as our estimate with the method visible. A number without origin does not ship.
-- We never promise a procedural outcome. Nexo sells operations, not victory.
+- We never promise a procedural outcome. [YOUR_COMPANY] sells operations, not victory.
 
 ### Five editorial pillars, with weight
 
 | Pillar | Weight | Kit template | Goal |
 |-------|:----:|-----------------|----------|
-| Diagnosis | 30% | `feed-A-dado` | Engagement and problem recognition |
-| Method | 25% | `feed-B-carrossel` | Education and credibility |
-| Demonstration | 20% | `feed-C-produto` | Conversion |
-| Proof | 15% | `feed-D-depoimento` | Conversion |
-| Behind the scenes | 10% | `feed-E-founder` | Reputation |
+| Diagnosis | 30% | `[KIT_TEMPLATE_A]` | Engagement and problem recognition |
+| Method | 25% | `[KIT_TEMPLATE_B]` | Education and credibility |
+| Demonstration | 20% | `[KIT_TEMPLATE_C]` | Conversion |
+| Proof | 15% | `[KIT_TEMPLATE_D]` | Conversion |
+| Behind the scenes | 10% | `[KIT_TEMPLATE_E]` | Reputation |
 
 Method is the pillar that sustains credibility, because it teaches how to solve the problem without buying anything. If it falls below 20% in the month, the account becomes a catalog.
 
 ### Ecosystem
 
-[PRODUCT_A] (legal management), [PRODUCT_H] (24h AI capture and intake), Nexo Academy (mentoring and training), digital presence consulting. Entry offer on all networks: free thirty-minute diagnosis.
+[PRODUCT_A] (legal management), [PRODUCT_H] (24h AI capture and intake), [YOUR_COMPANY] Academy (mentoring and training), digital presence consulting. Entry offer on all networks: free thirty-minute diagnosis.
 
 ### Visual identity
 
-Navy `#0B1F3A` as base, cyan `#00D4FF` as accent, blue `#2563EB` for action. Violet `#7C3AED` only when the topic is AI, and never inside the symbol (2.90:1 on navy, below the 3:1 minimum). Typography Sora for titles and Inter for body.
+Navy `[COMPANY_PRIMARY]` as base, cyan `[COMPANY_ACCENT]` as accent, blue `[COMPANY_ACTION]` for action. Violet `[COMPANY_AI_COLOR]` only when the topic is AI, and never inside the symbol (2.90:1 on navy, below the 3:1 minimum). Typography [COMPANY_FONT_HEADING] for titles and [COMPANY_FONT_BODY] for body.
 
-Full brand kit at `Desktop/Negócio/Nexo [BRAND_KIT_DIR] /kit-nexo/`. Logo, avatar, and signature rules in `01-logotipo/logomarca.md`. Full editorial line, with four-week calendar, copy ruler, and metrics, in `06-copy/linha-editorial-nexo.docx`.
+Full brand kit at `[BRAND_KIT_DIR]/`. Logo, avatar, and signature rules in `[BRAND_KIT_DIR]/logo-rules.md`. Full editorial line, with four-week calendar, copy ruler, and metrics, in `[BRAND_KIT_DIR]/editorial-line.docx`.
 
 ## Legaltech products
 
 Product voice: clear, useful, and oriented to the lawyer’s work. Sells efficiency and trust by demonstrating value with concrete examples, not adjectives.
 
-- **[PRODUCT_A] / [PRODUCT_B]**: research and analysis of labor case law. Swiss Legal Design identity: petrol blue (#1B4965) as primary, golden amber (#D4A843) as accent, 12-column grid, Instrument Serif and Inter typography.
+- **[PRODUCT_A] / [PRODUCT_B]**: research and analysis of labor case law. [PRODUCT_DESIGN_SYSTEM] identity: petrol blue ([PRODUCT_PRIMARY]) as primary, golden amber ([PRODUCT_ACCENT]) as accent, 12-column grid, [PRODUCT_FONT_HEADING] and [PRODUCT_FONT_BODY] typography.
 - **[PRODUCT_G]**: second product, in discovery. Define positioning and voice at launch.
 
 ## Copy axes (choose by goal)
@@ -87,11 +87,11 @@ Product voice: clear, useful, and oriented to the lawyer’s work. Sells efficie
 - Never use filler phrases: "it is important to note that", "in the current context".
 - Open with a datum, case, or impact claim, never with a generic formula.
 - Cultivated standard in technical and institutional texts; always check https://www.normaculta.com.br/. Direct, human language in network content.
-- Run the `no-tropes` skill as post-processing on all generated prose. The expanded trope catalog is at `~/.claude/skills/no-tropes/tropes-reference.md`.
+- Run the `[SKILL_NO_TROPES]` skill as post-processing on all generated prose. The expanded trope catalog is at `~/.claude/skills/[SKILL_NO_TROPES]/tropes-reference.md`.
 
 ## Long academic and technical writing style (canonical)
 
-Standard to apply in pre-project, article, thesis, dissertation, opinion, memorial, substantial filing, and any long-form text that is not network copy. Calibrated from the v4 review of the ADO 73/[YOUR_UNIVERSITY] pre-project (Jun. 2026).
+Standard to apply in pre-project, article, thesis, dissertation, opinion, memorial, substantial filing, and any long-form text that is not network copy. Calibrated from the v4 review of the [THESIS_REF] pre-project (Jun. 2026).
 
 ### 1. Rhythm
 
@@ -127,7 +127,7 @@ Practical criterion:
 
 - Every ABNT citation goes to the footnote: direct (with quotes and page) and indirect (paraphrase).
 - The body may mention the author ("Edelman described...", "Sarlet sustains...") without inserting a year parenthesis. Year and full reference go in the footnote.
-- Law, judgment, and comparative statute may appear in the body with short identification (art. 7, XXVII, of the Constitution; ADO 73/DF; KSchG, § 1). Full reference goes in the footnote on first occurrence.
+- Law, judgment, and comparative statute may appear in the body with short identification (art. 7, XXVII, of the Constitution; [CASE_REF]; KSchG, § 1). Full reference goes in the footnote on first occurrence.
 - The footnote is not merely a reference catalog. It is a space of critical operation: it confirms the use made of the author, makes divergences explicit, and qualifies the reach of the citation.
 
 ### 8. Patterns always to remove

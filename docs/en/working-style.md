@@ -53,11 +53,11 @@ Apply whenever the request is research, survey, or grounding.
 
 ## Case-law relevance evaluation (retrieval judgment)
 
-Apply when the task is to judge the quality of a search or legal RAG, score query–judgment pairs, or build a golden set. Reference skill: `avaliar-relevancia-jurisprudencia`. Works with the Nexo team Data & AI Tech Lead for metrics and monitoring.
+Apply when the task is to judge the quality of a search or legal RAG, score query–judgment pairs, or build a golden set. Reference skill: `[SKILL_RETRIEVAL_EVAL]`. Works with the [AGENT_TEAM] Data & AI Tech Lead for metrics and monitoring.
 
 - **0 to 3 rubric:** 0 irrelevant to the query and its filters; 1 contextual or tangential; 2 relevant and useful, with the thesis as grounding; 3 directly responsive and strongly grounding, with the thesis faced and resolved in the holding. The score measures responsiveness, not success. An adverse precedent that faces the thesis is a high score, flagged in the note.
 - **Hard rules:** violated court or date filter caps the score at 1, checked in the body of the judgment and not only in metadata. Separate judgment fact from tactical use, distinguishing mere mention, grounding, and holding. Never score by keyword match. Missing text yields PENDING and reprocess with the full text. Do not invent missing data.
-- **Base and training:** evaluate on the full text, not the short excerpt. On large batches, one subagent per query in parallel. Labor training comes from the Obsidian brain, loaded by the activator MOC `_moc-direito-trabalho.md`, without reading the whole vault or inventing OJ or Súmula holdings from an index.
+- **Base and training:** evaluate on the full text, not the short excerpt. On large batches, one subagent per query in parallel. Labor training comes from the Obsidian brain, loaded by the activator MOC `[DOMAIN_MOC].md`, without reading the whole vault or inventing OJ or Súmula holdings from an index.
 - **Metrics:** score distribution, useful precision (score ≥ 2), recall per query, zero-recall queries, and filter conformity. Fix the evaluated batch as a regression golden set and redo verification on every prompt, index, or model change.
 - **Output:** CSV filled with score and note on every row, and `.docx` report with methodology, metrics, retrieval diagnosis, and pair appendix.
 
@@ -67,11 +67,11 @@ Apply on code, automation, and product tasks.
 
 **First:** classify effort S/M/C (section below). Ceremony (plan, TDD, suite) follows the class table. Fail-closed does not loosen.
 
-- **Orchestration:** on demands that cross fronts, use the Nexo agent team. The CTO classifies and delegates to managers and specialists. For a single front, go straight to the specialist (backend, frontend, devops, dba, qa).
+- **Orchestration:** on demands that cross fronts, use the [AGENT_TEAM]. The CTO classifies and delegates to managers and specialists. For a single front, go straight to the specialist (backend, frontend, devops, dba, qa).
 - **Plan before coding:** per S/M/C. Reproduce the bug before proposing the fix (M/C). On C, full plan and explicit approval.
 - **Prove before asserting:** no "it is ready" without evidence. On S: path verification. On M: package/module. On C: full suite. Fresh evidence before claiming success.
 - **Honesty about limits:** declare what the fix resolves and what it does not. Point out what was left untouched and why.
-- **Commits:** Conventional Commits standard. Use the `commit-push-pr` skill for the commit, push, and draft PR flow.
+- **Commits:** Conventional Commits standard. Use the `[SKILL_COMMIT_PR]` skill for the commit, push, and draft PR flow.
 - **PRs:** description opens with the problem, then the solution. Add which model/harness made the changes. When referencing an issue or PR, use a hyperlink. When monitoring a PR: poll recent checks, verify bot findings against source, fix real ones, dismiss false positives with justification. If nothing is new, stay quiet. Merge only per the disposition given.
 - **Nothing destructive on your own:** do not restart services, kill processes, run a production migration, or delete data without my approval. Leave the command ready for me to run and explain the effect.
 - **Blast radius:** never touch production apps, live servers, or daily-use data without explicit instruction. Name what will be touched before touching.
@@ -79,7 +79,7 @@ Apply on code, automation, and product tasks.
 - **Never edit a repository inside iCloud:** Desktop and Documents sync, and iCloud resolves conflicts by creating duplicates. Worse, a non-materialized file returns `Resource deadlock avoided` on read and `Bus error` on git, and the copy leaves with zero bytes looking intact. Before touching code that lives in a synced folder, clone outside, for example in `~/dev`, and work on the clone. Also true for production snapshots: `~/[PRODUCT_A]-prod` is a read-only record; editing there changes nothing.
 - **Prove the test bites:** mandatory on M/C when there is a new test (deliberate post-GREEN mutation). On S, no. Record in the commit which mutations were tried and which were caught.
 - **Cost:** inform estimated cost before using a paid API (models, embeddings, services).
-- **PostgreSQL, Docker, and Kubernetes:** full rules in `agent_rules.md` (PostgreSQL, Docker, and Kubernetes sections). Summary: mandatory RLS, parameterized SQL, reversible migrations, multi-stage build, one process per container, never root, separate probes, minimum replicas, GitOps. Reference skills: `dba-data-engineer` and `devops-sre` (Nexo Agents Team).
+- **PostgreSQL, Docker, and Kubernetes:** full rules in `agent_rules.md` (PostgreSQL, Docker, and Kubernetes sections). Summary: mandatory RLS, parameterized SQL, reversible migrations, multi-stage build, one process per container, never root, separate probes, minimum replicas, GitOps. Reference skills: `[AGENT_TEAM]:dba` and `[AGENT_TEAM]:devops`.
 - **Convert book to skill:** to turn a PDF, EPUB, DOCX, or other long document into an agent skill, use `book-to-skill` (command `/book-to-skill ~/path/to-book.pdf`), installed at `~/.claude/skills/book-to-skill`. Skills generated from books enter the category matching the subject, not a generic folder.
 
 ## Effort classification (S / M / C)
@@ -198,7 +198,7 @@ Apply to logo, visual identity, graphic pieces, and interface.
 
 Apply before installing a pixel, tag, analytics SDK, or any third-party script on my product.
 
-- **Read the policy before the code:** open the product’s current Cookie Policy and Privacy Policy and check what they assert. In September 2026, [PRODUCT_A]’s said, in so many words, that the product did not use advertising cookies. Installing the pixel without changing the text would have created a contradiction between a document signed by the company and the site’s real behavior, and the named Data Protection Officer there is me.
+- **Read the policy before the code:** open the product’s current Cookie Policy and Privacy Policy and check what they assert. In September 2026, [PRODUCT_A]’s said, in so many words, that the product did not use advertising cookies. Installing the pixel without changing the text would have created a contradiction between a document signed by the company and the site’s real behavior, and the Data Protection Officer named there is [YOUR_NAME].
 - **Text and behavior ship together:** the policy change and the tracker install enter the same deploy window. They must not diverge even for one day.
 - **Consent before the first request:** the third-party script is only fetched after acceptance. No loading and then “respecting” the choice. The guarantee must be structural, with the loader outside the pages and a test forbidding any page from referencing the third-party host.
 - **Fail-closed on consent:** missing, malformed, tampered, or previous-policy-version cookie means absence of consent, and the notice reappears.
@@ -212,7 +212,7 @@ Apply to every agent that produces a real action (file, publish, charge, change 
 - **Origin:** adapted from the reference architecture of the `anthropics/commerce-agents` repository (shopping agent and merchant agent), specifically the `commerce-common` core (fencing, provenance gates) and the staged-changes pattern with human approval before any real write.
 - **Central rule:** no agent writes directly to a real system. The flow is always: draft, staged change with fencing and provenance, human approval, handoff to the execution system, and, when the action involves real spend or financial commitment, a second separate confirmation before activating.
 - **Two approvals, not one:** the first approves the idea (content, audience, structure). The second approves real money (budget, activation). They do not substitute for each other.
-- **Mapped applications:** [PRODUCT_A] follows the merchant-agent pattern, staged changes with partner approval before applying. [PRODUCT_G] follows the shopping-agent pattern, builds the simulation and checkout only renders, never charges alone. JusGraphé gets the human-approval gate before any filing leaves. [YOUR_FIRM] WhatsApp automation separates deciding from executing. For campaigns and ads, the internal agent drafts, handoff goes to Adspirer, which creates the paused campaign, and only the second budget approval truly activates.
+- **Mapped applications:** [PRODUCT_A] follows the merchant-agent pattern, staged changes with partner approval before applying. [PRODUCT_G] follows the shopping-agent pattern, builds the simulation and checkout only renders, never charges alone. [PRODUCT_I] gets the human-approval gate before any filing leaves. [YOUR_FIRM] WhatsApp automation separates deciding from executing. For campaigns and ads, the internal agent drafts, handoff goes to Adspirer, which creates the paused campaign, and only the second budget approval truly activates.
 
 ## Execution rules
 
@@ -220,7 +220,7 @@ Apply to every agent that produces a real action (file, publish, charge, change 
 - **On uncertainty about classification or decision:** record in `_PARA-REVISAR.md`, do not try to guess.
 - **When processing multiple items:** if confidence is below 80%, mark as `VERIFY`.
 - **On tasks with independent parts:** suggest or use parallel subagents to gain speed.
-- **Whenever I use the `/papel-timbrado` command:** use `PAPEL TIMBRADO.docx` and `logo-cabecalho.png` from the `[CONTEXT_DIR]/ativos-[YOUR_FIRM]/` subfolder.
+- **Whenever I use the `/[LETTERHEAD_CMD]` command:** use `[LETTERHEAD_FILE]` and `[LOGO_FILE]` from the `[CONTEXT_DIR]/ativos-[YOUR_FIRM]/` subfolder.
 - **Every structural change** in this folder goes to `_CHANGELOG.md`.
 
 ## How to present the plan before executing
@@ -272,7 +272,7 @@ When using Fable or the Managed Agents API to orchestrate agents:
 - **Persistent threads**: coordinator can send follow-up; agent retains context from prior turns
 - **MCP routing**: servers are agent-scoped; vault credentials are session-scoped
 - **Limits**: maximum 20 agents in the roster, 25 concurrent threads, 1 depth level (no sub-delegation)
-- **Nexo mapping**: CTO → coordinator, Eng/Product/Infra Managers → second level, Frontend/Backend/QA/DBA/DevOps → operational, Solution Architect and Data/AI Lead → on-demand consultants
+- **[AGENT_TEAM] mapping**: CTO → coordinator, Eng/Product/Infra Managers → second level, Frontend/Backend/QA/DBA/DevOps → operational, Solution Architect and Data/AI Lead → on-demand consultants
 
 ## Privacy exclusions
 
@@ -315,7 +315,7 @@ If I correct a delivery or say "that wasn’t quite it", ask: "Should I update a
 
 Ready copy for Claude Project / paste into audit chat: `appsec-rules.md` (same playbook, single file).
 
-Apply on every audit, security code review, and deploy. Reference skills: `cybersecurity-squad`, `appsec-specialist` (Nexo), `especialista-revisao-codigo` (security category).
+Apply on every audit, security code review, and deploy. Reference skills: `[SKILL_SECURITY_SQUAD]`, `[AGENT_TEAM]:appsec`, `[SKILL_CODE_REVIEW]` (security category).
 
 ### Repository and CI/CD
 

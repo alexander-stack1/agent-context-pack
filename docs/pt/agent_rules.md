@@ -8,7 +8,7 @@
 
 ## Fonte da verdade
 
-Os arquivos em `[CONTEXT_DIR]/` (no Mini: `[CONTEXT_DIR]`) são a fonte canônica operacional. A memória do modelo serve para roteamento, as preferências estáveis ficam no `.auto-memory/`, o conhecimento operacional/Karpathy fica no vault `[YOUR_NAME]/`, e o segundo cérebro jurídico de domínio fica em `[DOMAIN_VAULT]` (atalho `[DOMAIN_VAULT]`). O histórico de conversa é contexto secundário.
+Os arquivos em `[CONTEXT_DIR]/` (no [SECONDARY_MACHINE]: `[CONTEXT_DIR]`) são a fonte canônica operacional. A memória do modelo serve para roteamento, as preferências estáveis ficam no `.auto-memory/`, o conhecimento operacional/Karpathy fica no vault `[YOUR_NAME]/`, e o segundo cérebro jurídico de domínio fica em `[DOMAIN_VAULT]` (atalho `[DOMAIN_VAULT]`). O histórico de conversa é contexto secundário.
 
 Roteamento de domínio: se o pedido for jurídico (direito, jurisprudência, legislação, precedentes, doutrina, notícias jurídicas, RAG jurídico), **todas as IAs** devem apontar e consultar o vault Jurídico (`[DOMAIN_VAULT]`). Não usar só memória do modelo no lugar desse vault.
 
@@ -50,7 +50,7 @@ Nunca armazenar: credenciais, senhas, cookies, códigos de recuperação, chaves
 6. Nunca usar ênclises e mesóclises artificiais
 7. Nunca usar linguagem de IA ("certamente!", "ótima pergunta!", "com prazer!")
 8. Nunca usar frases de preenchimento ("é importante ressaltar que", "cabe destacar")
-9. Rodar `no-tropes` como pós-processamento em toda prosa gerada
+9. Rodar `[SKILL_NO_TROPES]` como pós-processamento em toda prosa gerada
 
 ### Engenharia
 
@@ -128,7 +128,7 @@ Pergunta é pedido de resposta, não de mudança. Se a mensagem abre com "quão 
 
 ### Trabalho visual e design
 
-Para qualquer mudança não trivial de UI, layout ou copy: construir várias variantes estáticas primeiro, apresentar para escolha e esperar a decisão antes de implementar no componente real. Skills de referência: `impeccable`, `visual-verify`, `design-mentes-brilhantes`.
+Para qualquer mudança não trivial de UI, layout ou copy: construir várias variantes estáticas primeiro, apresentar para escolha e esperar a decisão antes de implementar no componente real. Skills de referência: `impeccable`, `visual-verify`, `[SKILL_DESIGN_A]`.
 
 Evitar animações que repintem continuamente (pulse, shimmer, blur, spinners que não param). Toda animação respeita Reduce Motion.
 
@@ -138,7 +138,7 @@ Nunca tocar em apps de produção, servidores live, canais de release ou dados d
 
 ### Pull Requests
 
-PRs seguem as regras de `commit-push-pr` (draft por padrão, Conventional Commits). Adicionalmente:
+PRs seguem as regras de `[SKILL_COMMIT_PR]` (draft por padrão, Conventional Commits). Adicionalmente:
 - Descrição abre com descrição mínima e clara do problema, seguida de como foi resolvido
 - Adicionar no final da descrição qual modelo e harness fez as mudanças
 - Ao referenciar issue ou PR, usar hyperlink
@@ -191,7 +191,7 @@ Antes de responder pergunta sobre o usuário:
 
 ### Segurança
 
-Playbook completo (copiável): `appsec-rules.md`. Resumo e CI/CD também em `working-style.md` § Segurança de aplicações. Skills de referência: `cybersecurity-squad`, `appsec-specialist` (Nexo Agents Team), `especialista-revisao-codigo` (categoria segurança).
+Playbook completo (copiável): `appsec-rules.md`. Resumo e CI/CD também em `working-style.md` § Segurança de aplicações. Skills de referência: `[SKILL_SECURITY_SQUAD]`, `[AGENT_TEAM]:appsec`, `[SKILL_CODE_REVIEW]` (categoria segurança).
 
 Resumo para qualquer agente:
 1. Todo repositório com SECURITY.md, secret scanning, Dependabot, CodeQL e branch protection
@@ -207,7 +207,7 @@ Resumo para qualquer agente:
 
 ## Ponteiros
 
-- Vault Obsidian operacional: `[CONTEXT_DIR]/[YOUR_NAME]/` (Mini: `[CONTEXT_DIR]/[YOUR_NAME]`)
+- Vault Obsidian operacional: `[CONTEXT_DIR]/[YOUR_NAME]/` ([SECONDARY_MACHINE]: `[CONTEXT_DIR]/[YOUR_NAME]`)
 - Vault Obsidian Jurídico (segundo cérebro): `[DOMAIN_VAULT]` (atalho `[DOMAIN_VAULT]`)
 - MOCs: `[YOUR_NAME]/wiki/00-indices/`
 - Memória persistente Claude: `.auto-memory/MEMORY.md`

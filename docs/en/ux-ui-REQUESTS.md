@@ -12,13 +12,13 @@
 
 | You want… | Ask / skill | Encapsulates |
 |------------|--------------|-----------|
-| Plan a screen **before** coding | **`planejar-interface`** | R0 + gates + impeccable `shape` (+ variants if requested) |
-| Landing / marketing web+mobile | **`desenhar-landing`** | web-landing + mobile gates + Persuade mode |
-| Review UX, a11y, responsive | **`revisar-experiencia`** | gates checklist + impeccable `critique` + `audit` |
-| Visual refactor (hierarchy, type, color, mobile↔web) | **`refatorar-interface`** | gates + `distill` / `layout` / `typeset` / `adapt` / `colorize` / `clarify` as needed |
-| Polish and harden for ship | **`polir-para-ship`** | `polish` + `harden` + `provar-com-screenshot` |
-| Prove the screen is right | **`provar-com-screenshot`** | `visual-verify` (screenshot vs reference) |
-| Incremental redesign of [PRODUCT_A] | **`redesenhar-[PRODUCT_A]`** | [PRODUCT_A] briefing + gates (does not change brand) |
+| Plan a screen **before** coding | **`[SKILL_UI_PLAN]`** | R0 + gates + impeccable `shape` (+ variants if requested) |
+| Landing / marketing web+mobile | **`[SKILL_UI_LANDING]`** | web-landing + mobile gates + Persuade mode |
+| Review UX, a11y, responsive | **`[SKILL_UI_REVIEW]`** | gates checklist + impeccable `critique` + `audit` |
+| Visual refactor (hierarchy, type, color, mobile↔web) | **`[SKILL_UI_REFACTOR]`** | gates + `distill` / `layout` / `typeset` / `adapt` / `colorize` / `clarify` as needed |
+| Polish and harden for ship | **`[SKILL_UI_POLISH]`** | `polish` + `harden` + `[SKILL_UI_PROVE]` |
+| Prove the screen is right | **`[SKILL_UI_PROVE]`** | `visual-verify` (screenshot vs reference) |
+| Incremental redesign of [PRODUCT_A] | **`[SKILL_UI_REDESIGN]`** | [PRODUCT_A] briefing + gates (does not change brand) |
 
 Base skill (rarely ask alone): `ux-ui-criteria` — fail-closed gates only.
 
@@ -26,13 +26,13 @@ Base skill (rarely ask alone): `ux-ui-criteria` — fail-closed gates only.
 
 ## Ready phrases
 
-- «Run **planejar-interface** for [screen/flow].»
-- «**desenhar-landing** for [product], web and mobile.»
-- «**revisar-experiencia** on this page / this PR.»
-- «**refatorar-interface**: it is cluttered / unreadable / breaks on mobile.»
-- «**polir-para-ship** before merge.»
-- «**provar-com-screenshot** against the mock / sibling.»
-- «**redesenhar-[PRODUCT_A]** layer [Chrome|Panel|Listings|Forms].»
+- «Run **[SKILL_UI_PLAN]** for [screen/flow].»
+- «**[SKILL_UI_LANDING]** for [product], web and mobile.»
+- «**[SKILL_UI_REVIEW]** on this page / this PR.»
+- «**[SKILL_UI_REFACTOR]**: it is cluttered / unreadable / breaks on mobile.»
+- «**[SKILL_UI_POLISH]** before merge.»
+- «**[SKILL_UI_PROVE]** against the mock / sibling.»
+- «**[SKILL_UI_REDESIGN]** layer [Chrome|Panel|Listings|Forms].»
 
 ---
 
@@ -41,10 +41,10 @@ Base skill (rarely ask alone): `ux-ui-criteria` — fail-closed gates only.
 | Old | Why | Use instead |
 |--------|---------|------------|
 | Loose English impeccable commands (`polish`, `bolder`…) | PT menu already chooses the motor | table skills |
-| `frontend-design` plugin directly | Overlaps impeccable for craft | `planejar-interface` / `desenhar-landing` / `refatorar-interface` |
+| `frontend-design` plugin directly | Overlaps impeccable for craft | `[SKILL_UI_PLAN]` / `[SKILL_UI_LANDING]` / `[SKILL_UI_REFACTOR]` |
 | `ui-design` marketplace (dozens of skills) | Noise; gates+impeccable cover the flow | menu above |
 | `design-an-interface` | It is API/module, **not** UI | (outside this menu) |
-| `design-mentes-brilhantes`, `apple-design-master` | Cited in stack, **no folder** in Claude | remove from stack |
+| `[SKILL_DESIGN_A]`, `[SKILL_DESIGN_B]` | Cited in stack, **no folder** in Claude | remove from stack |
 | `asc-app-create-ui` | App Store Connect automation, not design | (outside) |
 | `product-partner` | Full product cycle | only if launching a product, not point UI |
 | `meigen-ai-design` | Image generation | only if you need an illustrated asset |

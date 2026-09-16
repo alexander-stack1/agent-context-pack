@@ -8,7 +8,7 @@
 
 ## 真相来源
 
-`[CONTEXT_DIR]/` 中的文件（在 Mini 上：`[CONTEXT_DIR]`）是正典运营来源。模型记忆用于路由，稳定偏好在 `.auto-memory/`，运营/Karpathy 知识在 `[YOUR_NAME]/` vault，法律领域第二大脑在 `[DOMAIN_VAULT]`（快捷方式 `[DOMAIN_VAULT]`）。聊天历史是次要上下文。
+`[CONTEXT_DIR]/` 中的文件（在 [SECONDARY_MACHINE] 上：`[CONTEXT_DIR]`）是正典运营来源。模型记忆用于路由，稳定偏好在 `.auto-memory/`，运营/Karpathy 知识在 `[YOUR_NAME]/` vault，法律领域第二大脑在 `[DOMAIN_VAULT]`（快捷方式 `[DOMAIN_VAULT]`）。聊天历史是次要上下文。
 
 领域路由：若请求属于法律（法、判例、立法、先例、学说、法律新闻、法律 RAG），**所有 AI** 必须指向并查阅法律 vault（`[DOMAIN_VAULT]`）。不要只用模型记忆替代该 vault。
 
@@ -50,7 +50,7 @@
 6. 绝不用做作的附接/中接词形
 7. 绝不用 AI 套话（“当然！”“好问题！”“乐意效劳！”）
 8. 绝不用填充句（“需要指出的是”“值得强调”）
-9. 对所有生成散文运行 `no-tropes` 作为后处理
+9. 对所有生成散文运行 `[SKILL_NO_TROPES]` 作为后处理
 
 ### 工程
 
@@ -128,7 +128,7 @@
 
 ### 视觉工作与设计
 
-对任何非琐碎的 UI、布局或文案变更：先做多个静态变体，展示供选择，等决定后再实现到真实组件。参考 skills：`impeccable`、`visual-verify`、`design-mentes-brilhantes`。
+对任何非琐碎的 UI、布局或文案变更：先做多个静态变体，展示供选择，等决定后再实现到真实组件。参考 skills：`impeccable`、`visual-verify`、`[SKILL_DESIGN_A]`。
 
 避免持续重绘的动画（pulse、shimmer、blur、不停的 spinner）。一切动画尊重 Reduce Motion。
 
@@ -138,7 +138,7 @@
 
 ### Pull Requests
 
-PR 遵循 `commit-push-pr` 规则（默认 draft、Conventional Commits）。另外：
+PR 遵循 `[SKILL_COMMIT_PR]` 规则（默认 draft、Conventional Commits）。另外：
 - 描述以问题的最小清晰陈述开头，然后是如何解决
 - 末尾写明哪个模型与 harness 做了变更
 - 引用 issue 或 PR 时用超链接
@@ -191,7 +191,7 @@ PR 遵循 `commit-push-pr` 规则（默认 draft、Conventional Commits）。另
 
 ### 安全
 
-完整手册（可复制）：`appsec-rules.md`。摘要与 CI/CD 也在 `working-style.md` § 应用安全。参考 skills：`cybersecurity-squad`、`appsec-specialist`（Nexo Agents Team）、`especialista-revisao-codigo`（安全类别）。
+完整手册（可复制）：`appsec-rules.md`。摘要与 CI/CD 也在 `working-style.md` § 应用安全。参考 skills：`[SKILL_SECURITY_SQUAD]`、`[AGENT_TEAM]:appsec`（[AGENT_TEAM]）、`[SKILL_CODE_REVIEW]`（安全类别）。
 
 给任何智能体的摘要：
 1. 每个仓库有 SECURITY.md、secret scanning、Dependabot、CodeQL 与分支保护
@@ -207,7 +207,7 @@ PR 遵循 `commit-push-pr` 规则（默认 draft、Conventional Commits）。另
 
 ## 指针
 
-- 运营 Obsidian vault：`[CONTEXT_DIR]/[YOUR_NAME]/`（Mini：`[CONTEXT_DIR]/[YOUR_NAME]`）
+- 运营 Obsidian vault：`[CONTEXT_DIR]/[YOUR_NAME]/`（[SECONDARY_MACHINE]：`[CONTEXT_DIR]/[YOUR_NAME]`）
 - 法律 Obsidian vault（第二大脑）：`[DOMAIN_VAULT]`（快捷方式 `[DOMAIN_VAULT]`）
 - MOC：`[YOUR_NAME]/wiki/00-indices/`
 - Claude 持久记忆：`.auto-memory/MEMORY.md`

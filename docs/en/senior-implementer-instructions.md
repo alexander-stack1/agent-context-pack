@@ -12,7 +12,7 @@
 
 ## 0. Mission
 
-Deliver code ready for immediate use, with verifiable evidence, without rework and without inventing results. [YOUR_NAME] ([YOUR_NAME]) operates banking labor practice, academia, and legaltech at the same time. The biggest bottleneck is time. Every delivery must be at merge, deploy, or handoff level.
+Deliver code ready for immediate use, with verifiable evidence, without rework and without inventing results. [YOUR_NAME] ([YOUR_HANDLE]) operates [FRONT_A], [FRONT_B], and [FRONT_C] at the same time. The biggest bottleneck is time. Every delivery must be at merge, deploy, or handoff level.
 
 You implement. You prove. You do not promise what you did not run.
 
@@ -35,7 +35,7 @@ Before touching code, read in this order:
 Manifest layer rules:
 
 - **Camada 1** (canonicals above): mandatory reading.
-- **Camada 2** (domains): load only what the task touches (`[YOUR_NAME]/wiki/[PRODUCT_A]/`, `tech/`, Nexo kit, etc.).
+- **Camada 2** (domains): load only what the task touches (`[YOUR_NAME]/wiki/[PRODUCT_A]/`, `tech/`, [BRAND_KIT_DIR], etc.).
 - **Camada 3** (archive, changelog backups, trash, `*_old`): ignore unless explicitly asked.
 
 The `[CONTEXT_DIR]/` folder on iCloud is the **only** canonical context source. Model memory does not replace a file. Chat history is secondary.
@@ -142,7 +142,7 @@ Mandatory on **M/C** with behavior. On **S** without new behavior: path verifica
 ### 3.3 Commits and PRs
 
 - Conventional Commits.
-- Reference skill: `commit-push-pr`.
+- Reference skill: `[SKILL_COMMIT_PR]`.
 - PR in draft by default.
 - Description: minimal clear problem → how it was solved → model/harness that made the change.
 - Issue/PR references with hyperlink.
@@ -317,14 +317,14 @@ Two distinct approvals: idea ≠ budget.
 4. Respect the documented product/brand palette. Contrast conflict: signal, apply alternative, record reason.
 5. Animations respect Reduce Motion. Avoid continuous pulse/shimmer.
 6. Delivered SVG text becomes outlines (does not depend on an installed font).
-7. Reference skills: menu in `ux-ui-REQUESTS.md` (`planejar-interface`, `desenhar-landing`, `revisar-experiencia`, `refatorar-interface`, `polir-para-ship`, `provar-com-screenshot`).
+7. Reference skills: menu in `ux-ui-REQUESTS.md` (`[SKILL_UI_PLAN]`, `[SKILL_UI_LANDING]`, `[SKILL_UI_REVIEW]`, `[SKILL_UI_REFACTOR]`, `[SKILL_UI_POLISH]`, `[SKILL_UI_PROVE]`).
 
 ### Product palettes (quick reference)
 
 | Product | Primary | Accent | Typography |
 |---------|----------|--------|------------|
-| [PRODUCT_A] / [PRODUCT_B] | `#1B4965` | `#D4A843` | Instrument Serif + Inter |
-| Nexo Tecnologia | `#0B1F3A` | `#00D4FF` (action `#2563EB`) | Sora + Inter |
+| [PRODUCT_A] / [PRODUCT_B] | `[PRODUCT_PRIMARY]` | `[PRODUCT_ACCENT]` | [PRODUCT_FONT_HEADING] + [PRODUCT_FONT_BODY] |
+| [YOUR_COMPANY] | `[COMPANY_PRIMARY]` | `[COMPANY_ACCENT]` (action `[COMPANY_ACTION]`) | [COMPANY_FONT_HEADING] + [COMPANY_FONT_BODY] |
 
 ---
 
@@ -353,18 +353,18 @@ Decision rule: if the tree fits in code, build a workflow. Autonomous agent only
 
 | Situation | Skill / reference |
 |----------|-------------------|
-| Multi-front orchestration | `nexo-agents-team` (CTO → managers → ops) |
+| Multi-front orchestration | `[AGENT_TEAM]` (CTO → managers → ops) |
 | TDD | `tdd` |
 | Disciplined debug | `diagnose` |
-| Review Standards + Spec | `review`, `especialista-revisao-codigo` |
-| Commit / push / PR | `commit-push-pr` |
+| Review Standards + Spec | `review`, `[SKILL_CODE_REVIEW]` |
+| Commit / push / PR | `[SKILL_COMMIT_PR]` |
 | Architecture / deepening | `improve-codebase-architecture`, `zoom-out`, `archify` |
 | Refactor in tiny commits | `request-refactor-plan` |
 | Disposable prototype | `prototype` |
 | Cross-session handoff | `handoff` |
-| Security | `cybersecurity-squad`, `appsec-specialist` |
-| Postgres / Docker / K8s | sections of this doc + `dba-data-engineer`, `devops-sre` |
-| PRD / issues | `gerar-prd`, `quebrar-em-issues`, `triagem` |
+| Security | `[SKILL_SECURITY_SQUAD]`, `[AGENT_TEAM]:appsec` |
+| Postgres / Docker / K8s | sections of this doc + `[AGENT_TEAM]:dba`, `[AGENT_TEAM]:devops` |
+| PRD / issues | `[SKILL_PRD]`, `[SKILL_ISSUES]`, `[SKILL_TRIAGE]` |
 
 ---
 
@@ -374,7 +374,7 @@ Before editing, confirm the real path in `_PROJETOS-ATIVOS.md`.
 
 | Project | Canonical path / critical note |
 |---------|------------------------------|
-| [PRODUCT_A] / [PRODUCT_B] | Stack React, TS, tRPC, Drizzle, MySQL; Swiss Legal Design |
+| [PRODUCT_A] / [PRODUCT_B] | Stack React, TS, tRPC, Drizzle, MySQL; [PRODUCT_DESIGN_SYSTEM] |
 | [PRODUCT_H] | **Only** `~/[PRODUCT_H]`. Copies on Desktop/Mesa/worktrees are dead |
 | [PRODUCT_F] | Local automation; cron + LLM gateway |
 | Medicine ([RAG_STACK]) | Medical RAG; indexer + Postgres + [PRODUCT_F]/GHA |
@@ -392,7 +392,7 @@ Editing the wrong copy of [PRODUCT_H] has no effect. Confirm the path starts at 
 - No filler phrases ("it is important to note", "it is worth highlighting", "in light of the foregoing").
 - Open with a datum, problem, or concrete claim.
 - Cultivated standard in technical documents.
-- Mentally run the `no-tropes` filter before delivering prose.
+- Mentally run the `[SKILL_NO_TROPES]` filter before delivering prose.
 
 In code comments: English or PT per the pattern already dominant in the repository. Do not mix without need.
 

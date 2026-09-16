@@ -9,14 +9,14 @@
 
 ## About this folder
 
-This is the canonical context folder of [YOUR_NAME] ([YOUR_NAME]): banking labor lawyer, academic (Master [YOUR_UNIVERSITY], doctoral candidate), and founder of legaltech products. The folder gathers work identity, brand voice, collaboration rules, project status, and the knowledge vault.
+This is the canonical context folder of [YOUR_NAME] ([YOUR_HANDLE]): [YOUR_ROLE], academic ([YOUR_UNIVERSITY]), and founder of [YOUR_INDUSTRY] products. The folder gathers work identity, brand voice, collaboration rules, project status, and the knowledge vault.
 
-The `[CONTEXT_DIR]/` folder (on the Mini: `[CONTEXT_DIR]`) is the **only** source of canonical operational context. Any assistant, on any machine, must read exclusively the files in this folder before starting tasks.
+The `[CONTEXT_DIR]/` folder (on the [SECONDARY_MACHINE]: `[CONTEXT_DIR]`) is the **only** source of canonical operational context. Any assistant, on any machine, must read exclusively the files in this folder before starting tasks.
 
 There are two Obsidian vaults, with distinct roles:
 
 - **Context / `[YOUR_NAME]/`**: operational vault (Karpathy method: the human reads, the LLM writes).
-- **Legal**: domain second brain for all agents: `[DOMAIN_VAULT]` (shortcut `[DOMAIN_VAULT]` on the Mini; ~4.5k notes: case law, legislation, news, RAG, precedents). It does not replace Camada 1 of this folder.
+- **Legal**: domain second brain for all agents: `[DOMAIN_VAULT]` (shortcut `[DOMAIN_VAULT]` on the [SECONDARY_MACHINE]; ~4.5k notes: case law, legislation, news, RAG, precedents). It does not replace Camada 1 of this folder.
 
 **Mandatory routing:** on any request related to law, case law, legislation, precedents, doctrine, legal news, legal RAG, or legal domain research, **all AIs and agents** must consult and point to the Legal vault (`[DOMAIN_VAULT]`) before inventing or improvising. The `[YOUR_NAME]/` vault remains only for operational context and the Karpathy method.
 
@@ -77,7 +77,7 @@ Karpathy flow in `[YOUR_NAME]/`:
 | `credenciais/` | Integration credentials | Only on automation tasks that require access (see `_PARA-REVISAR.md`) |
 | `appsec-rules.md` | Full fail-closed playbook (10 rules + matrix + APPROVED); paste into Claude AppSec Project | Audit, security review, auth/secrets/deploy fix |
 | `documentos/` | Loose documents and project status | Point consult |
-| `Desktop/Negócio/Nexo [BRAND_KIT_DIR] /kit-nexo/` | Nexo Tecnologia brand kit: logo, palette, typography, avatars, signatures, and pieces by network. Rules in `01-logotipo/logomarca.md` | Any Nexo visual piece |
+| `[BRAND_KIT_DIR]/` | [YOUR_COMPANY] brand kit: logo, palette, typography, avatars, signatures, and pieces by network. Rules in `[BRAND_KIT_DIR]/logo-rules.md` | Any [YOUR_COMPANY] visual piece |
 
 ---
 
@@ -96,50 +96,50 @@ Karpathy flow in `[YOUR_NAME]/`:
 ## Skills by front
 > Routing map. When you identify the task front, prefer these skills.
 
-### Banking labor (pro-claimant)
+### [PRACTICE_AREA]
 
 | Task | Skill |
 |--------|-------|
-| Read new case, filing synthesis | `resumo-processo` |
-| Petition, reply, memorials (1st instance) | `advogado-trabalhista-bancario` |
-| Settlement calculation and proposal | `calculo-acordo-trabalhista` |
-| Expert report and calculation | `perito-trabalhista-bancario` |
-| Challenge calculation or report | `contador-trabalhista-impugnacao` |
-| Review appeal, embargos, agravo | `especialista-recurso-revista` |
-| Counter-arguments to employer appeal | `contrarrazoes-trabalhistas` |
-| Enforcement and liquidation | `execucao-trabalhista` |
-| Case-law research | `pesquisa-jurisprudencia`, `jurisprudencia-stf-direitos-sociais` |
-| Labor procedure doctrine (competence, deadlines, nullities, appeals, enforcement) | `martins-processo-trabalho` (Sergio Pinto Martins book converted; private repo `[YOUR_GITHUB]/martins-processo-trabalho`) |
-| Check law or procedure | `legislacao-brasileira:verificar-legislacao` |
+| Read new case, filing synthesis | `[SKILL_CASE_SUMMARY]` |
+| Petition, reply, memorials (1st instance) | `[SKILL_DOMAIN_DRAFTING]` |
+| Settlement calculation and proposal | `[SKILL_SETTLEMENT_CALC]` |
+| Expert report and calculation | `[SKILL_EXPERT_REPORT]` |
+| Challenge calculation or report | `[SKILL_CALC_CHALLENGE]` |
+| Review appeal, embargos, agravo | `[SKILL_APPEALS]` |
+| Counter-arguments to employer appeal | `[SKILL_COUNTER_APPEAL]` |
+| Enforcement and liquidation | `[SKILL_ENFORCEMENT]` |
+| Case-law research | `[SKILL_CASELAW_SEARCH]`, `[SKILL_CASELAW_SEARCH_B]` |
+| Labor procedure doctrine (competence, deadlines, nullities, appeals, enforcement) | `[SKILL_DOMAIN_BOOK]` ([BOOK_AUTHOR] book converted; private repo `[YOUR_GITHUB]/[SKILL_DOMAIN_BOOK]`) |
+| Check law or procedure | `[SKILL_LAW_CHECK]` |
 
 ### Academic ([YOUR_UNIVERSITY], doctorate)
 
 | Task | Skill |
 |--------|-------|
-| Write or review article, thesis, chapter | `revisor-academico-juridico` |
-| Doctrinal analysis and pre-project | `professor-trabalho-previdenciario-[YOUR_UNIVERSITY]` |
-| ABNT study document | `documento-estudo-abnt` |
-| STF judgment analysis | `analise-jurisprudencia-stf` |
+| Write or review article, thesis, chapter | `[SKILL_ACADEMIC_REVIEW]` |
+| Doctrinal analysis and pre-project | `[SKILL_ACADEMIC_ADVISOR]` |
+| ABNT study document | `[SKILL_STUDY_DOC]` |
+| STF judgment analysis | `[SKILL_COURT_ANALYSIS]` |
 
 ### Legaltech and product
 
 | Task | Skill |
 |--------|-------|
-| Legaltech market intelligence | `analise-mercado-juridico` |
-| PRD from conversation | `gerar-prd` |
-| Break plan into issues | `quebrar-em-issues` |
-| Issue triage | `triagem` |
-| Evaluate legal search or RAG relevance (score 0 to 3, precision, recall, golden set) | `avaliar-relevancia-jurisprudencia` |
+| Legaltech market intelligence | `[SKILL_MARKET_INTEL]` |
+| PRD from conversation | `[SKILL_PRD]` |
+| Break plan into issues | `[SKILL_ISSUES]` |
+| Issue triage | `[SKILL_TRIAGE]` |
+| Evaluate legal search or RAG relevance (score 0 to 3, precision, recall, golden set) | `[SKILL_RETRIEVAL_EVAL]` |
 
 ### Development and automation
 
 | Task | Skill |
 |--------|-------|
-| Team orchestration and architecture | `nexo-agents-team` (cto, backend, frontend, devops, dba, qa) |
+| Team orchestration and architecture | `[AGENT_TEAM]` (cto, backend, frontend, devops, dba, qa) |
 | Senior implementer operational contract (DoD, TDD, infra, security) | `senior-implementer-instructions.md` (Camada 1) |
-| Full code review | `especialista-revisao-codigo` |
-| End-to-end system analysis | `analisador-sistema-ponta-a-ponta` |
-| Commit, push, and PR | `commit-push-pr` |
+| Full code review | `[SKILL_CODE_REVIEW]` |
+| End-to-end system analysis | `[SKILL_E2E_ANALYSIS]` |
+| Commit, push, and PR | `[SKILL_COMMIT_PR]` |
 | Interactive architecture diagrams | `archify` (architecture, workflow, sequence, data-flow, lifecycle) |
 | TDD red-green-refactor | `tdd` |
 | Disciplined debugging | `diagnose` |
@@ -185,20 +185,20 @@ Karpathy flow in `[YOUR_NAME]/`:
 
 | Task | Skill |
 |--------|-------|
-| Copy for [YOUR_HANDLE], [YOUR_FIRM], and products | `copy-marca-pessoal` |
+| Copy for [YOUR_HANDLE], [YOUR_FIRM], and products | `[SKILL_BRAND_COPY]` |
 | Logo, visual identity, and graphic pieces | "Design and visual identity flow" section in `working-style.md` |
-| UI / landing / app / chat | `ux-ui-REQUESTS.md` → PT skills (`planejar-interface`, `desenhar-landing`, `revisar-experiencia`, `refatorar-interface`, `polir-para-ship`, `provar-com-screenshot`, `redesenhar-[PRODUCT_A]`); motors: gates + impeccable |
+| UI / landing / app / chat | `ux-ui-REQUESTS.md` → PT skills (`[SKILL_UI_PLAN]`, `[SKILL_UI_LANDING]`, `[SKILL_UI_REVIEW]`, `[SKILL_UI_REFACTOR]`, `[SKILL_UI_POLISH]`, `[SKILL_UI_PROVE]`, `[SKILL_UI_REDESIGN]`); motors: gates + impeccable |
 
 ### Knowledge and productivity
 
 | Task | Skill |
 |--------|-------|
-| Synthesize theme or long text | `sintetizador` |
-| Compressed response mode | `modo-conciso` |
-| Stress a plan with an interview | `entrevistar`, `entrevistar-com-contexto` |
+| Synthesize theme or long text | `[SKILL_SYNTHESIZE]` |
+| Compressed response mode | `[SKILL_CONCISE_MODE]` |
+| Stress a plan with an interview | `[SKILL_INTERVIEW]`, `[SKILL_INTERVIEW_CTX]` |
 | Operate the Obsidian vault | `obsidian-cli`, `obsidian-markdown`, `obsidian-bases` |
-| Translate document to PT-BR | `tradutor-documentos` |
-| Create or adjust a skill | `criar-skill`, `skill-creator` |
+| Translate document to PT-BR | `[SKILL_TRANSLATE]` |
+| Create or adjust a skill | `[SKILL_CREATE_SKILL]`, `skill-creator` |
 | Convert a book (PDF, EPUB, DOCX, etc.) into an agent skill | `book-to-skill` (installed at `~/.claude/skills/book-to-skill`, command `/book-to-skill`) |
 
 ### Document output

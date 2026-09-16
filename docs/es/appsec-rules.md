@@ -204,4 +204,4 @@ Si algún ítem no puede comprobarse, escribe “NO VERIFICADO” e informa exac
 
 ## Skills de referencia
 
-`cybersecurity-squad`, `appsec-specialist` (Nexo), `especialista-revisao-codigo` (categoría seguridad).
+`[SKILL_SECURITY_SQUAD]`, `[AGENT_TEAM]:appsec`, `[SKILL_CODE_REVIEW]` (categoría seguridad).

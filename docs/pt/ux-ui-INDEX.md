@@ -14,7 +14,7 @@
 
 ## Cardápio de pedidos (condensado)
 
-Leia **`ux-ui-PEDIDOS.md`** para saber o que pedir. Skills PT: `planejar-interface`, `desenhar-landing`, `revisar-experiencia`, `refatorar-interface`, `polir-para-ship`, `provar-com-screenshot`, `redesenhar-[PRODUCT_A]`. Elas encapsulam estes arquivos + impeccable.
+Leia **`ux-ui-PEDIDOS.md`** para saber o que pedir. Skills PT: `[SKILL_UI_PLAN]`, `[SKILL_UI_LANDING]`, `[SKILL_UI_REVIEW]`, `[SKILL_UI_REFACTOR]`, `[SKILL_UI_POLISH]`, `[SKILL_UI_PROVE]`, `[SKILL_UI_REDESIGN]`. Elas encapsulam estes arquivos + impeccable.
 
 ---:|---------|------|
 | 1 | `ux-ui-criteria.md` | Princípios MUST/MUST-NOT (Norman, Krug, Yablonski, Refactoring UI, Johnson) + checklist §7 |

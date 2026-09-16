@@ -53,11 +53,11 @@ Aplicar siempre que el pedido sea una investigación, levantamiento o fundamenta
 
 ## Evaluación de relevancia de jurisprudencia (juicio de retrieval)
 
-Aplicar cuando la tarea sea juzgar la calidad de una búsqueda o RAG jurídico, dar nota a pares consulta y fallo, o armar golden set. Skill de referencia: `avaliar-relevancia-jurisprudencia`. Trabaja junto al Data & AI Tech Lead del equipo Nexo para métricas y monitoreo.
+Aplicar cuando la tarea sea juzgar la calidad de una búsqueda o RAG jurídico, dar nota a pares consulta y fallo, o armar golden set. Skill de referencia: `[SKILL_RETRIEVAL_EVAL]`. Trabaja junto al Data & AI Tech Lead del [AGENT_TEAM] para métricas y monitoreo.
 
 - **Rúbrica 0 a 3:** 0 irrelevante para la consulta y sus filtros; 1 contextual o tangencial; 2 relevante y útil, con la tesis como fundamento; 3 directamente responsivo y fuertemente fundamentador, con la tesis enfrentada y resuelta en el dispositivo. La nota mide responsividad, no éxito. Un precedente adverso que enfrenta la tesis es nota alta, señalizado en la observación.
 - **Reglas duras:** filtro de tribunal o fecha violado rebaja la nota al tope de 1, verificado en el cuerpo del acórdão y no solo en los metadatos. Separar hecho del fallo de uso táctico, distinguiendo mera mención, fundamento y dispositivo. Nunca puntuar por coincidencia de palabra clave. Falta de texto genera PENDIENTE y reprocesa con el íntegro. No inventar dato ausente.
-- **Base y formación:** evaluar sobre el íntegro, no sobre el trecho corto. En lotes grandes, un subagente por consulta en paralelo. La formación laboral viene del cerebro del Obsidian, cargada por el MOC activador `_moc-direito-trabalho.md`, sin leer el vault entero ni inventar enunciado de OJ o Súmula a partir de índice.
+- **Base y formación:** evaluar sobre el íntegro, no sobre el trecho corto. En lotes grandes, un subagente por consulta en paralelo. La formación laboral viene del cerebro del Obsidian, cargada por el MOC activador `[DOMAIN_MOC].md`, sin leer el vault entero ni inventar enunciado de OJ o Súmula a partir de índice.
 - **Métricas:** distribución de notas, precisión útil (nota ≥ 2), recall por consulta, consultas de recall cero y conformidad de filtro. Fijar el lote evaluado como golden set de regresión y rehacer la verificación en cada cambio de prompt, índice o modelo.
 - **Salida:** CSV rellenado con nota y observación en todas las filas, e informe `.docx` con metodología, métricas, diagnóstico de retrieval y anexo de los pares.
 
@@ -67,11 +67,11 @@ Aplicar en tareas de código, automatización y producto.
 
 **Primero:** clasificar esfuerzo S/M/C (sección abajo). La ceremonia (plan, TDD, suite) sigue la tabla de la clase. Fail-closed no se afloja.
 
-- **Orquestación:** en demandas que cruzan frentes, usar el equipo de agentes Nexo. El CTO clasifica y delega a managers y especialistas. Para un solo frente, ir directo al especialista (backend, frontend, devops, dba, qa).
+- **Orquestación:** en demandas que cruzan frentes, usar el [AGENT_TEAM]. El CTO clasifica y delega a managers y especialistas. Para un solo frente, ir directo al especialista (backend, frontend, devops, dba, qa).
 - **Planificar antes de codificar:** según S/M/C. Reproducir el bug antes de proponer el fix (M/C). En C, plan completo y aprobación explícita.
 - **Probar antes de afirmar:** nada de "está listo" sin evidencia. En S: verificación del path. En M: paquete/módulo. En C: suite integral. Evidencia fresca antes de alegar éxito.
 - **Honestidad sobre límites:** declarar qué resuelve el fix y qué no. Señalar qué quedó intocado y por qué.
-- **Commits:** patrón Conventional Commits. Usar la skill `commit-push-pr` para el flujo commit, push y PR en borrador.
+- **Commits:** patrón Conventional Commits. Usar la skill `[SKILL_COMMIT_PR]` para el flujo commit, push y PR en borrador.
 - **PRs:** la descripción abre con el problema, sigue con la solución. Añadir qué modelo/harness hizo los cambios. Al referenciar issue o PR, usar hyperlink. Al monitorear PR: poll de checks recientes, verificar hallazgos de bot contra código fuente, corregir reales, descartar falsos positivos con justificación. Si nada es nuevo, quedarse en silencio. Merge solo según la disposición dada.
 - **Nada destructivo por cuenta propia:** no reiniciar servicios, tumbar procesos, correr migración en producción o borrar datos sin mi aval. Dejar el comando listo para que yo lo ejecute y explicar el efecto.
 - **Radio de impacto:** nunca tocar apps de producción, servidores live o datos de uso diario sin instrucción explícita. Nombrar qué se va a tocar antes de tocar.
@@ -79,7 +79,7 @@ Aplicar en tareas de código, automatización y producto.
 - **Nunca editar repositorio dentro de iCloud:** Desktop y Documents sincronizan, y iCloud resuelve conflicto creando duplicado. Peor, un archivo no materializado devuelve `Resource deadlock avoided` en la lectura y `Bus error` en git, y la copia sale con cero bytes pareciendo íntegra. Antes de tocar código que vive en carpeta sincronizada, clonar fuera, por ejemplo en `~/dev`, y trabajar en el clone. Vale también para snapshots de producción: `~/[PRODUCT_A]-prod` es registro de solo lectura; editar ahí no cambia nada.
 - **Probar que el test muerde:** obligatorio en M/C cuando haya test nuevo (mutación deliberada post-GREEN). En S, no. Registrar en el commit qué mutaciones se intentaron y cuáles se atraparon.
 - **Costo:** informar el costo estimado antes de usar API de pago (modelos, embeddings, servicios).
-- **PostgreSQL, Docker y Kubernetes:** reglas completas en `agent_rules.md` (secciones PostgreSQL, Docker y Kubernetes). Resumen: RLS obligatorio, SQL parametrizado, migrations reversibles, multi-stage build, un proceso por contenedor, nunca root, probes separadas, réplicas mínimas, GitOps. Skills de referencia: `dba-data-engineer` y `devops-sre` (Nexo Agents Team).
+- **PostgreSQL, Docker y Kubernetes:** reglas completas en `agent_rules.md` (secciones PostgreSQL, Docker y Kubernetes). Resumen: RLS obligatorio, SQL parametrizado, migrations reversibles, multi-stage build, un proceso por contenedor, nunca root, probes separadas, réplicas mínimas, GitOps. Skills de referencia: `[AGENT_TEAM]:dba` y `[AGENT_TEAM]:devops`.
 - **Convertir libro en skill:** para transformar un PDF, EPUB, DOCX u otro documento largo en skill de agente, usar `book-to-skill` (comando `/book-to-skill ~/ruta/del-libro.pdf`), instalada en `~/.claude/skills/book-to-skill`. Skills generadas a partir de libros entran en la categoría correspondiente al asunto, no en una carpeta genérica.
 
 ## Clasificación de esfuerzo (S / M / C)
@@ -198,7 +198,7 @@ Aplicar en logotipo, identidad visual, piezas gráficas e interfaz.
 
 Aplicar antes de instalar pixel, tag, SDK de analytics o cualquier script de tercero en producto mío.
 
-- **Leer la política antes del código:** abrir la Política de Cookies y la Política de Privacidad vigentes del producto y verificar lo que afirman. En septiembre de 2026 la de [PRODUCT_A] decía, con todas las letras, que el producto no usaba cookie publicitaria. Instalar el pixel sin cambiar el texto habría creado contradicción entre documento firmado por la empresa y comportamiento real del sitio, y el Encargado nombrado allí soy yo.
+- **Leer la política antes del código:** abrir la Política de Cookies y la Política de Privacidad vigentes del producto y verificar lo que afirman. En septiembre de 2026 la de [PRODUCT_A] decía, con todas las letras, que el producto no usaba cookie publicitaria. Instalar el pixel sin cambiar el texto habría creado contradicción entre documento firmado por la empresa y comportamiento real del sitio, y el Encargado nombrado allí es [YOUR_NAME].
 - **Texto y comportamiento suben juntos:** el cambio de la política y la instalación del rastreador entran en la misma ventana de deploy. No pueden divergir ni un día.
 - **Consentimiento antes de la primera petición:** el script del tercero solo se busca después del acepto. Nada de cargar y después "respetar" la elección. La garantía tiene que ser estructural, con el cargador fuera de las páginas y un test que prohíba que cualquier página referencie el host del tercero.
 - **Fallo cerrado en el consentimiento:** cookie ausente, malformada, adulterada o de versión anterior de la política significa ausencia de consentimiento, y el aviso vuelve a aparecer.
@@ -212,7 +212,7 @@ Aplicar en todo agente que produce una acción real (protocolar, publicar, cobra
 - **Origen:** adaptado de la arquitectura de referencia del repositorio `anthropics/commerce-agents` (shopping agent y merchant agent), específicamente el núcleo `commerce-common` (fencing, provenance gates) y el patrón de staged changes con aprobación humana antes de cualquier escritura real.
 - **Regla central:** ningún agente escribe directo en un sistema real. El flujo es siempre: borrador, staged change con fencing y provenance, aprobación humana, handoff al sistema de ejecución y, cuando la acción involucra gasto o compromiso financiero real, una segunda confirmación separada antes de activar.
 - **Dos aprobaciones, no una:** la primera aprueba la idea (contenido, público, estructura). La segunda aprueba dinero de verdad (presupuesto, activación). No se sustituyen una a la otra.
-- **Aplicaciones mapeadas:** [PRODUCT_A] sigue el patrón del merchant agent, staged changes con aprobación de socio antes de aplicar. [PRODUCT_G] sigue el patrón del shopping agent, arma la simulación y el checkout solo renderiza, nunca cobra solo. JusGraphé gana el gate de aprobación humana antes de que cualquier pieza salga. La automatización WhatsApp de [YOUR_FIRM] separa decidir de ejecutar. Para campañas y anuncios, el agente interno borra, el handoff va a Adspirer, que crea la campaña pausada, y solo la segunda aprobación de presupuesto activa de hecho.
+- **Aplicaciones mapeadas:** [PRODUCT_A] sigue el patrón del merchant agent, staged changes con aprobación de socio antes de aplicar. [PRODUCT_G] sigue el patrón del shopping agent, arma la simulación y el checkout solo renderiza, nunca cobra solo. [PRODUCT_I] gana el gate de aprobación humana antes de que cualquier pieza salga. La automatización WhatsApp de [YOUR_FIRM] separa decidir de ejecutar. Para campañas y anuncios, el agente interno borra, el handoff va a Adspirer, que crea la campaña pausada, y solo la segunda aprobación de presupuesto activa de hecho.
 
 ## Reglas de ejecución
 
@@ -220,7 +220,7 @@ Aplicar en todo agente que produce una acción real (protocolar, publicar, cobra
 - **En caso de incertidumbre sobre clasificación o decisión:** registrar en `_PARA-REVISAR.md`, no intentar adivinar.
 - **Al procesar múltiples ítems:** si la confianza es menor que 80%, marcar como `VERIFICAR`.
 - **En tareas con partes independientes:** sugerir o usar subagentes paralelos para ganar velocidad.
-- **Siempre que yo use el comando `/papel-timbrado`:** usar el `PAPEL TIMBRADO.docx` y la `logo-cabecalho.png` de la subcarpeta `[CONTEXT_DIR]/ativos-[YOUR_FIRM]/`.
+- **Siempre que yo use el comando `/[LETTERHEAD_CMD]`:** usar el `[LETTERHEAD_FILE]` y la `[LOGO_FILE]` de la subcarpeta `[CONTEXT_DIR]/ativos-[YOUR_FIRM]/`.
 - **Todo cambio estructural** en esta carpeta va a `_CHANGELOG.md`.
 
 ## Cómo presentar el plan antes de ejecutar
@@ -272,7 +272,7 @@ Cuando se use Fable o la Managed Agents API para orquestar agentes:
 - **Threads persistentes**: el coordinador puede enviar follow-up; el agente retiene contexto de turns anteriores
 - **MCP routing**: servers son agent-scoped; vault credentials son session-scoped
 - **Límites**: máximo 20 agentes en el roster, 25 threads concurrentes, 1 nivel de profundidad (sin sub-delegación)
-- **Mapeo Nexo**: CTO → coordinator, Eng/Product/Infra Managers → segundo nivel, Frontend/Backend/QA/DBA/DevOps → operacionales, Solution Architect y Data/AI Lead → consultores bajo demanda
+- **Mapeo [AGENT_TEAM]**: CTO → coordinator, Eng/Product/Infra Managers → segundo nivel, Frontend/Backend/QA/DBA/DevOps → operacionales, Solution Architect y Data/AI Lead → consultores bajo demanda
 
 ## Exclusiones de privacidad
 
@@ -315,7 +315,7 @@ Si yo corrijo una entrega o digo "no fue exactamente así", pregunta: "¿Debo ac
 
 Copia lista para Project Claude / pegar en chat de auditoría: `appsec-rules.md` (mismo playbook, archivo único).
 
-Aplicar en toda auditoría, code review de seguridad y deploy. Skills de referencia: `cybersecurity-squad`, `appsec-specialist` (Nexo), `especialista-revisao-codigo` (categoría seguridad).
+Aplicar en toda auditoría, code review de seguridad y deploy. Skills de referencia: `[SKILL_SECURITY_SQUAD]`, `[AGENT_TEAM]:appsec`, `[SKILL_CODE_REVIEW]` (categoría seguridad).
 
 ### Repositorio y CI/CD
 
