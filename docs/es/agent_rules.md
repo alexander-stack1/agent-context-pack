@@ -36,6 +36,21 @@ Para otros agentes: leer este archivo y seguir los punteros abajo.
 6. Los resúmenes responden "qué es verdad ahora". Los registros fechados responden "qué pasó y cuándo".
 7. Antes de responder una pregunta sobre el usuario: busca en el vault, lee el resumen canónico, sigue enlaces de fuente. Solo después responde.
 
+### Verificación de fuente de dominio (fail-closed, vale sin pedirlo)
+
+1. **Nunca afirmar de memoria** el contenido de un precedente, súmula, tesis, número de artículo de ley o plazo. La memoria localiza el número; nunca transcribe el contenido.
+2. **Citar solo lo que vino de una búsqueda en fuente oficial o herramienta de investigación y fue confirmado** por un paso de verificación de cita (p. ej. `verify_citation` en tu MCP de dominio).
+3. **Citar la URL o el identificador de la fuente** junto a la afirmación.
+4. Si no es posible verificar: escribir **NO CONFIRMADO** y seguir. Nunca rellenar el hueco.
+
+### Glosarios de dominio (carga por disparador)
+
+`GLOSSARY-[DOMAIN].md` no es Capa 1: cargarlo solo cuando la tarea toque el dominio, antes de afirmar sus términos.
+
+### Rutas canónicas (carga por disparador)
+
+`PATHS.md` es la fuente única de rutas locales; cargarlo antes de afirmar una ruta, nunca de memoria (ausente = **NO VERIFICADO**). Código fuera de carpetas sincronizadas, en `~/dev`, con excepciones nombradas. Ver [`PATHS.template.md`](PATHS.template.md).
+
 ### Privacidad y exclusiones
 
 Nunca almacenes: credenciales, contraseñas, cookies, códigos de recuperación, claves de API, seed phrases, tokens de autenticación, datos de pago, CPF, número de cuenta bancaria. Generaliza cuando haga falta. Nunca envíes contenido privado a terceros sin aprobación explícita.
@@ -67,24 +82,28 @@ Nunca almacenes: credenciales, contraseñas, cookies, códigos de recuperación,
 11. Tests enfocados. Los tests son buenos. Smoke infinito, regresión de features borradas y tests genéricos son malos. Cada test debe tener propósito claro.
 12. Verificación de versión. Antes de generar código con framework o biblioteca específica, confirma que el modelo conoce la versión en uso. Si no, o hay duda, consulta Context7 MCP o la documentación oficial antes de asumir API, sintaxis o comportamiento. Nunca generes código basado en versión antigua sin avisar.
 13. Contexto progresivo. Empieza por Camada 1 del _MANIFEST (identity, stack, working-style, brand-voice). Carga Camada 2 solo cuando la tarea toque ese dominio. Nunca cargues Camada 3 sin pedido explícito. No ensucies el contexto con información que la tarea no necesita.
-14. Debugging guiado por error. Antes de proponer un fix, exige o busca: error completo con stack trace, código del tramo relevante, respuesta de API o log cuando aplique, y comportamiento esperado vs actual. No diagnostiques con información parcial. Si falta alguno de esos 4 elementos, pregunta antes de actuar.
+14. Debugging guiado por error. Antes de proponer un fix, exige o busca: error completo con stack trace, código del tramo relevante, respuesta de API o log cuando aplique, y comportamiento esperado vs actual. Si falta alguno de esos 4 elementos, pregunta antes de actuar.
 15. Justificación de componente. Antes de proponer nuevo servicio, base, cola, caché o dependencia de infra, responde: "¿qué problema específico resuelve esto que la infra actual no resuelve?" Si la respuesta es vaga ("escalabilidad", "desacoplamiento"), la propuesta no está lista.
 16. Estimación de capacidad. Antes de una decisión de infra que elija entre tecnologías (SQL vs NoSQL, Cloud Run vs VM, con caché vs sin), estima el sobre: QPS esperado, volumen de storage, bandwidth, usuarios concurrentes. Decisión de infra sin números es opinión, no ingeniería.
-17. Modos de fallo explícitos. Toda propuesta de arquitectura incluye una sección "qué se rompe si esto falla". Lista de forma proactiva: punto único de fallo, comportamiento con red degradada, qué pasa si el servicio externo no está disponible, y el plan de degradación elegante. Trae la historia de fallo antes de que te la pidan.
-18. MCP bidireccional. Al construir capacidad interna vía MCP tools, evalúa si debe exponerse como MCP server para otros agentes. Un agente que solo consume herramientas es un endpoint. Un agente que también sirve es infraestructura. La exposición exige control de acceso real porque cualquier caller puede golpear la capa de razonamiento directamente.
-19. Validación única entre caminos. Al implementar fallback (modelo alternativo, degradación, retry), la función de validación del output es una sola, compartida por todos los caminos. Nunca dupliques validación entre camino primario y fallback. Si la validación vive en dos sitios, actualizar uno y olvidar el otro significa entregar dos productos distintos con una sola etiqueta.
+17. Modos de fallo explícitos. Toda propuesta de arquitectura incluye una sección "qué se rompe si esto falla". Lista: punto único de fallo, comportamiento con red degradada, qué pasa si el servicio externo no está disponible, y el plan de degradación elegante. Trae la historia de fallo antes de que te la pidan.
+18. MCP bidireccional. Al construir capacidad interna vía MCP tools, evalúa si debe exponerse como MCP server para otros agentes. Quien solo consume es endpoint; quien también sirve es infraestructura. La exposición exige control de acceso real porque cualquier caller puede golpear la capa de razonamiento directamente.
+19. Validación única entre caminos. Al implementar fallback (modelo alternativo, degradación, retry), la función de validación del output es una sola, compartida por todos los caminos. Nunca dupliques la validación entre el camino primario y el fallback: actualizar uno y olvidar el otro entrega dos productos con una etiqueta.
+
+### Tamaño de archivo (tope de 5.000 tokens)
+
+Archivo escrito por agente: bajo ~20.000 bytes; hook pre-commit en staged; dividir por responsabilidad, nunca por líneas; nunca `--no-verify`. Detalle en [`core/guardrails.md`](core/guardrails.md).
 
 ### PostgreSQL
 
 - Toda tabla accesible por el cliente tiene RLS habilitado y al menos una política por operación (SELECT, INSERT, UPDATE, DELETE). Una tabla sin RLS habilitado accesible por un rol con NOBYPASSRLS es un agujero, no protección.
 - SQL siempre parametrizado. Fragmentos interpolados solo de allowlists internas cerradas. Nunca concatenes input externo en una query.
 - Migrations versionadas y reversibles. Toda migration tiene un up y un down. Prueba el down antes de mergear. Nunca ejecutes migration en producción sin backup previo.
-- Índices creados con CONCURRENTLY en tablas con datos en producción. Un índice que bloquea la tabla es downtime disfrazado.
+- Índices creados con CONCURRENTLY en tablas con datos en producción.
 - Naming: snake_case para tablas, columnas y funciones. Prefijo de dominio cuando el schema tenga más de 20 tablas (p. ej. `billing_invoices`, `auth_sessions`). Claves primarias como `id` (UUID v7 o serial), foreign keys como `<tabla>_id`.
 - Constraints en la base, no solo en la aplicación. NOT NULL, CHECK, UNIQUE y FK existen para atrapar lo que la aplicación deje pasar.
 - Connection pooling obligatorio en producción (PgBouncer o pooler de Supabase). La aplicación nunca abre conexión directa a Postgres en producción.
 - Queries explicadas antes de mergear: ejecuta EXPLAIN ANALYZE en queries nuevas que toquen tablas con más de 100k rows. Seq scan en tabla grande sin filtro es red flag.
-- Backups automáticos con retención mínima de 7 días. Prueba restore periódicamente. Un backup que nunca se restauró es esperanza, no protección.
+- Backups automáticos con retención mínima de 7 días. Prueba restore periódicamente.
 - Roles separadas: la aplicación usa rol con permisos mínimos (SELECT/INSERT/UPDATE donde haga falta). Las migrations usan rol con DDL. Nunca ejecutes la aplicación como superuser.
 
 ### Docker
@@ -96,8 +115,8 @@ Nunca almacenes: credenciales, contraseñas, cookies, códigos de recuperación,
 - Mantén .dockerignore: node_modules, .git, .env, tests, docs y artefactos de build local quedan fuera del contexto de build.
 - Health check definido en el Dockerfile o en el compose. Un contenedor sin health check es una caja negra para el orquestador.
 - Variables de entorno para configuración, nunca hardcodeadas. Secretos vía secret manager o mount, nunca como ENV en el Dockerfile o docker-compose.yml versionado.
-- Layers ordenadas de lo menos mutable (apt-get, COPY package.json) a lo más mutable (COPY . .). La caché de layers ahorra minutos de build.
-- Tag de imagen fija en producción (nunca `latest`). Usa hash del commit o semver. `latest` en producción es ruleta.
+- Layers ordenadas de lo menos mutable (apt-get, COPY package.json) a lo más mutable (COPY . .).
+- Tag de imagen fija en producción (nunca `latest`). Usa hash del commit o semver.
 - Logs en stdout/stderr. Nunca escribas log a un archivo dentro del contenedor. El orquestador recoge de stdout.
 
 ### Kubernetes
@@ -112,7 +131,7 @@ Aplicar cuando el proyecto use K8s (Cloud Run con Knative cuenta como subset):
 - Namespace por entorno (dev, staging, prod). Nunca mezcles workloads de entornos distintos en el mismo namespace.
 - Network policies restrictivas: deny-all por defecto, liberar solo el tráfico necesario entre servicios. Sin network policy, todo pod habla con todo pod.
 - Las imágenes vienen de registry privado o de registries públicos allowlisted. Nunca tires una imagen de un registry arbitrario en producción.
-- Observabilidad: métricas (Prometheus/Datadog), logs (stdout recogido por Fluentd/Vector), traces (OpenTelemetry). Un pod sin observabilidad es black box en un incidente.
+- Observabilidad: métricas (Prometheus/Datadog), logs (stdout recogido por Fluentd/Vector), traces (OpenTelemetry).
 - GitOps cuando sea posible: estado deseado del cluster declarado en Git (ArgoCD, Flux). kubectl apply manual en producción es anti-pattern.
 
 ### Swift
@@ -142,7 +161,7 @@ Los PRs siguen las reglas de `[SKILL_COMMIT_PR]` (draft por defecto, Conventiona
 - La descripción abre con descripción mínima y clara del problema, seguida de cómo se resolvió
 - Añade al final qué modelo y harness hizo los cambios
 - Al referenciar issue o PR, usa hyperlink
-- Al monitorear PR: haz poll de checks y comentarios más recientes que el último push. Verifica cada hallazgo de bot contra el código fuente antes de actuar. Corrige los reales y descarta falsos positivos con justificación escrita. Corrige fallos de CI, distinguiendo breaks reales de flakes de infra conocidos. Si nada es nuevo, quédate en silencio. Para cuando los review bots estén verdes en el último commit
+- Al monitorear el PR: poll de checks y comentarios posteriores al último push. Cada hallazgo de bot se verifica en el fuente antes de actuar. Corregir lo real; descartar falso positivo con justificación escrita. Corregir el CI separando break real de flake de infra conocido. Sin novedad, silencio. Parar con review bots verdes en el último commit
 - Merge solo según la disposición dada en el pedido (merge when green, o parar y reportar)
 
 ### Ceremonia proporcional (S / M / C)
@@ -205,8 +224,14 @@ Resumen para cualquier agente:
 9. Hallazgos clasificados como OK | HALLAZGO | NO APLICABLE | NO VERIFICADO
 10. Solo "APROBADO" si cero hallazgos bloqueantes + evidencia verificable
 
+## Núcleo del harness y autonomía
+
+Una tarea clara llega hasta el final; merge, deploy y dinero solo por scripts con traba. Líneas rojas con el humano: secretos, datos de cliente fuera de la máquina principal, borrar producción, migración destructiva, force push a `main`, envío sin ok. Servidores solo en `127.0.0.1`; backup con sello; nunca `--no-verify`. Detalle en [`core/`](core/).
+
 ## Punteros
 
+- Rutas canónicas: `PATHS.md` (plantilla en `PATHS.template.md`)
+- Núcleo del harness: `core/`
 - Vault Obsidian operacional: `[CONTEXT_DIR]/[YOUR_NAME]/` ([SECONDARY_MACHINE]: `[CONTEXT_DIR]/[YOUR_NAME]`)
 - Vault Obsidian Jurídico (segundo cerebro): `[DOMAIN_VAULT]` (atajo `[DOMAIN_VAULT]`)
 - MOCs: `[YOUR_NAME]/wiki/00-indices/`

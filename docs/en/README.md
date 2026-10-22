@@ -11,8 +11,10 @@ Welcome. This pack teaches agents **how you work**, not your private data.
 3. [`working-style.md`](working-style.md) — collaboration, research, engineering, S/M/C
 4. [`appsec-rules.md`](appsec-rules.md) — fail-closed security
 5. [`senior-implementer-instructions.md`](senior-implementer-instructions.md) — DoD / TDD / staged-write
-6. On demand: `identity.md`, `brand-voice.md`, `stack.md`, `about-me.md`, `ux-ui-*.md`
-7. Domain requests → **all** AIs use `[DOMAIN_VAULT]`
+6. [`core/`](core/) — harness core: short rules, guardrails, delegation/handoff, model matrix
+7. On trigger: [`PATHS.template.md`](PATHS.template.md) (canonical paths), domain glossaries
+8. On demand: `identity.md`, `brand-voice.md`, `stack.md`, `about-me.md`, `ux-ui-*.md`
+9. Domain requests → **all** AIs use `[DOMAIN_VAULT]`
 
 ## What does not ship
 

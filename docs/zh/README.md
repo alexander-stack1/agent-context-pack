@@ -11,8 +11,10 @@
 3. [`working-style.md`](working-style.md) — 协作、研究、工程、S/M/C
 4. [`appsec-rules.md`](appsec-rules.md) — fail-closed 安全
 5. [`senior-implementer-instructions.md`](senior-implementer-instructions.md) — DoD / TDD / staged-write
-6. 按需：`identity.md`、`brand-voice.md`、`stack.md`、`about-me.md`、`ux-ui-*.md`
-7. 领域请求 → **所有** AI 使用 `[DOMAIN_VAULT]`
+6. [`core/`](core/) — harness 核心：短规则、guardrails、委派/交接、模型矩阵
+7. 按触发：[`PATHS.template.md`](PATHS.template.md)（规范路径）、领域术语表
+8. 按需：`identity.md`、`brand-voice.md`、`stack.md`、`about-me.md`、`ux-ui-*.md`
+9. 领域请求 → **所有** AI 使用 `[DOMAIN_VAULT]`
 
 ## 不上线的内容
 

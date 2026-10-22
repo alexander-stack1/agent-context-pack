@@ -53,6 +53,8 @@ Most agent setups fail the same way: prompts live in chat memory, rules drift, s
 5. **Identity / brand / stack** skeletons with placeholders  
 6. **UX criteria** for agent-built UI  
 7. **Repo boot templates** (`CLAUDE.md`, maps, decisions)
+8. **Harness core** (`docs/<lang>/core/`): short rules, hook guardrails, dispatch + structured handoff, model × effort matrix
+9. **Canonical paths template** (`PATHS.template.md`): one file owns every local path; never state a path from memory
 
 This repo ships **scrubbed** content only. Real names, firms, products, emails, and paths are replaced by tokens like `[YOUR_NAME]` and `[DOMAIN_VAULT]`. See [`PLACEHOLDERS.md`](PLACEHOLDERS.md). Keep a **private overlay** for your real board, vaults, and secrets.
 

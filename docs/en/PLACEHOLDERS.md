@@ -69,3 +69,17 @@ Never commit real secrets, client names, case numbers, or credentials to a publi
 | `[SKILL_UI_PLAN]` `[SKILL_UI_LANDING]` `[SKILL_UI_REVIEW]` `[SKILL_UI_REFACTOR]` `[SKILL_UI_POLISH]` `[SKILL_UI_PROVE]` `[SKILL_UI_REDESIGN]` `[SKILL_DESIGN_A]` `[SKILL_DESIGN_B]` | Custom UI / design skills |
 
 Public third-party skills (docx, xlsx, pptx, pdf, obsidian-*, Google Cloud skills, tdd, diagnose, review, archify, handoff, book-to-skill, skill-creator, impeccable, etc.) are kept by name because they are not personal.
+
+## Added in the harness-core pass
+
+| Placeholder | Meaning |
+|---|---|
+| `[AGENT_CLI_A]` / `[AGENT_CLI_B]` / `[IDE_AGENT]` | Agent tools in your model matrix |
+| `[MODEL_ORQ]` / `[MODEL_PES]` / `[MODEL_EXE]` / `[MODEL_SIM]` | Exact model IDs per role (from official docs) |
+| `[product-a]` / `[product-b]` / `[product-x]` | Repo folder names in `PATHS.md` |
+| `[OLD_PATH]` / `[NEW_PATH]` / `[DATE]` | Retired-path and decision-date fields |
+| `[TRACK_1]` / `[PROJECT_1]` / `[STATUS]` / `[NEXT_STEP]` | Empty project-board fields (PT/ES use `[FRENTE_1]`, `[PROJETO_1]`/`[PROYECTO_1]`) |
+| `[VAULT_CLI]` | Secret-injection command (`[VAULT_CLI] run ...`); no real binary name |
+| `[REASON]` | Short token in timestamped backup filenames |
+| `[DOMAIN]` | Glossary suffix in `GLOSSARY-[DOMAIN].md` |
+| `[FRENTE_2]` / `[PROJETO_2]` / `[PRÓXIMO_PASSO]` / `[DATA]` / `[PROYECTO_2]` / `[ESTADO]` / `[SIGUIENTE_PASO]` / `[FECHA]` / `[TRACK_2]` / `[PROJECT_2]` | Other empty board fields in the language templates |
