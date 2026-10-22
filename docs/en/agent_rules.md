@@ -36,6 +36,21 @@ For other agents: read this file and follow the pointers below.
 6. Summaries answer "what is true now". Dated records answer "what happened and when".
 7. Before answering a question about the user: search the vault, read the canonical summary, follow source links. Only then answer.
 
+### Domain source verification (fail-closed, applies unasked)
+
+1. **Never state from memory** the content of a precedent, ruling summary, thesis, statute article number or deadline. Memory locates the number; it never transcribes the content.
+2. **Cite only what came from an official-source or research-tool search and was confirmed** by a citation-verification step (e.g. `verify_citation` in your domain MCP).
+3. **Cite the source URL or identifier** next to the claim.
+4. If verification is impossible: write **UNCONFIRMED** and move on. Never fill the gap.
+
+### Domain glossaries (trigger-loaded)
+
+`GLOSSARY-[DOMAIN].md` is not Layer 1: load it only when the task touches the domain, before stating its terms.
+
+### Canonical paths (trigger-loaded)
+
+`PATHS.md` is the single source of local paths; load it before stating a path, never from memory (missing = **UNVERIFIED**). Code outside synced folders, in `~/dev`, with named exceptions. See [`PATHS.template.md`](PATHS.template.md).
+
 ### Privacy and exclusions
 
 Never store: credentials, passwords, cookies, recovery codes, API keys, seed phrases, auth tokens, payment data, CPF, bank account numbers. Generalize when needed. Never send private content to third parties without explicit approval.
@@ -73,6 +88,10 @@ Never store: credentials, passwords, cookies, recovery codes, API keys, seed phr
 17. Explicit failure modes. Every architecture proposal includes a section "what breaks if this fails". Proactively list: single point of failure, behavior under degraded network, what happens if the external service is unavailable, and the graceful degradation plan. Bring the failure story before being asked.
 18. Bidirectional MCP. When building internal capability via MCP tools, evaluate whether it should be exposed as an MCP server for other agents. An agent that only consumes tools is an endpoint. An agent that also serves is infrastructure. Exposure requires real access control because any caller can hit the reasoning layer directly.
 19. Single validation across paths. When implementing fallback (alternate model, degradation, retry), the output validation function is one shared by all paths. Never duplicate validation between primary and fallback. If validation lives in two places, updating one and forgetting the other means shipping two different products under one label.
+
+### File size (5,000-token cap)
+
+Agent-authored files stay under ~20,000 bytes; pre-commit hook on staged files; split by responsibility, never by line count; never `--no-verify`. Details in [`core/guardrails.md`](core/guardrails.md).
 
 ### PostgreSQL
 
@@ -205,8 +224,14 @@ Summary for any agent:
 9. Findings classified as OK | FINDING | NOT APPLICABLE | UNVERIFIED
 10. Only "APPROVED" if zero blocking findings + verifiable evidence
 
+## Harness core and autonomy
+
+A clear task runs to completion; merge, deploy and money only via guarded scripts. Red lines stay with the human: secrets, client data off the primary machine, deleting production, destructive migrations, force-pushing `main`, sending without approval. Servers only on `127.0.0.1`; timestamped backups; never `--no-verify`. Details in [`core/`](core/).
+
 ## Pointers
 
+- Canonical paths: `PATHS.md` (template in `PATHS.template.md`)
+- Harness core: `core/`
 - Operational Obsidian vault: `[CONTEXT_DIR]/[YOUR_NAME]/` ([SECONDARY_MACHINE]: `[CONTEXT_DIR]/[YOUR_NAME]`)
 - Legal Obsidian vault (second brain): `[DOMAIN_VAULT]` (shortcut `[DOMAIN_VAULT]`)
 - MOCs: `[YOUR_NAME]/wiki/00-indices/`

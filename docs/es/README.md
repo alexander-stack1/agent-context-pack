@@ -11,8 +11,10 @@ Bienvenido. Este paquete enseña a los agentes **cómo trabajas**, no tus datos 
 3. [`working-style.md`](working-style.md) — colaboración, investigación, ingeniería, S/M/C
 4. [`appsec-rules.md`](appsec-rules.md) — seguridad fail-closed
 5. [`senior-implementer-instructions.md`](senior-implementer-instructions.md) — DoD / TDD / staged-write
-6. Bajo demanda: `identity.md`, `brand-voice.md`, `stack.md`, `about-me.md`, `ux-ui-*.md`
-7. Pedidos de dominio → **todas** las IAs usan `[DOMAIN_VAULT]`
+6. [`core/`](core/) — núcleo del harness: reglas cortas, guardrails, delegación/handoff, matriz de modelos
+7. Por disparador: [`PATHS.template.md`](PATHS.template.md) (rutas canónicas), glosarios de dominio
+8. Bajo demanda: `identity.md`, `brand-voice.md`, `stack.md`, `about-me.md`, `ux-ui-*.md`
+9. Pedidos de dominio → **todas** las IAs usan `[DOMAIN_VAULT]`
 
 ## Qué no se publica
 
